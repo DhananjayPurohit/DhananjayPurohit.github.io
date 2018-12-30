@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <link rel = "icon" type = "image/png" href = "img/SCHEMLOGO.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <link rel = "stylesheet" href = "makeover.css"> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    
+    <script src="NewSOC.js"></script>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>School of Chemical Science</title>
+    <style type="text/css">
+    .bg-light{
+      background-color: #0c2461 !important;
+    }
+
+    .imgfooter{
+      width:100%;
+      height : 50px;
+      background-color: #0c2461;
+      display:block;
+      position: fixed;
+      transition:0.5s;
+      z-index:3;
+     }
+
+     /* Float four columns side by side */
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.nav-item a:hover {
+  opacity:1 !important;
+}
+
+
+
+/* Responsive columns */
+@media only screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 992px) {
+
+  #f1,#f2{
+    display:none;
+  }
+
+  #f3,#f4{
+    display:block;
+  }
+
+
+}
+
+@media only screen and (min-width: 992px) {
+
+  #e1,#e2,#e3,#e4,#e5,#e6,#e7,#e8{
+    padding-top: 120px;
+  }
+
+}
+@media only screen and (max-width: 1080px) {
+  .pseudocont{
+    display:none;
+  }
+
+}
+
+
+
+
+
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: white;
+  height:440px;
+}
+
+.qlinks{
+  text-decoration  : none;
+  font-size : 12px;
+  display : block;
+  color:white;
+  opacity:0.7;
+}
+
+.qlinks a:hover{
+  opacity: 1 !important;
+  font-weight: bold;
+  color:#0c2461;
+}
+
+ .sfqlinks a:hover {
+  opacity: 1 !important;
+  text-decoration: none;
+
+}
+    </style>
+  </head>
+  <body style="background-color: #E9E6DF;">
+    <div class="container-fluid" style="width:100% !important; padding:0% !important; margin:0% !important;box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2), 0 14px 25px 0 rgba(0, 0, 0, 0.19); " >
+      <div class="pseudocont" style="z-index:1; box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2), 0 14px 25px 0 rgba(0, 0, 0, 0.19);"  >
+      <nav class="navbar navbar-inverse" id="pseudoheader" style="background-color: #0c2461; position:fixed; width:100%; border:0px; z-index:3;">
+  <div class="container-fluid" id="pseudocontent" style="font-family: 'Source Sans Pro', sans-serif; font-weight:bold;font-size:15px;" >
+    <div class="navbar-header" >
+      <a class="navbar-brand" style="font-family: serif; font-size : 20px; color:white; font-weight:normal; padding-top:8px; " href="bsnewsocs.html">SCHOOL OF CHEMICAL SCIENCES</a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="aboutus.html" >About</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="admission.html">Admission</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="research.html">Research</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="student.html" style=" color:white;">Students</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="facultyprofile.html">Faculty</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="http://www.iqac.dauniv.ac.in/">IQAC</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="alumni.html" >Alumni</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="photogallery.html">Gallery</a></li>
+    </ul>
+
+  </div>
+</nav>
+</div>
+<font id="f1" style="font-size:30px; color:white; position:absolute;  top:30px; left:40%; z-index:5; font-family:serif;">SCHOOL OF CHEMICAL SCIENCES | Students
+</font>
+<font id="f2" style="font-size:30px; color:white; position:absolute;  top:80px; left:46%; z-index:5; font-family: 'Hind', sans-serif;">रसायन विज्ञान अध्ययन शाला  
+</font>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:#0c2461; width:100% !important; z-index:4; ">
+  <a class="navbar-brand" href="#">
+    <a href="index.html">
+    <div class = "schoolName" style="  border-style:solid;
+      border-width: thin;
+      border-color: white;
+      height:150px;
+      width: 140px;
+      margin-top:10px;
+      margin-bottom:15px;">
+     <img src="img/SCHEMLOGO.png" height="100%" width="100%">
+    </div>
+    </a>
+    <a href="http://www.dauniv.ac.in/">
+     <div class="logopane" style="display: block;
+     margin-left: 5%;
+     width:140px;
+     height:150px;
+     border-style:solid;
+     border-width: thin;
+     border-color: white;
+     margin-top:10px;
+     margin-bottom:15px;">
+      <center><img src= "img/davvLogo2.png" width="70%" height="70%" style =" margin-top:0.5vw;">
+      </center>
+      <center>
+       <font style="color:white; font-family: serif; font-size: 13px; ">DEVI AHILYA</font>
+       <font style="color:white; font-family: sans-serif; font-size: 9px;">VISHWAVIDYALAYA</font>
+     </center>
+     </div></a>
+</a>
+<font id="f3" style="font-size:20px; color:white;  left:10%; z-index:5; font-family:serif; display:none;">SCHOOL OF CHEMICAL SCIENCES
+</font>
+<font id="f4" style="font-size:20px; color:white;  left:10%; z-index:5; font-family: 'Hind', sans-serif; display:none; ">रसायन विज्ञान अध्ययन शाला  
+</font>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style="background-color:white; color:#0c2461;">
+    <span class="navbar-toggler-icon" style="color:white;"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02"  >
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="font-family: 'Source Sans Pro', sans-serif; font-weight:bold;font-size:20px; flex:1; width: 100%;">
+      <li class="nav-item" id="e1" style=" margin-left:5%;">
+        <a class="nav-link" style="color:white ; opacity:0.6;" href="aboutus.html">About </a>
+      </li>
+      <li class="nav-item" id="e2" style=" margin-left:5%; ">
+        <a class="nav-link" style="color:white ; opacity:0.6;" href="admission.html">Admission</a>
+      </li>
+      <li class="nav-item" id="e3" style="margin-left:5%; ">
+        <a class="nav-link" style="color:white ; opacity:0.6;"href="research.html">Research</a>
+      </li>
+      <li class="nav-item" id="e4" style="margin-left:5%; ">
+        <a class="nav-link" style="color:white ; opacity:1;"href="student.html">Students</a>
+      </li>
+      <li class="nav-item" id="e5" style="margin-left:5%; ">
+        <a class="nav-link" style="color:white ; opacity:0.6;"href="facultyprofile.html">Faculty</a>
+      </li>
+      <li class="nav-item" id="e6" style=" margin-left:5%;">
+        <a class="nav-link" target="_blank" style="color:white ; opacity:0.6;"href="http://www.iqac.dauniv.ac.in/">IQAC</a>
+      </li>
+      <li class="nav-item" id="e7" style="margin-left:5%; ">
+        <a class="nav-link" style="color:white ; opacity:0.6;"href="alumni.html">Alumni</a>
+      </li>
+      <li class="nav-item" id="e8" style="margin-left:5%;">
+        <a class="nav-link" style="color:white; opacity:0.6;"href="photogallery.html">Gallery</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+
+ <!-- *************************************************************************************************************** -->
+
+
+<div class="w3-content w3-section"  id = "activitiesSlider" style="display: block;">
+
+<img class="mySlides" src="img/A1.jpg" style="width:100%;height : auto;max-height: 650px;">
+
+   <img class="mySlides" src="img/A3.jpg" style="width:100%;height : auto;max-height: 650px;">
+   <img class="mySlides" src="img/A4.jpg" style="width:100%;height : auto;max-height: 650px;">
+   <img class="mySlides" src="img/A5.jpg" style="width:100%;height : auto;max-height: 650px;">
+</div>
+
+<script>
+ var myIndex = 0;
+ carousel();
+
+ function carousel() {
+     var i;
+     var x = document.getElementsByClassName("mySlides");
+     for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+     }
+     myIndex++;
+     if (myIndex > x.length) {myIndex = 1}
+     x[myIndex-1].style.display = "block";
+     setTimeout(carousel, 2000); // Change image every 2 seconds
+ }
+ </script>
+
+ <!-- ********************************************************************************************************************** -->
+
+
+<div class = "ImportantLinks">
+
+<h2 style = "text-align: center;margin-top : 15%;font-family : Source Sans Pro; font-weight:bold; ">Important Links</h2>
+<br>
+<br>
+<br>
+<div class = "container">
+  <div class="row">
+  <div class = "col-md-4" style = "height : 100px;border-right : solid 10px #fff;background-color: #D3D3D3;">
+  <a href = "http://www.dauniv.ac.in/M.Sc.Syllabus201718.php" target="_blank" style = "text-align:center;vertical-align:center;font-size : 20px;text-decoration: none;color: black;
+vertical-align: middle;
+line-height: 100px;  ">Syllabus</a>
+  </div>
+
+ <div class = "col-md-4" style = "height : 100px;border-right : solid 10px #fff;background-color: #D3D3D3;">
+  <a href = "http://www.dauniv.ac.in/PG_Exam_Notification.php" target="_blank"style = "text-align: center;vertical-align:center;font-size : 20px;text-decoration: none;
+vertical-align: middle;display: inline-flex;color : black;
+line-height: 100px;">Time Table</a>
+  </div>
+
+<div class = "col-md-4" style = "height : 100px;background-color: #D3D3D3">
+  <a href = "#" style = "text-align: center;vertical-align:center;font-size : 20px;text-decoration: none;color:black;
+vertical-align: middle;display: inline-flex;
+line-height: 100px;">Academic Calendar</a>
+</div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+<div class = "container-fluid" style = "background-color : #D3D3D3;height : auto;margin-bottom : 100px;">
+
+	<h1 id = 'marquee' align = center style = "font-family : Source Sans Pro;margin-bottom : 70px;font-weight : 700;margin-top : 30px;">Star Performers</h1>
+<div class="row">
+	<div class = "col-md-4">
+<img src = "img/Ujats.jpg" style = "height : 300px;outline: solid 5px #fff;width : 100%;">
+</div>
+
+<div class = "col-md-4">
+<img src = "img/spm.jpeg" style = "height : 300px;outline: solid 5px #fff;width : 100%;">
+</div>
+
+
+
+<div class = "col-md-4">
+<img src = "img/star3.jpg" style = "height : 300px;width : 100%;outline: solid 5px #fff;">
+</div>
+</div>
+
+<script type="text/javascript">
+
+  function getRandomColor(){
+    var letters = "0123456789ABCEF";
+    var color = "#";
+
+    for(var i = 0; i < 6; i++){
+      color +=letters[Math.floor(Math.random() * 6)];
+      
+    }
+    return color
+  }
+  function changeColorHeader(){
+       var text = document.getElementById('marquee');
+       
+    colorInput = getRandomColor()
+   text.style.color = String(colorInput);
+    
+  }
+ 
+  // setInterval(changeColorHeader(),500);
+setInterval("changeColorHeader()",300);
+</script>
+
+
+
+
+
+</div>
+<div class = "container-fluid" style = "background-color: #D3D3D3;height : auto;width : 100%;">
+<div class = "container">
+
+<h2 style = "text-align: center;font-family : Source Sans Pro; font-weight:bold;">Outside The Classroom...</h2>
+
+<div class = "row">
+<div class = "col-md-4" style = "height: 320px;background-color: #fff;border-right: solid 15px #D3D3D3;margin-top : 60px; margin-bottom:30px;">
+<img src = "img/davv5.jpg" style = "width : 100%; height : 280px;margin : 0;border : 0">
+<center><font style = "text-align : center;margin-top : 10px;font-size : 20px;display: preserve-3d;font-family: Source Sans Pro; font-weight:bold;">Dance</font>
+  </center>
+</div>
+
+
+<div class = "col-md-4"  style = "height: 320px;background-color: #fff;border-right: solid 15px #D3D3D3;margin-top : 60px; margin-bottom:30px;">
+
+<img src = "img/A4.jpg" style = "width : 100%; height : 280px;">
+<center>
+<font style = "text-align : center;margin-top : 10px;font-size : 20px;display: preserve-3d;font-family: Source Sans Pro; font-weight:bold; ">Drama</font>
+</center>
+</div>
+
+<div class = "col-md-4"  style = "height: 320px;background-color: #fff;margin-top : 60px;  margin-bottom:30px;">
+<img src = "img/lab2.jpg" style = "width : 100%; height : 280px">
+<center>
+<font style = "text-align : center;margin-top : 10px;font-size : 20px;display: preserve-3d;font-family: Source Sans Pro; font-weight:bold; ">Practicals</font>
+</center>
+</div>
+
+</div>
+<div class = "row">
+<div class = "col-md-4" style = "height: 320px;background-color: #fff;border-right: solid 15px #D3D3D3;margin-top : 60px; margin-bottom:30px;">
+<img src = "img/quiz.jpg" style = "width : 100%; height : 280px;margin : 0;border : 0">
+<center><font style = "text-align : center;margin-top : 10px;font-size : 20px;display: preserve-3d;font-family: Source Sans Pro; font-weight:bold;">Chemistry Quiz</font>
+  </center>
+</div>
+
+
+<div class = "col-md-4"  style = "height: 320px;background-color: #fff;border-right: solid 15px #D3D3D3;margin-top : 60px; margin-bottom:30px;">
+
+<img src = "img/comp.jpg" style = "width : 100%; height : 280px;">
+<center>
+<font style = "text-align : center;margin-top : 10px;font-size : 20px;display: preserve-3d;font-family: Source Sans Pro; font-weight:bold; ">Computing</font>
+</center>
+</div>
+
+<div class = "col-md-4"  style = "height: 320px;background-color: #fff;margin-top : 60px;  margin-bottom:30px;">
+<img src = "img/Experiment.jpg" style = "width : 100%; height : 280px">
+<center>
+<font style = "text-align : center;margin-top : 10px;font-size : 20px;display: preserve-3d;font-family: Source Sans Pro; font-weight:bold; ">Practicals</font>
+</center>
+</div>
+
+</div>
+</div>
+  </div>
+
+
+
+
+
+<!-- ************************************************************************************************************************ -->
+
+
+<div class="smallfooter" style="background-color:#0c2461; display:block; font-family: 'Source Sans Pro', sans-serif; padding-bottom:450px;">
+   <div class="col-sm-6 col-md-6" style="float:left; background-color:#0c2461;" >
+        <a href="index.html">
+        <div class = "schoolName" style="  border-style:solid;
+          border-width: thin;
+          border-color: white;
+          height:140px;
+          width:140px;
+          margin-left:5%;
+          margin-top:10px;">
+         <img src="img/SCHEMLOGO.png" height="138px" width="138px">
+        </div>
+      </a>
+      <div class="sfqlinks" style="color:white !important;"  >
+      <ul style=" list-style-type: none; color:white !important; text-decoration:none;">
+        <li style="margin-top:30px;" >
+        <a style="color:white !important; font-weight:bold; opacity:0.6;" href="http://www.dauniv.ac.in/">DAVV</a>
+        </li>
+        <li style="margin-top:15px;" >
+        <a style="color:white !important; font-weight:bold; opacity:0.6;"href="aboutus.html">About Us</a>
+        </li>
+        <li style="margin-top:15px;" >
+        <a style="color:white !important; font-weight:bold; opacity:0.6;" href="https://maps.google.com/?cid=6646430206762351224">Campus Map</a>
+        </li>
+        <li style="margin-top:15px;" >
+        <a style="color:white !important; font-weight:bold; opacity:0.6;" href="aboutdev.html">About Developers</a>
+        </li>
+
+      </ul>
+    </div>
+      <hr style="width:70%; margin-left:20%; margin-top:20px; color:white;">
+      <center>
+      <font style="font-size:12px; color:white ; ">
+        <span style="font-size: 1.2em; color: white;">
+      <i class="far fa-copyright"></i>
+      </span> 2018 School of Chemical Sciences </font>
+      </center>
+   </div>
+
+   <div class="col-sm-6 col-md-6" style="float:left; background-color:#0c2461;" >
+    <div class="mapouter" style="outline:solid 20px white; margin-top:30px; margin-bottom:10px;"><div class="gmap_canvas"><iframe width="350" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=School%20of%20chemical%20sciences%2CDAVV%2C%20KHANDWA%20ROAD&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de/webdesign-muenster/"></a></div>
+    <style>.mapouter{text-align:right;height:350px;width:350px;}.gmap_canvas {overflow:hidden;background:none!important;height:350px;width:350px;}
+    </style></div>
+
+</div>
+
+</div>
+</div>
+
+  </body>
+  </html>
