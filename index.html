@@ -152,20 +152,160 @@
   text-decoration: none;
 
 }
+      @media only screen and (max-width: 1020px) {
+
+  .gif{
+    display:none;
+  }
+  #f1,#f2{
+    font-size:3vw !important;
+    position: absolute !important;
+    right:3% !important;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+
+  
+  #f1,#f2{
+    display:none;
+  }
+  
+
+
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #0c2461;
+  
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color:#f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight:bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:20px;
+  opacity: 0.6;
+}
+
+.active {
+  
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-weight:bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:20px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+
+.dropbtn {
+  opacity:0.6;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  height:auto;
+  z-index:5;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block !important;
+  text-align: left;
+
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  /*background-color: #555;*/
+  color: white;
+  opacity: 1;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  position:fixed;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
 
 
     </style>
   </head>
   <body style="background-color: #E9E6DF;">
     <div class="container-fluid" style="width:100% !important; padding:0% !important; margin:0% !important;box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2), 0 14px 25px 0 rgba(0, 0, 0, 0.19); " >
-      <div class="pseudocont" style="z-index:1; box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2), 0 14px 25px 0 rgba(0, 0, 0, 0.19);"  >
-      <nav class="navbar navbar-inverse" id="pseudoheader" style="background-color: #0c2461; position:fixed; width:100%; border:0px; z-index:3;">
+      <div class="pseudocont" style=" box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2), 0 14px 25px 0 rgba(0, 0, 0, 0.19); position:fixed;
+      z-index:3 !important;"  >
+      <nav class="navbar navbar-inverse" id="pseudoheader" style="background-color: #0c2461; position:fixed; z-index:0 !important;width:100%; border:0px;">
   <div class="container-fluid" id="pseudocontent" style="font-family: 'Source Sans Pro', sans-serif; font-weight:bold;font-size:18px;" >
     <div class="navbar-header" >
-      <a class="navbar-brand" style="font-family: serif; font-size : 20px; color:white; font-weight:normal; padding-top:8px; " href="index.html">SCHOOL OF CHEMICAL SCIENCES</a>
+      <a class="navbar-brand" style="font-family: serif; font-size : 20px; color:white; font-weight:normal; padding-top:8px; " href="bsnewsocs.html">SCHOOL OF CHEMICAL SCIENCES</a>
     </div>
     <ul class="nav navbar-nav navbar-left">
-      <li><a href="bsnewsocs.html"><span style="font-size: 1.2em; color: white;">
+      <li><a href="index.html"><span style="font-size: 1.2em; color: white; ">
             <i class="fas fa-home"></i>
             </span></a></li>
     </ul>
@@ -200,47 +340,52 @@
   </div>
 </nav>
 </div>
-<font id="f1" style="font-size:2.5vw; color:white; position:absolute;  top:40px; left:36%; z-index:5; font-family:serif; font-weight:bold; ">SCHOOL OF CHEMICAL SCIENCES
+<font id="f1" style="font-size:2.7vw; color:white; position:absolute;  top:30px; right:20%; z-index:5; font-family:serif; font-weight:bold; ">SCHOOL OF CHEMICAL SCIENCES
 </font>
-<font id="f2" style="font-size:2.5vw; color:white; position:absolute;  top:120px; left:44%; z-index:5; font-family: 'Hind', sans-serif; font-weight:bold;">रसायन विज्ञान अध्ययनशाला  
+<font id="f2" style="font-size:2.7vw; color:white; position:absolute;  top:110px; right:23%; z-index:5; font-family: 'Hind', sans-serif; font-weight:bold;">रसायन विज्ञान अध्ययनशाला  
 </font>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:#0c2461; width:100% !important; z-index:4; ">
-  <a class="navbar-brand" href="#">
-    <a href="bsnewsocs.html">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:#0c2461; width:100% !important; z-index:4; ">
+  <a class="navbar-brand" href="#"> -->
+    <nav class="" style="background-color: #0c2461; position:relative; z-index:4 !important; width:100%; padding-top:10px;">
+    <a href="index.html">
     <div class = "schoolName" style="  border-style:solid;
       border-width: thin;
       border-color: white;
       height:150px;
       width: 140px;
-      margin-top:-50px;
+      display:inline-block;
+      margin-top: 10px;
+      margin-left:3%;
       ">
      <img src="img/SCHEMLOGO.png" height="100%" width="100%">
      
     </div>
     </a>
     <a href="http://www.dauniv.ac.in/">
-     <div class="logopane" style="display: block;
-     margin-left: 5%;
+     <div class="logopane" style="
+     margin-left: 3%;
      width:140px;
      height:150px;
      border-style:solid;
      border-width: thin;
      border-color: white;
-     margin-top:-50px;
+     display:inline-block;
+     margin-top: 0px;
+     margin-bottom:10px;
      ">
       <center><img src= "img/davvLogo2.png" width="95%" height="95%" style =" margin-top:0.5vw;">
       </center>
       </div></a>
-<!--       <div class="gif">
-        <img src = "img/atoms.gif" style = "height :180px;width : 180px;position: absolute;left : 80%; top:20px; ">
-      </div> -->
-</a>
+      <div class="gif">
+        <img src = "img/atoms.gif" style = "height :180px;width : 180px;position: absolute;right:3%; top:20px; ">
+      </div>
+
 <!-- <font id="f3" style="font-size:36px; color:white;  left:10%; z-index:5; font-family:serif; display:none;">SCHOOL OF CHEMICAL SCIENCES</font>
 <font id="f4" style="font-size:44px; color:white;  left:10%; z-index:5; font-family: 'Hind', sans-serif; display:none; ">रसायन विज्ञान अध्ययन शाला  
 </font>
  -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style="background-color:white; color:#0c2461;">
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style="background-color:white; color:#0c2461;">
     <span class="navbar-toggler-icon" style="color:white;"></span>
   </button>
 
@@ -283,8 +428,52 @@
 
     </ul>
 
+  </div> -->
+  <div class="topnav" id="myTopnav" style="margin-left: 2%;">
+  <a href="index.html" style="opacity:1;"><span style="font-size: 1.2em; color: white; ">
+            <i class="fas fa-home"></i>
+            </span></a>
+  <a href="aboutus.html">About</a>
+  <div class="dropdown">
+    <button class="dropbtn">Admission 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Admission Procedure</a>
+      <a href="#">Eligibility</a>
+      <a href="#">Seat Matrix</a>
+      <a href="#">Fee Structure</a>
+     </div>
   </div>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="window.location.href='research.html'">Research 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" >
+      <a href="Doc/SCHEM Lab Profile 1.doc">Lab Profile 1</a>
+      <a href="Doc/SCHEM Lab Profile 2.doc">Lab Profile 2</a>
+      <a href="Doc/SCHEM Lab Profile 3.doc">Lab Profile 3</a>
+    </div>
+  </div> 
+  <a href="student.html">Students</a>
+  <a href="activities.html">Activities</a>
+  <a href="facultyprofile.html">Staff</a>
+  <a href="http://www.iqac.dauniv.ac.in/" target="_blank">IQAC</a>
+  <a href="alumni.html">Alumni</a>
+  <a href="photogallery.html">Gallery</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
 </nav>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 <marquee><i class="fas fa-vial" style = "color :#800000;font-size : 20px;margin-right : 5px;"></i> <font id = "marquee" style = "font-size : 25px;font-family: serif; color :#800000;"><b>SCHOOL OF CHEMICAL SCIENCES WELCOMES YOU!!!</b></font><i class="fas fa-vial" style = "color :#800000;font-size : 20px;margin-left : 5px;"></i></marquee>
 <marquee></marquee>
 
