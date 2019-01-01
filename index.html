@@ -120,25 +120,17 @@
 }
       
 /* from here       */
-   .nav-item a:hover {
-  opacity:1 !important;
-}
-
-@media only screen and (max-width: 1080px) {
+   @media only screen and (max-width: 1080px) {
   .pseudocont{
     display:none;
   }
-
 }
-
 @media only screen and (max-width: 500px) {
   .mapouter,.gmap_canvas,#gmap_canvas{
     width:350px;
   }
-
 }
       @media only screen and (max-width: 1020px) {
-
   .gif{
     display:none;
   }
@@ -148,25 +140,19 @@
     right:3% !important;
   }
 }
-
 @media only screen and (max-width: 710px) {
-
   
   #f1,#f2{
     display:none;
   }
   
-
-
 }
-
-.topnav {
+.itopnav {
   overflow: hidden;
   background-color: #0c2461;
   
 }
-
-.topnav a {
+.itopnav a {
   float: left;
   display: block;
   color:#f2f2f2;
@@ -176,24 +162,20 @@
   font-weight:bold;
   font-family: 'Source Sans Pro', sans-serif;
   font-size:20px;
-  opacity: 0.6;
+  opacity: 0.7;
 }
-
-.active {
+.iactive {
   
   color: white;
 }
-
-.topnav .icon {
+.itopnav .icon {
   display: none;
 }
-
-.dropdown {
+.idropdown {
   float: left;
   overflow: hidden;
 }
-
-.dropdown .dropbtn {
+.idropdown .idropbtn {
   font-weight:bold;
   font-family: 'Source Sans Pro', sans-serif;
   font-size:20px;  
@@ -204,86 +186,76 @@
   background-color: inherit;
   margin: 0;
 }
-
-.dropbtn {
+.idropbtn {
   opacity:0.6;
 }
-
-
-.dropdown-content {
+.idropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  height:auto;
   z-index:5;
 }
-
-.dropdown-content a {
+.idropdown-content a {
   float: none;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
-  display: block !important;
+  display: block ;
   text-align: left;
-
 }
-
-.topnav a:hover, .dropdown:hover .dropbtn {
+.itopnav a:hover, .idropdown:hover .idropbtn {
   /*background-color: #555;*/
   color: white;
   opacity: 1;
 }
-
-.dropdown-content a:hover {
+.idropdown-content a:hover {
   background-color: #ddd;
   color: black;
 }
-
-.dropdown:hover .dropdown-content {
+.idropdown:hover .idropdown-content {
   display: block;
-  position:absolute;
 }
-
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
+  .itopnav a:not(:first-child), .idropdown .idropbtn {
     display: none;
   }
-  .topnav a.icon {
+  .itopnav a.icon {
     float: right;
     display: block;
   }
 }
-
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
+  .itopnav.responsive {position: relative;}
+  .itopnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .topnav.responsive a {
+  .itopnav.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
+  .itopnav.responsive .idropdown {float: none;}
+  .itopnav.responsive .idropdown-content {position: relative;}
+  .itopnav.responsive .idropdown .idropbtn {
     display: block;
     width: 100%;
     text-align: left;
   }
-}   
+} 
 
-
-
+#colch:hover {
+    color:white !important;
+  
+}  
     </style>
   </head>
   <body style="background-color: #E9E6DF;">
-    <div class="container-fluid" style="width:100% !important; padding:0% !important; margin:0% !important;box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2), 0 14px 25px 0 rgba(0, 0, 0, 0.19); " >
-      <div class="pseudocont" style=" box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2), 0 14px 25px 0 rgba(0, 0, 0, 0.19); position:fixed;
+    <div class="container-fluid" style="width:100% !important; padding:0% !important; margin:0% !important; " >
+      <div class="pseudocont" style=" box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 1); position:fixed;
       z-index:3 !important;"  >
       <nav class="navbar navbar-inverse" id="pseudoheader" style="background-color: #0c2461; position:fixed; z-index:0 !important;width:100%; border:0px;">
   <div class="container-fluid" id="pseudocontent" style="font-family: 'Source Sans Pro', sans-serif; font-weight:bold;font-size:18px;" >
@@ -299,10 +271,33 @@
       <li><a href="aboutus.html">About</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-left">
-      <li><a href="admission.html">Admission</a></li>
+      <li><div class="idropdown" >
+    <button class="idropbtn" id="colch" style="font-size:18px; color: #9d9d9d; opacity:1;">Admission 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="idropdown-content">
+      <a href="#">Admission Procedure</a>
+      <a href="#">Eligibility</a>
+      <a href="#">Seat Matrix</a>
+      <a href="#">Fee Structure</a>
+     </div>
+  </div>
+  </li>
     </ul>
     <ul class="nav navbar-nav navbar-left">
-      <li><a href="research.html">Research</a></li>
+      <li><div class="idropdown" >
+    <button class="idropbtn" id="colch" onclick="window.location.href='research.html'"  style="font-size:18px; color: #9d9d9d; opacity:1;">
+      Research 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="idropdown-content" >
+      <a href="research.html">Research</a>
+      <div class="dropdown-divider"></div>
+      <a href="Doc/SCHEM Lab Profile 1.doc">Lab Profile 1</a>
+      <a href="Doc/SCHEM Lab Profile 2.doc">Lab Profile 2</a>
+      <a href="Doc/SCHEM Lab Profile 3.doc">Lab Profile 3</a>
+    </div>
+  </div></li>
     </ul>
     <ul class="nav navbar-nav navbar-left">
       <li><a href="student.html">Students</a></li>
@@ -331,9 +326,9 @@
 <font id="f2" style="font-size:2.7vw; color:white; position:absolute;  top:110px; right:23%; z-index:5; font-family: 'Hind', sans-serif; font-weight:bold;">रसायन विज्ञान अध्ययनशाला  
 </font>
 
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:#0c2461; width:100% !important; z-index:4; ">
-  <a class="navbar-brand" href="#"> -->
-    <nav class="" style="background-color: #0c2461; position:relative; z-index:4 !important; width:100%; padding-top:10px;">
+
+    <nav class="" style="background-color: #0c2461; position:relative; z-index:4 !important; width:100%; padding-top:10px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);">
     <a href="index.html">
     <div class = "schoolName" style="  border-style:solid;
       border-width: thin;
@@ -367,75 +362,30 @@
         <img src = "img/atoms.gif" style = "height :180px;width : 180px;position: absolute;right:3%; top:20px; ">
       </div>
 
-<!-- <font id="f3" style="font-size:36px; color:white;  left:10%; z-index:5; font-family:serif; display:none;">SCHOOL OF CHEMICAL SCIENCES</font>
-<font id="f4" style="font-size:44px; color:white;  left:10%; z-index:5; font-family: 'Hind', sans-serif; display:none; ">रसायन विज्ञान अध्ययन शाला  
-</font>
- -->
-  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style="background-color:white; color:#0c2461;">
-    <span class="navbar-toggler-icon" style="color:white;"></span>
-  </button>
 
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="margin-top:80px; " >
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="font-family: 'Source Sans Pro', sans-serif; font-weight:bold;font-size:20px; flex:1; width: 100%; ">
-      <li class="nav-item" id="e1" >
-        <a class="nav-link" style="color:white ; opacity:1;" href="bsnewsocs.html">
-      <span style="font-size: 1.2em; color: white;">
-            <i class="fas fa-home"></i>
-            </span></a>
-          </li>
-      <li class="nav-item" id="e2" style=" margin-left:5%;">
-        <a class="nav-link" style="color:white ; opacity:0.6;" href="aboutus.html">About</a>
-      </li>
-      <li class="nav-item" id="e3" style=" margin-left:5%; ">
-        <a class="nav-link" style="color:white ; opacity:0.6;" href="admission.html">Admission</a>
-      </li>
-      <li class="nav-item" id="e4" style="margin-left:5%; ">
-        <a class="nav-link" style="color:white ; opacity:0.6;"href="research.html">Research</a>
-      </li>
-      <li class="nav-item" id="e5" style="margin-left:5%; ">
-        <a class="nav-link" style="color:white ; opacity:0.6;"href="student.html">Students</a>
-      </li>
-       <li class="nav-item" id="e5" style="margin-left:5%; ">
-        <a class="nav-link" style="color:white ; opacity:0.6;"href="activities.html">Activities</a>
-      </li>
-      <li class="nav-item" id="e6" style="margin-left:5%; ">
-        <a class="nav-link" style="color:white ; opacity:0.6;"href="facultyprofile.html">Staff</a>
-      </li>
-      <li class="nav-item" id="e7" style=" margin-left:5%;">
-        <a class="nav-link" target="_blank" style="color:white ; opacity:0.6;"href="http://www.iqac.dauniv.ac.in/">IQAC</a>
-      </li>
-      <li class="nav-item" id="e8" style="margin-left:5%; ">
-        <a class="nav-link" style="color:white ; opacity:0.6;"href="alumni.html">Alumni</a>
-      </li>
-      <li class="nav-item" id="e9" style="margin-left:5%;">
-        <a class="nav-link" style="color:white; opacity:0.6;"href="photogallery.html">Gallery</a>
-      </li>
-
-    </ul>
-
-  </div> -->
-  <div class="topnav" id="myTopnav" style="margin-left: 2%;">
+  <div class="itopnav" id="myTopnav" style="margin-left: 2%;">
   <a href="index.html" style="opacity:1;"><span style="font-size: 1.2em; color: white; ">
             <i class="fas fa-home"></i>
             </span></a>
   <a href="aboutus.html">About</a>
-  <div class="dropdown">
-    <button class="dropbtn">Admission 
+  <div class="idropdown">
+    <button class="idropbtn">Admission 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div class="idropdown-content">
       <a href="#">Admission Procedure</a>
       <a href="#">Eligibility</a>
       <a href="#">Seat Matrix</a>
       <a href="#">Fee Structure</a>
      </div>
   </div>
-  <div class="dropdown">
-    <button class="dropbtn" onclick="window.location.href='research.html'">Research 
+  <div class="idropdown" style="">
+    <button class="idropbtn" onclick="window.location.href='research.html'">Research 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content" >
+    <div class="idropdown-content" >
+      <a href="research.html">Research</a>
+      <div class="dropdown-divider"></div>
       <a href="Doc/SCHEM Lab Profile 1.doc">Lab Profile 1</a>
       <a href="Doc/SCHEM Lab Profile 2.doc">Lab Profile 2</a>
       <a href="Doc/SCHEM Lab Profile 3.doc">Lab Profile 3</a>
@@ -453,17 +403,17 @@
 <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
+  if (x.className === "itopnav") {
     x.className += " responsive";
   } else {
-    x.className = "topnav";
+    x.className = "itopnav";
   }
 }
 </script>
       
 <!--    to here    -->
-<marquee><i class="fas fa-vial" style = "color :#800000;font-size : 20px;margin-right : 5px;"></i> <font id = "marquee" style = "font-size : 25px;font-family: serif; color :#800000;"><b>SCHOOL OF CHEMICAL SCIENCES WELCOMES YOU!!!</b></font><i class="fas fa-vial" style = "color :#800000;font-size : 20px;margin-left : 5px;"></i></marquee>
-<marquee></marquee>
+<marquee style="margin-top:20px;"><i class="fas fa-vial" style = "color :#800000;font-size : 20px;margin-right : 5px;"></i> <font id = "marquee" style = "font-size : 25px;font-family: serif; color :#800000;"><b>SCHOOL OF CHEMICAL SCIENCES WELCOMES YOU!!!</b></font><i class="fas fa-vial" style = "color :#800000;font-size : 20px;margin-left : 5px;"></i></marquee>
+<br>
 
 <!-- <script type="text/javascript">
 
