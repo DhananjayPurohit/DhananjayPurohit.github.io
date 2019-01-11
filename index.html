@@ -974,6 +974,75 @@ document.onreadystatechange = function () {
       },1000);
   }
 }
+ var img,num,showImg,quote;
+
+num = randomNum().toString();
+img = document.getElementById('apjfrontimg');
+showImg = document.getElementById('apjsqimg');
+quote = document.getElementById('quote');
+showImg.style.display = 'none';
+quote.style.display = 'none';
+
+function mouseOver(){
+	img.style.filter = 'blur(10px)'; 
+	showImg.style.display =  'block';
+	quote.style.display= 'block';
+}
+
+function mouseOut(){
+	img.style.filter = 'none';
+    showImg.style.display = 'none';
+	quote.style.display = 'none';
+
+}
+
+function randomNum(){
+	return Math.floor(Math.random() * 3) + 1 
+}
+
+function changeImage(){
+	img.src = "img/img-" + num + '.jpg';
+	showImg.src = "img/simg-" + num + '.jpg'
+}
+
+function setupEventListeners(){
+	img.addEventListener('mouseover', mouseOver);
+    img.addEventListener('mouseout', mouseOut);
+}
+
+function init(){
+changeImage();
+setupEventListeners();	
+ quoteChanger(num); 
+}
+
+function quoteChanger(randNum){
+
+	if(randNum == 1){
+    document.getElementById('quote').innerHTML = "Learning gives creativity \n "
+    document.getElementById('quote').innerHTML += "Creativity leads to thinking\n "
+    document.getElementById('quote').innerHTML +="Thinking provides knowledge \n"
+    document.getElementById('quote').innerHTML +="Knowledge makes you great."
+    }
+
+	else if(randNum == 3){
+      document.getElementById('quote').innerHTML =   "           Nothing in life is to be \n "   
+       document.getElementById('quote').innerHTML += "           feared,it is only to be \n "
+        document.getElementById('quote').innerHTML += "               understood. Now is the time\n "
+         document.getElementById('quote').innerHTML += "              to understand more, so \n "
+         document.getElementById('quote').innerHTML +=  "             that we may fear less."
+	}
+
+	else(randNum == 2){
+		document.getElementById('quote').innerHTML = "               Work, look for peace \n "
+		document.getElementById('quote').innerHTML +="               and calm in work; \n"
+		document.getElementById('quote').innerHTML +="               you will find it \n"
+		document.getElementById('quote').innerHTML +="               nowhere else."
+	}
+}
+
+init();
+
   
       </script>
 
