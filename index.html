@@ -974,7 +974,69 @@ Knowledge makes you great. "</pre></center>
 </div>
 </div>
 <script>
-  
+var num, showImg, quote, img;	
+showImg = document.getElementById('apjsqimg');
+quote = document.getElementById('quote');
+img = document.getElementById('apjfrontimg')
+	
+function changeImage(str(num)){
+	img.src = "img/img-" + num + '.jpg';
+	showImg.src = "img/simg-" + num + '.jpg'
+}	
+
+function randomNum(){
+	num =  Math.floor(Math.random() * 3) + 1
+	return num
+}
+	
+function quoteChanger(randNum){
+
+	if(randNum == 1){
+    document.getElementById('quote').innerHTML = "      Learning gives creativity \n "
+    document.getElementById('quote').innerHTML += "     Creativity leads to thinking\n "
+    document.getElementById('quote').innerHTML +="      Thinking provides knowledge \n"
+    document.getElementById('quote').innerHTML +="      Knowledge makes you great."
+    }
+
+	if (randNum == 3){
+      document.getElementById('quote').innerHTML =   "       Nothing in life is to be \n "   
+       document.getElementById('quote').innerHTML += "        feared,it is only to be \n "
+        document.getElementById('quote').innerHTML += "       understood. Now is the time\n "
+         document.getElementById('quote').innerHTML += "        to understand more, so \n "
+         document.getElementById('quote').innerHTML +=  "       that we may fear less."
+	}
+
+	if(randNum == 2){
+		document.getElementById('quote').innerHTML = "           Work, look for peace \n "
+		document.getElementById('quote').innerHTML +="           and calm in work; \n"
+		document.getElementById('quote').innerHTML +="           you will find it \n"
+		document.getElementById('quote').innerHTML +="           nowhere else."
+	}
+}
+	randomNum();
+	changeImage();
+	quoteChanger(toString(num));
+	quote.style.display = 'none';
+	showimg.style.display = 'none';
+	window.addEventListener('scroll', function(){
+	
+
+	if(pageYOffset > 2100 && pageYOffset < 2800){
+		img.style.filter = 'blur(10px)';
+		console.log(pageYOffset + "px");
+		quote.style.display = 'block';
+		showimg.style.display = 'block';
+	}
+
+	else{
+		img.style.filter = 'blur(0px)';
+		quote.style.display = 'none';
+		showimg.style.display = 'none';
+	}
+	
+
+});
+// 	**************************************************************
 document.onreadystatechange = function () {
   var state = document.readyState
   if (state == 'interactive') {
@@ -988,75 +1050,75 @@ document.onreadystatechange = function () {
   }
 }
  
-var img,num,showImg,quote;
+// var img,num,showImg,quote;
 
-num = randomNum().toString();
-img = document.getElementById('apjfrontimg');
-showImg = document.getElementById('apjsqimg');
-quote = document.getElementById('quote');
-showImg.style.display = 'none';
-quote.style.display = 'none';
+// num = randomNum().toString();
+// img = document.getElementById('apjfrontimg');
+// showImg = document.getElementById('apjsqimg');
+// quote = document.getElementById('quote');
+// showImg.style.display = 'none';
+// quote.style.display = 'none';
 
-function mouseOver(){
-	img.style.filter = 'blur(10px)'; 
-	showImg.style.display =  'block';
-	quote.style.display= 'block';
-}
+// function mouseOver(){
+// 	img.style.filter = 'blur(10px)'; 
+// 	showImg.style.display =  'block';
+// 	quote.style.display= 'block';
+// }
 
-function mouseOut(){
-	img.style.filter = 'none';
-    showImg.style.display = 'none';
-	quote.style.display = 'none';
+// function mouseOut(){
+// 	img.style.filter = 'none';
+//     showImg.style.display = 'none';
+// 	quote.style.display = 'none';
 
-}
+// }
 
-function randomNum(){
-	return Math.floor(Math.random() * 3) + 1 
-}
+// function randomNum(){
+// 	return Math.floor(Math.random() * 3) + 1 
+// }
 
-function changeImage(){
-	img.src = "img/img-" + num + '.jpg';
-	showImg.src = "img/simg-" + num + '.jpg'
-}
+// function changeImage(){
+// 	img.src = "img/img-" + num + '.jpg';
+// 	showImg.src = "img/simg-" + num + '.jpg'
+// }
 
-function setupEventListeners(){
-	img.addEventListener('mouseover', mouseOver);
-    img.addEventListener('mouseout', mouseOut);
-}
+// function setupEventListeners(){
+// 	img.addEventListener('mouseover', mouseOver);
+//     img.addEventListener('mouseout', mouseOut);
+// }
 
-function init(){
-changeImage();
-setupEventListeners();	
-}
+// function init(){
+// changeImage();
+// setupEventListeners();	
+// }
 
-function quoteChanger(randNum){
+// function quoteChanger(randNum){
 
-	if(randNum == 1){
-    document.getElementById('quote').innerHTML = "      Learning gives creativity \n "
-    document.getElementById('quote').innerHTML += "     Creativity leads to thinking\n "
-    document.getElementById('quote').innerHTML +="      Thinking provides knowledge \n"
-    document.getElementById('quote').innerHTML +="      Knowledge makes you great."
-    }
+// 	if(randNum == 1){
+//     document.getElementById('quote').innerHTML = "      Learning gives creativity \n "
+//     document.getElementById('quote').innerHTML += "     Creativity leads to thinking\n "
+//     document.getElementById('quote').innerHTML +="      Thinking provides knowledge \n"
+//     document.getElementById('quote').innerHTML +="      Knowledge makes you great."
+//     }
 
-	if (randNum == 3){
-      document.getElementById('quote').innerHTML =   "           Nothing in life is to be \n "   
-       document.getElementById('quote').innerHTML += "           feared,it is only to be \n "
-        document.getElementById('quote').innerHTML += "               understood. Now is the time\n "
-         document.getElementById('quote').innerHTML += "              to understand more, so \n "
-         document.getElementById('quote').innerHTML +=  "             that we may fear less."
-	}
+// 	if (randNum == 3){
+//       document.getElementById('quote').innerHTML =   "           Nothing in life is to be \n "   
+//        document.getElementById('quote').innerHTML += "           feared,it is only to be \n "
+//         document.getElementById('quote').innerHTML += "               understood. Now is the time\n "
+//          document.getElementById('quote').innerHTML += "              to understand more, so \n "
+//          document.getElementById('quote').innerHTML +=  "             that we may fear less."
+// 	}
 
-	if(randNum == 2){
-		document.getElementById('quote').innerHTML = "               Work, look for peace \n "
-		document.getElementById('quote').innerHTML +="               and calm in work; \n"
-		document.getElementById('quote').innerHTML +="               you will find it \n"
-		document.getElementById('quote').innerHTML +="               nowhere else."
-	}
-}
+// 	if(randNum == 2){
+// 		document.getElementById('quote').innerHTML = "               Work, look for peace \n "
+// 		document.getElementById('quote').innerHTML +="               and calm in work; \n"
+// 		document.getElementById('quote').innerHTML +="               you will find it \n"
+// 		document.getElementById('quote').innerHTML +="               nowhere else."
+// 	}
+// }
 
-init();
-quoteChanger(num);
-console.log(num)
+// init();
+// quoteChanger(num);
+// console.log(num)
 
 
   
