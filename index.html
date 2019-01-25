@@ -829,16 +829,13 @@ include('connect-db.php');
 </div>
 
 <div class="thoughtimg" style = "position : relative; margin-top:30px;">
-  <img src="" id="apjfrontimg"  style=" height:auto; width:100%; transition:0.3s;filter : blur(8px);margin-height : 500px;">
+  <img src="" id="backImage"  style=" height:auto; width:100%;max-height : 800px;">
 
 
-  <center><img src="" id="apjsqimg"  style="display : inline-block;position : absolute;top : 20px;height:auto; width:30%; border-radius:100%; visibility:visible; left:35%; ">
+  <center><img src="" id="frontImage"  style="display : inline-block;position : absolute;top : 20px;width:30%; border-radius:100%; visibility:visible; left:35%;height : 300px; ">
 
-  <pre id="quote" style=" font-size:4vw; font-family: 'Source Sans Pro', sans-serif; font-weight:bold; position:absolute; top:50%; color:white; background:transparent; visibility:visible;left:26%; border:0px;">
-<!--     " Learning gives creativity
-Creativity leads to thinking
-Thinking provides knowledge
-Knowledge makes you great. "</pre></center> --></pre></center>
+ <pre id="quote" style=" font-size:4vw; font-family: 'Source Sans Pro', sans-serif; font-weight:bold; position:absolute; top:50%; color:white; background:transparent; visibility:visible;left:25%; border:0px;">
+</pre></center>
 </div>
 
 
@@ -992,156 +989,69 @@ Knowledge makes you great. "</pre></center> --></pre></center>
 
 </div>
 </div>
-<!-- <script>
-var num, showImg, quote, img;	
-showImg = document.getElementById('apjsqimg');
-quote = document.getElementById('quote');
-img = document.getElementById('apjfrontimg')
+
+<script>
 	
-function changeImage(str(num)){
-	img.src = "img/img-" + num + '.jpg';
-	showImg.src = "img/simg-" + num + '.jpg'
-}	
-
-function randomNum(){
-	num =  Math.floor(Math.random() * 3) + 1
-	return num
-}
-	
-function quoteChanger(randNum){
-
-	if(randNum == 1){
-    document.getElementById('quote').innerHTML = "      Learning gives creativity \n "
-    document.getElementById('quote').innerHTML += "     Creativity leads to thinking\n "
-    document.getElementById('quote').innerHTML +="      Thinking provides knowledge \n"
-    document.getElementById('quote').innerHTML +="      Knowledge makes you great."
-    }
-
-	if (randNum == 3){
-      document.getElementById('quote').innerHTML =   "       Nothing in life is to be \n "   
-       document.getElementById('quote').innerHTML += "        feared,it is only to be \n "
-        document.getElementById('quote').innerHTML += "       understood. Now is the time\n "
-         document.getElementById('quote').innerHTML += "        to understand more, so \n "
-         document.getElementById('quote').innerHTML +=  "       that we may fear less."
-	}
-
-	if(randNum == 2){
-		document.getElementById('quote').innerHTML = "           Work, look for peace \n "
-		document.getElementById('quote').innerHTML +="           and calm in work; \n"
-		document.getElementById('quote').innerHTML +="           you will find it \n"
-		document.getElementById('quote').innerHTML +="           nowhere else."
-	}
-}
-	randomNum();
-	changeImage();
-	quoteChanger(toString(num));
+	var randNum = Math.floor(Math.random() * 3) + 1;
 	quote.style.display = 'none';
-	showimg.style.display = 'none';
+	frontImage.style.display = 'none'
+
 	window.addEventListener('scroll', function(){
 	
+	var frontImage, backImage, quote, tht;
 
-	if(pageYOffset > 2100 && pageYOffset < 2800){
-		img.style.filter = 'blur(10px)';
-		console.log(pageYOffset + "px");
-		quote.style.display = 'block';
-		showimg.style.display = 'block';
-	}
-
-	else{
-		img.style.filter = 'blur(0px)';
-		quote.style.display = 'none';
-		showimg.style.display = 'none';
-	}
+	frontImage = document.getElementById('frontImage');
+	backImage = document.getElementById('backImage');
+	quote = document.getElementById("quote");
 	
- 
+
+	function imageGenerator(num){
+		num =  num.toString();
+		frontImage.src = 'img/' + 'simg-' + num + '.jpg';
+		backImage.src = 'img/' + 'img-' + num + '.jpg';
+		
+		//Change this quote value.
+		quoteGenerator(randNum);
+		quote.innerHTML = tht;
+
+	};
+
+	imageGenerator(randNum);
+	
+
+	if(pageYOffset > 1850 && pageYOffset < 2300){
+		backImage.style.filter = 'blur(10px)';
+	    quote.style.display = 'block';
+		frontImage.style.display = 'block';
+	}
+	else{
+		backImage.style.filter = 'blur(0px)';
+		quote.style.display = 'none';
+		frontImage.style.display = 'none';
+	}
+
+	function quoteGenerator(randNum){
+
+		if  (randNum === 3){
+			tht = "Nothing in life is to be feared \n it is only to be understood. Now \n is the time to understand more, \n so that we may fear less \n\t\t\t\t - Marie Qurie";
+			
+																												
+		}
+
+		if(randNum === 1){
+			tht = "Learning gives creativity \n Creativity leads to thinking \n Thinking provides knowledge \n Knowledge make you great \n\t\t\t\t -Abdul Kamal Azad";
+																					
+		}
+
+		if(randNum === 2){
+			tht = "Work, look for peace \n and calm in work; \n you will find it nowhere else. \n\t\t -Dmitri Ivanovich Mendeleev";
+					
+
+		}
+	}
+
 });
-// 	**************************************************************
-document.onreadystatechange = function () {
-  var state = document.readyState
-  if (state == 'interactive') {
-       document.getElementById('contents').style.visibility="hidden";
-  } else if (state == 'complete') {
-      setTimeout(function(){
-         document.getElementById('interactive');
-         document.getElementById('load').style.visibility="hidden";
-         document.getElementById('contents').style.visibility="visible";
-      },1000);
-  }
-}
- 
-<!-- // var img,num,showImg,quote;
- 
-// num = randomNum().toString();
-// img = document.getElementById('apjfrontimg');
-// showImg = document.getElementById('apjsqimg');
-// quote = document.getElementById('quote');
-// showImg.style.display = 'none';
-// quote.style.display = 'none';
 
-// function mouseOver(){
-// 	img.style.filter = 'blur(10px)'; 
-// 	showImg.style.display =  'block';
-// 	quote.style.display= 'block';
-// }
-
-// function mouseOut(){
-// 	img.style.filter = 'none';
-//     showImg.style.display = 'none';
-// 	quote.style.display = 'none';
-
-// }
-
-// function randomNum(){
-// 	return Math.floor(Math.random() * 3) + 1 
-// }
-
-// function changeImage(){
-// 	img.src = "img/img-" + num + '.jpg';
-// 	showImg.src = "img/simg-" + num + '.jpg'
-// }
-
-// function setupEventListeners(){
-// 	img.addEventListener('mouseover', mouseOver);
-//     img.addEventListener('mouseout', mouseOut);
-// }
-
-// function init(){
-// changeImage();
-// setupEventListeners();	
-// }
-
-// function quoteChanger(randNum){
-
-// 	if(randNum == 1){
-//     document.getElementById('quote').innerHTML = "      Learning gives creativity \n "
-//     document.getElementById('quote').innerHTML += "     Creativity leads to thinking\n "
-//     document.getElementById('quote').innerHTML +="      Thinking provides knowledge \n"
-//     document.getElementById('quote').innerHTML +="      Knowledge makes you great."
-//     }
-
-// 	if (randNum == 3){
-//       document.getElementById('quote').innerHTML =   "           Nothing in life is to be \n "   
-//        document.getElementById('quote').innerHTML += "           feared,it is only to be \n "
-//         document.getElementById('quote').innerHTML += "               understood. Now is the time\n "
-//          document.getElementById('quote').innerHTML += "              to understand more, so \n "
-//          document.getElementById('quote').innerHTML +=  "             that we may fear less."
-// 	}
-
-// 	if(randNum == 2){
-// 		document.getElementById('quote').innerHTML = "               Work, look for peace \n "
-// 		document.getElementById('quote').innerHTML +="               and calm in work; \n"
-// 		document.getElementById('quote').innerHTML +="               you will find it \n"
-// 		document.getElementById('quote').innerHTML +="               nowhere else."
-// 	}
-// }
-
-// init();
-// quoteChanger(num);
-// console.log(num)
-
-
-  
-      </script>
- -->
+	    </script>
   </body>
   </html>
