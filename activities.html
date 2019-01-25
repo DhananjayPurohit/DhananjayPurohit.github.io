@@ -210,6 +210,36 @@
   
 }  
 
+ .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
     </style>
   </head>
   <body style="background-color: #E9E6DF;">
@@ -371,36 +401,109 @@ function myFunction() {
 </script>
 <p style="font-size : 45px; font-family: 'sans-serif', sans-serif; font-weight:bold;text-align : center;margin-top: 50px;"> Invited Speakers
     </p>
-<div class="gallery" style="margin-bottom:30px;">
-<!-- Photo Grid -->
 <div class="row">
-  <div class="column">
-    <img src="img/sp1.JPG" style="width:100%">
-    <img src="img/sp2.JPG" style="width:100%">
-    <img src="img/sp3.JPG" style="width:100%">
-    <img src="img/sp4.JPG" style="width:100%">
-    
-  </div>
-  <div class="column">
-    <img src="img/sp5.jpg" style="width:100%">
-    <img src="img/sp6.jpg" style="width:100%">
-    <img src="img/sp7.jpg" style="width:100%">
-   
-    
-  </div>
-  <div class="column">
-     <img src="img/sp8.jpg" style="width:100%">
-    <img src="img/sp9.jpg" style="width:100%">
-    <img src="img/sp10.jpg" style="width:100%">
-   
-    
-  </div>
-  <div class="column">
-     <img src="img/sp11.jpg" style="width:100%">
-    <img src="img/sp12.jpg" style="width:100%">
-    <img src="img/sp13.jpg" style="width:100%">
-   
-  </div>
+  <div class="col-md">
+<div class="card">
+  <img src="img/sp2.JPG" alt="" style="width:100%">
+  <h3>Dr. J.S. Yadav</h3>
+  <p class="title">Forward Director</p>
+  <p>IICT Hyderabad</p>
+  <p><button style="background-color:#0c2461;">Contact</button></p>
+</div>
+</div>
+
+<div class="col-md">
+<div class="card">
+  <img src="img/sp12.JPG" alt="" style="width:100%">
+  <h3>Prof. R.S. Mali</h3>
+  <p class="title">Former Vice Chancelor</p>
+  <p>Jalgaon University</p>
+  <p><button style="background-color:#0c2461;">Contact</button></p>
+</div>
+</div>
+
+<div class="col-md">
+<div class="card">
+  <img src="img/sp9.JPG" alt="" style="width:100%">
+  <h3>Dr. C. Venkatesh</h3>
+  <!-- <p class="title">Forward Director</p> -->
+  <p>IIT Indore</p>
+  <p><button style="background-color:#0c2461;">Contact</button></p>
+</div>
+</div>
+
+<div class="col-md">
+<div class="card">
+  <img src="img/sp8.JPG" alt="" style="width:100%">
+  <h3>Dr. Sampak Samanta</h3>
+  <!-- <p class="title">Forward Director</p> -->
+  <p>IIT Indore</p>
+  <p><button style="background-color:#0c2461;">Contact</button></p>
+</div>
+</div>
+
+</div>
+
+<div class="row">
+  <div class="col-md">
+  <div class="card">
+  <img src="img/sp.JPG" alt="" style="width:100%">
+  <h3>Dr. S.K. Singh</h3>
+  <!-- <p class="title">Forward Director</p> -->
+  <p>IIT Indore</p>
+  <p><button style="background-color:#0c2461;">Contact</button></p>
+</div>
+</div>
+
+<div class="col-md">
+<div class="card">
+  <img src="img/sp5.JPG" alt="" style="width:100%">
+  <h3>Dr. Satya S. Bulusu</h3>
+  <!-- <p class="title">Forward Director</p> -->
+  <p>IIT Indore</p>
+  <p><button style="background-color:#0c2461;">Contact</button></p>
+</div>
+</div>
+
+<div class="col-md">
+<div class="card">
+  <img src="img/sp4.JPG" alt="" style="width:100%">
+  <h3>Dr. P.S. Kulsi</h3>
+  <!-- <p class="title">Forward Director</p> -->
+  <p>Punjab Technical University, Ludhiana</p>
+  <p><button style="background-color:#0c2461;">Contact</button></p>
+</div>
+</div>
+
+<div class="col-md">
+<div class="card">
+  <img src="img/sp3.JPG" alt="" style="width:100%">
+  <h3>Dr. Rajneesh Misra</h3>
+  <!-- <p class="title">Forward Director</p> -->
+  <p>IIT Indore</p>
+  <p><button style="background-color:#0c2461;">Contact</button></p>
+</div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-md">
+  <div class="card">
+  <img src="img/sp1.JPG" alt="" style="width:100%">
+  <h3>Dr. Akhilesh Verma</h3>
+  <!-- <p class="title">Forward Director</p> -->
+  <p>University Of Delhi</p>
+  <p><button style="background-color:#0c2461;">Contact</button></p>
+</div>
+</div>
+
+<div class="col-md">
+<div class="card">
+  <img src="img/sp.JPG" alt="" style="width:100%">
+  <h3>Dr. D.S. Rawat</h3>
+  <!-- <p class="title">Forward Director</p> -->
+  <!-- <p>IIT Indore</p> -->
+  <p><button style="background-color:#0c2461;">Contact</button></p>
 </div>
 </div>
 
