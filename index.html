@@ -404,7 +404,7 @@ canvas {
       </center>
       </div></a>
       <div class="motionpic" style = "height :220px;width : 220px;position: absolute;right:2%; top:10px; ">
-	      <canvas style="width:5%; height:100px;"></canvas>
+	     
       </div>
 <script>
 	// particules
@@ -608,8 +608,8 @@ class Synapse{
 let canvas = document.createElement("canvas"),
   ctx = canvas.getContext("2d");
 document.body.appendChild(canvas);
-let W = canvas.width = window.innerWidth,
-    H = canvas.height = window.innerHeight;
+let W = canvas.width = 220px,
+    H = canvas.height = 220px;
 
 document.addEventListener("mousedown", event => pointerDown(event), false);
 document.addEventListener("mouseup", event => pointerUp(event), false);
