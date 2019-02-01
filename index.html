@@ -1082,7 +1082,7 @@ include('connect-db.php');
 </div>
 
 <div class="thoughtimg" style = "position : relative; margin-top:30px;">
-  <img src="" id="backImage"  style="width:100%;max-height : 800px;">
+  <img src="" id="backImage"  style="width:100%;max-height : 1000px;">
 
 
   <center><img src="" id="frontImage"  style="display : inline-block;position : absolute;top : 20px;width:30%; border-radius:100%; visibility:visible; left:35%;height : 300px; ">
@@ -1246,7 +1246,7 @@ include('connect-db.php');
 <script type="text/javascript">
 	
 	
-	var randNum = Math.floor(Math.random() * 3) + 1;
+	var randNum = Math.floor(Math.random() * 5) + 1;
 	quote.style.display = 'none';
 	frontImage.style.display = 'none'
 
@@ -1273,7 +1273,7 @@ include('connect-db.php');
 	imageGenerator(randNum);
 	
 
-	if(pageYOffset > 1850 && pageYOffset < 2300){
+	if(pageYOffset > 1870 && pageYOffset < 2300){
 		backImage.style.filter = 'blur(10px)';
 	    quote.style.display = 'block';
 		frontImage.style.display = 'block';
@@ -1298,9 +1298,16 @@ include('connect-db.php');
 		}
 
 		if(randNum === 2){
-			tht = "Work, look for peace \n and calm in work; \n you will find it nowhere else. \n\t\t -Dmitri Ivanovich Mendeleev";
-					
+			tht = "Home is \n everywhere I \n work, and I work everywhere.\n\t\t\t -Alfred Noble"
 
+		}
+		
+		if(randNum === 4){
+		tht = "But still try.\n For who \n knows the future.\n\t\t\t - Michael Faraday"	
+		}
+		
+		if(randNum ==5){
+		tht = "As the sun is best seen at his rising and setting, so men's native despositions are clearest seen when they are children and when they are dying. \n\t\t\t -Robert Boyle"	
 		}
 	}
 
