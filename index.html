@@ -479,7 +479,7 @@ class Stick{
     this.min_distance = min_distance;
     this.length = Math.max(min_distance,distance) + Utl.random(10,80);
     this.maxLength = this.length + 100;
-    this.max_link_width = Math.min(2,8);
+    this.max_link_width = Math.min(1,4);
   }
   update(){
         let dx = this.p1.pos.x - this.p0.pos.x,
