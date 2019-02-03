@@ -183,7 +183,8 @@
       .aboutusimg{
       background-image:url(img/wood.jpg);
         }
-    .motionpic {
+   
+.motionpic {
   margin: 0;
   padding: 0;
   color: #222;
@@ -194,7 +195,6 @@
   align-items: center;
   font-size: 2em;
 }
-
 canvas {
   background-color: #0c2461;
 }
@@ -227,8 +227,6 @@ canvas {
   }
   
 }
-
-
     </style>
   </head>
   <body style="background-color: #E9E6DF;">
@@ -328,6 +326,8 @@ canvas {
       width: 150px;
       display:inline-block;
       margin-left:3%;
+      margin-top:20px;
+      margin-bottom:10px;
       ">
 	    <img src= "img/davvlogo.png" width="100%" height="100%" >
       
@@ -343,7 +343,8 @@ canvas {
      border-width: thin;
      border-color: white;
      display:inline-block;
-   
+     margin-top:20px;
+     margin-bottom:10px;
      ">
 	     <img src="img/SCHEMLOGO.png" height="100%" width="100%">
       
@@ -540,7 +541,6 @@ class Synapse{
 }
 let canvas = document.getElementById("can"),
   ctx = canvas.getContext("2d");
-
 let W = canvas.width = 220;
     H = canvas.height = 220;
 document.addEventListener("mousedown", event => pointerDown(event), false);
