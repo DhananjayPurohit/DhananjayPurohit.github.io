@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <link rel = "icon" type = "image/png" href = "img/SCHEMLOGO.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <link rel = "stylesheet" href = "makeover.css"> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    
+    <script src="NewSOC.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>School of Chemical Science</title>
+    <style type="text/css">
+ .sfqlinks a:hover {
+  opacity: 1 !important;
+  text-decoration: none;
+}
+      
+/* from here       */
+  
+@media only screen and (max-width: 1350px) {
+  .pseudocont{
+    display:none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .mapouter,.gmap_canvas,#gmap_canvas{
+    width:350px;
+  }
+}
+      @media only screen and (max-width: 1020px) {
+  .gif{
+    display:none;
+  }
+  #f1,#f2{
+    font-size:3vw !important;
+    position: absolute !important;
+    right:3% !important;
+  }
+}
+@media only screen and (max-width: 710px) {
+  
+  #f1,#f2{
+    display:none;
+  }
+  
+}
+.itopnav {
+  overflow: hidden;
+  background-color: #0c2461;
+  
+}
+.itopnav a {
+  float: left;
+  display: block;
+  color:#f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight:bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:20px;
+  opacity: 0.7;
+}
+.iactive {
+  
+  color: white;
+}
+.itopnav .icon {
+  display: none;
+}
+.idropdown {
+  float: left;
+  overflow: hidden;
+}
+.idropdown .idropbtn {
+  font-weight:bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:20px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+.idropbtn {
+  opacity:0.6;
+}
+.idropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index:5;
+}
+.idropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block ;
+  text-align: left;
+}
+.itopnav a:hover, .idropdown:hover .idropbtn {
+  /*background-color: #555;*/
+  color: white;
+  opacity: 1;
+}
+.idropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.idropdown:hover .idropdown-content {
+  display: block;
+}
+@media screen and (max-width: 600px) {
+  .itopnav a:not(:first-child), .idropdown .idropbtn {
+    display: none;
+  }
+  .itopnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .itopnav.responsive {position: relative;}
+  .itopnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .itopnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .itopnav.responsive .idropdown {float: none;}
+  .itopnav.responsive .idropdown-content {position: relative;}
+  .itopnav.responsive .idropdown .idropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+} 
+
+#colch:hover {
+    color:white !important;
+  
+}  
+ .layer{
+      background-color:rgba(12,36,97,0.5);
+      padding:2%;
+      }
+      .missionimg{
+      background-image:url(img/wood.jpg);
+      }
+      .visionimg{
+        background-image:url(img/wood.jpg);
+      }
+      .aboutusimg{
+      background-image:url(img/wood.jpg);
+        }
+    </style>
+  </head>
+  <body style="background-color: #E9E6DF;">
+    <div class="container-fluid" style="width:100% !important; padding:0% !important; margin:0% !important; " >
+      <div class="pseudocont" style=" box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 1); position:fixed;
+      z-index:3 !important;"  >
+      <nav class="navbar navbar-inverse" id="pseudoheader" style="background-color: #0c2461; position:fixed; z-index:0 !important;width:100%; border:0px;">
+  <div class="container-fluid" id="pseudocontent" style="font-family: 'Source Sans Pro', sans-serif; font-weight:bold;font-size:18px;" >
+    <div class="navbar-header" >
+      <a class="navbar-brand" style="font-family: serif; font-size : 20px; color:white; font-weight:normal; padding-top:8px; " href="bsnewsocs.html">SCHOOL OF CHEMICAL SCIENCES</a>
+    </div>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="index.html"><span style="font-size: 1.2em; color: #9d9d9d; ">
+            <i class="fas fa-home"></i>
+            </span></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="aboutus.html" style="color: white; ">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><div class="idropdown" >
+    <button class="idropbtn" id="colch" style="font-size:18px; color: #9d9d9d; opacity:1;">Admission 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="idropdown-content">
+      <a href="#">Admission Procedure</a>
+      <a href="#">Eligibility</a>
+      <a href="#">Seat Matrix</a>
+      <a href="#">Fee Structure</a>
+     </div>
+  </div>
+  </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><div class="idropdown" >
+    <button class="idropbtn" id="colch" onclick="window.location.href='research.html'"  style="font-size:18px; color: #9d9d9d; opacity:1;">
+      Research 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="idropdown-content" >
+      <a href="research.html">Research</a>
+      <div class="dropdown-divider"></div>
+      <a href="Doc/SCHEM Lab Profile 1.doc">Lab Profile 1</a>
+      <a href="Doc/SCHEM Lab Profile 2.doc">Lab Profile 2</a>
+      <a href="Doc/SCHEM Lab Profile 3.doc">Lab Profile 3</a>
+    </div>
+  </div></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="student.html">Students</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="activities.html">Activities</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="facultyprofile.html">Faculty</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="http://www.iqac.dauniv.ac.in/">IQAC</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="alumni.html">Alumni</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="photogallery.html">Gallery</a></li>
+    </ul>
+
+  </div>
+</nav>
+</div>
+<font id="f1" style="font-size:2.7vw; color:white; position:absolute;  top:30px; right:20%; z-index:5; font-family:serif; font-weight:bold; ">SCHOOL OF CHEMICAL SCIENCES
+</font>
+<font id="f2" style="font-size:2.7vw; color:white; position:absolute;  top:110px; right:23%; z-index:5; font-family: 'Hind', sans-serif; font-weight:bold;">रसायन विज्ञान अध्ययनशाला  
+</font>
+
+
+    <nav class="" style="background-color: #0c2461; position:relative; z-index:4 !important; width:100%; padding-top:10px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);">
+    <a href="index.html">
+    <div class = "schoolName" style="  border-style:solid;
+      border-width: thin;
+      border-color: white;
+      height:150px;
+      width: 140px;
+      display:inline-block;
+      margin-top: 10px;
+      margin-left:3%;
+      ">
+     <img src="img/SCHEMLOGO.png" height="100%" width="100%">
+     
+    </div>
+    </a>
+    <a href="http://www.dauniv.ac.in/">
+     <div class="logopane" style="
+     margin-left: 3%;
+     width:140px;
+     height:150px;
+     border-style:solid;
+     border-width: thin;
+     border-color: white;
+     display:inline-block;
+     margin-top: 0px;
+     margin-bottom:10px;
+     ">
+      <center><img src= "img/davvLogo2.png" width="95%" height="95%" style =" margin-top:0.5vw;">
+      </center>
+      </div></a>
+      <div class="gif">
+        <img src = "img/research.gif" style = "height :180px;width : 180px;position: absolute;right:3%; top:20px; ">
+      </div>
+
+
+  <div class="itopnav" id="myTopnav" style="margin-left: 2%;">
+  <a href="index.html" ><span style="font-size: 1.2em; color: white; ">
+            <i class="fas fa-home"></i>
+            </span></a>
+  <a href="aboutus.html" style="opacity:1;">About</a>
+  <div class="idropdown">
+    <button class="idropbtn">Admission 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="idropdown-content">
+      <a href="#">Admission Procedure</a>
+      <a href="#">Eligibility</a>
+      <a href="#">Seat Matrix</a>
+      <a href="#">Fee Structure</a>
+     </div>
+  </div>
+  <div class="idropdown" style="">
+    <button class="idropbtn" onclick="window.location.href='research.html'">Research 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="idropdown-content" >
+      <a href="research.html">Research</a>
+      <div class="dropdown-divider"></div>
+      <a href="Doc/SCHEM Lab Profile 1.doc">Lab Profile 1</a>
+      <a href="Doc/SCHEM Lab Profile 2.doc">Lab Profile 2</a>
+      <a href="Doc/SCHEM Lab Profile 3.doc">Lab Profile 3</a>
+    </div>
+  </div> 
+  <a href="student.html">Students</a>
+  <a href="activities.html">Activities</a>
+  <a href="facultyprofile.html">Staff</a>
+  <a href="http://www.iqac.dauniv.ac.in/" target="_blank">IQAC</a>
+  <a href="alumni.html">Alumni</a>
+  <a href="photogallery.html">Gallery</a>
+  <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</nav>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "itopnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "itopnav";
+  }
+}
+</script>
+      
+<!--    to here    -->
+    
+ <div class = "image">
+     <img src = "img/aboutusedit2.jpg" style = "height: auto;width : 100%;max-height: 600px; margin-top:-20px;">
+     </div>
+ <div class = "container">
+
+  <div class = "row" style="margin-bottom:50px;margin-top:30px;">
+    
+    <div class = "col-sm-6" style="color:white; margin-left:1%; margin-right:-1%; margin-top:20px;">
+  <div class="missionimg">
+    <div class="layer">
+<h2 style = "text-align : center; font-family: 'Source Sans Pro', sans-serif;"><b>Vision  </b><span><i class="fas fa-eye"></i></span></h2>
+<br>
+<br>
+<br>
+<br>
+<p align="justify" style = "font-size : 22px; font-family: 'Source Sans Pro', sans-serif;">To create an academically sound environment that nurtures, motivates and inspires excellence in research anrd teaching in chemical sciences along with concern for society.
+      <br>
+      <br></p>
+
+    </div>
+  </div>
+  </div>
+    
+<div class = "col-sm-6" style=" color:white; margin-left:-1%; margin-right:1%; margin-top:20px; padding-bottom: -10px;">
+  <div class="missionimg">
+    <div class="layer">
+<h2 style = "text-align : center; font-family: 'Source Sans Pro', sans-serif;color : white;"><b>Mission </b><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span></h2>
+<br>
+<br>
+<br>
+<br>
+<p align="justify" style = "font-size : 22px; font-family: 'Source Sans Pro', sans-serif;color : white;">To impart theoretical and practical training in advanced areas of chemical sciences and contribute new knowledge through research which encourages creativity, insight development and a passion for science.</p>
+</div>
+    </div>
+  </div>
+
+
+    </div>
+ <div class="aboutdev" style=" color:white; margin-top:30px; font-family: 'Source Sans Pro', sans-serif;" >
+   <div class="aboutusimg">
+     <div class="layer">
+<h1 style = "text-align:center;margin-top:50px; margin-bottom:50px;font-family: 'Source Sans Pro', sans-serif;"><b>About Us </b><span><i class="fas fa-award"></i></span></h1>
+<p align = "justify"  style = "font-size : 21px;margin-top : 60px; font-family: 'Source Sans Pro', sans-serif; font-weight:normal;">The school of chemical sciences established in 1972, in one of the leading schools of Devi Ahilya Vishwavidyalaya, Indore and has played
+  a pivotal role in research and teaching chemistry. The school has very effectively played its role of training chemistry scientists who are contributing significantly
+  in the developmemt of the state as well as other parts of the country.<br><br>The school was founded with the dedicated effort of <strong>Late Professor W.V Bhagwat.</strong><br><br>School of Chemical
+  Sciences is one of the premier institutions in central India as one of the leading and acclaimed science centres. As science and technology move faster and faster globally,
+  it becomes more and more challenging for Indian institutions to prepare their students to face the international arena. To prepare trained chemist scientists for highly professional
+  and top positions in drug and pharmaceutical industries,the school is running M.Sc. Chemistry and M.Sc. Pharmaceutical Chemistry along with Ph.D. program. Standards and achievements are impressive for both taught courses as well as research. Our distinguishing features are :
+
+  <ol style = "font-size : 21px;">
+<li>The strength of the school has seen and continues to be excellance in research and teaching.</li>
+<li>The School is recognized at National and International levels as evidenced by research publications in reputed journals.</li>
+<li>We provide Theoretical and Practical knowledge of Instrumental and spectroscopic techniques at M.Sc level. </li>
+<li>Summer Training and project work in leading industries and reputed National Institutions.</li>
+<li>The Alumni of the School occupy high positions in industry and academia  in India and around the world.Their accomplishments have been outstanding and reflect high quality training imparted to the students at both M.Sc. and Ph.D. levels. </li>
+<li>Many students of department have qualified NET / GATE and related examination at National level.</li>
+<li>The department is supported by the SAP DRS-Phase 1 status provided by UGC to incultate an atmosphere which is conducive for research activities and to encourage innovative thinking among the young budding researchers and students. </li>
+
+</ol>
+<p  align = "justify"  style = "font-size : 21px;margin-top : 20px; font-family: 'Source Sans Pro', sans-serif; font-weight:normal;">Summer training and project work in leading industries / institutes of national importance such as Lupin, Nicholas Piramal, IPCA, Dr. Reddy's Lab, Parke_Davis, Bridgestone and reputed national institutes such as National Institute of Immunology,New Delhi, NCL, Pune, NIPER, Chandigarh, CDRI, Lucknow, IICT,Hyderabad, NEERI ,Nagpur, RRL, Bhopal, National Research Center for Soyabean, Indore, Indian Institute of Petroleum, Dehradun, Central Food Technological Research Institute, Mysore ,Inter University Consotium, Indore Center, DMRL, Hyderabad, IISC, Banglore</p>
+</p>
+</div>
+   </div>
+   </div>
+
+
+ </div>
+
+
+
+
+<div class="smallfooter" style="background-color:#0c2461; display:block; font-family: 'Source Sans Pro', sans-serif; padding-bottom:450px; margin-top:30px;">
+   <div class="col-sm-6 col-md-6" style="float:left; background-color:#0c2461;" >
+        <a href="index.html">
+        <div class = "schoolName" style="  border-style:solid;
+          border-width: thin;
+          border-color: white;
+          height:140px;
+          width:140px;
+          margin-left:5%;
+          margin-top:10px;">
+         <img src="img/SCHEMLOGO.png" height="138px" width="138px">
+        </div>
+      </a>
+      <div class="sfqlinks" style="color:white !important;"  >
+      <ul style=" list-style-type: none; color:white !important; text-decoration:none; font-size:18px;">
+        <li style="margin-top:30px;" >
+        <a style="color:white !important; font-weight:bold; opacity:0.6;" href="http://www.dauniv.ac.in/">DAVV</a>
+        </li>
+        <li style="margin-top:15px;" >
+        <a style="color:white !important; font-weight:bold; opacity:1;"href="aboutus.html">About Us</a>
+        </li>
+        <li style="margin-top:15px;" >
+        <a style="color:white !important; font-weight:bold; opacity:0.6;" href="https://maps.google.com/?cid=6646430206762351224">Campus Map</a>
+        </li>
+        <li style="margin-top:15px;" >
+        <a style="color:white !important; font-weight:bold; opacity:0.6;" href="aboutdev.html">About Developers</a>
+        </li>
+
+      </ul>
+    </div>
+      <hr style="width:70%; margin-left:20%; margin-top:20px; color:white;">
+      <center>
+      <font style="font-size:12px; color:white ; ">
+        <span style="font-size: 1.2em; color: white;">
+      <i class="far fa-copyright"></i>
+      </span> 2018 School of Chemical Sciences </font>
+      </center>
+   </div>
+
+   <div class="col-sm-6 col-md-6" style="float:left; background-color:#0c2461;" >
+    <div class="mapouter" style="outline:solid 20px white; margin-top:30px; margin-bottom:10px;"><div class="gmap_canvas"><iframe style="width:100%;" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=School%20of%20chemical%20sciences%2CDAVV%2C%20KHANDWA%20ROAD&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de/webdesign-muenster/"></a></div>
+    <style>.mapouter{text-align:right;height:350px;width:90%;}.gmap_canvas {overflow:hidden;background:none!important;height:350px;width:100%;}
+    </style></div>
+
+</div>
+
+</div>
+</div>
+
+
+  </body>
+  </html>
