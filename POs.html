@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  font-family: system-ui, sans-serif;
+  
+  /* this breaks position sticky in Firefox */
+  /* overflow-x: hidden; */
+}
+header {
+  grid-column: 1 / 3;
+  background: #455A64;
+  color: white;
+  padding: 4rem;
+  text-align: center;
+}
+nav {
+  white-space: nowrap;
+  background: #37474F;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Only stick if you can fit */
+@media (min-height: 300px) {
+  nav ul {
+    position: sticky;
+    top: 0;
+  }
+}
+nav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+nav ul li a.current {
+  background: black;
+}
+main {
+  padding-bottom: 40rem;
+}
+section {
+  padding: 2rem;
+  margin: 0 0 2rem 0;
+}
+footer {
+  grid-column: 1 / 3;
+  background: #607D8B;
+  padding: 5rem 1rem;
+}
+	</style>
+	<script type="text/javascript">
+		let mainNavLinks = document.querySelectorAll("nav ul li a");
+let mainSections = document.querySelectorAll("main section");
+
+let lastId;
+let cur = [];
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("current");
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+	</script>
+</head>
+<body>
+<!-- <header>
+  <h3>DEVI AHILYA   VISHWAVIDYALAYA</h3>
+  <h2></h2>
+</header> -->
+
+<nav>
+  <ul>
+    <li><a href="#section-1">Creative Learning</a></li>
+    <li><a href="#section-2">Programme Outcomes</a></li>
+    <li><a href="#section-3">Programme Specific Outcomes</a></li>
+    <li><a href="#section-4">Course Outcomes</a></li>
+    
+  </ul>
+</nav>
+
+<main>
+  <section id="section-1">
+
+    <h1>Creative Learning</h1>
+    <p>School of Chemical Sciences is one of the premier centres of higher education in central India. As an acclaimed and leading science centre for academic excellence, school’s mission is to provide world class education and training for high flying careers in chemical sciences. As science and technology move faster and faster, globally it becomes more and more important for Indian institutions to make their presence on the international arena. To prepare academicians and trained chemist scientists for highly professional and top positions in drug and pharmaceutical industries, environmental and scientific organizations, school is running following programmes:</p>
+    <ul>
+    	<li>M.Sc. Chemistry</li>
+    	<li>M.Sc. Pharmaceutical Chemistry</li>
+    	<li>Ph.D.</li>
+    </ul>
+  </section>
+  <section id="section-2">
+    <h1>Programme Outcomes (POs)</h1>
+    <p>Learning objectives of School of Chemical Sciences essentially focus on ‘Creative Learning’ of the students with a view to empower them with contemporary knowledge domain so as to enhance connectivity thereof towards academic and industrial institutions.<br>
+    	<br>
+    Programme outcomes basically aim at incorporation of chemical sciences in the mindset of students in an embedded state. With such association, students are expected to improve their critical thinking, accommodating both logical and intuitive approaches. With immense association of scientific approaches, new ideas may creep in the mind of students so that they can evolve innovative pathways. Standards and achievements are impressive for both taught courses and research.<br>
+<br>
+    Our distinguishing features are:
+    <ul>
+    	<li>Up-to-date knowledge of broad range of disciplines of chemical sciences</li>
+    	<li>Theoretical and practical knowledge of Instrumental Techniques</li>
+    	<li>Interpretation of various types of spectra viz., Nuclear Magnetic Resonance (NMR) , Electron Spin Resonance (ESR), Infrared (IR), Ultraviolet-Visible (UV-Visible),         MÖssbauer, XPS, and Mass.</li>
+    </ul>
+    </p>
+  </section>
+  <section id="section-3">
+    <h1>Programme Specific Outcomes (PSOs)</h1>
+    <p>Programme specific outcomes pertain to exploration of knowledge of chemical sciences with related disciplines.  A student of School of Chemical Sciences after acquiring Master of Science degree will be able to:
+    	<ol>
+    		<li> accelerate his/her thinking skills with the sound objective of problem solving at the         forefront, on the basis of exposure to the curriculum based knowledge of chemical         sciences.</li><br>
+    		<li>display greater respect to the cause –effect relationship which eventually creates new         avenues and designs innovative pathways.</li><br>
+    		<li>integrate creative learning in his/her day-to-day activities with the needed          confidence to embrace challenges.</li><br>
+    		<li> demonstrate broad mindedness with respect to knowledge penetration vis-a-vis         knowledge accumulation in his /her professional activities.</li><br>
+    		<li>explore global level research opportunities for doctoral and post-doctoral studies.</li>
+    		<li> avail the benefit of enormous job avenues in different domains such as –        academics,         pharmaceutical industries, analytical laboratories, scientific organizations,         entrepreneurship, administrative positions etc.</li><br>
+    		<li>display their true potential and get appropriate endorsement through qualifying         NET/GATE/SET/State Civil Services and other competitive examinations.</li><br>
+    		<li> avail the opportunity to explore the  knowledge of chemical sciences with related         disciplines, in particular knowledge of synthetic methods, knowledge and         application of analytical techniques with specific orientation towards  industries.</li>
+
+    	</ol>
+    </p>
+  </section>
+  <section id="section-4">
+    <h1>Course Outcomes (COs)</h1>
+    <p>Course outcomes essentially envision diverse aspects of chemical sciences. They provide due priority to classification mindset rather than compartmentalization mindset and interdependence of one segment over the other. Consequently, students orient themselves as pro-active learners thereby enhancing their problem- solving skills, rendering high priority on modern areas of chemical sciences including spectroscopic techniques, chromatographic techniques and medicinal chemistry. Spectral interpretation indeed is a unique practice prevalent in School of Chemical Sciences. Students are encouraged to adopt GREEN CHEMISTRY whenever possible with a sound objective of ensuring environmentally sustainable approach towards society.
+    	<h3>(I) For M.Sc. Programs</h3>
+        <h4>INORGANIC CHEMISTRY I & II</h4>
+    Students after studying inorganic chemistry courses are expected:
+  <ol>
+  	<li>to understand the shapes of the d orbitals and formation of delta bond, metal-metal         quadruple and quintiple bonds.</li>
+  	<li>to learn various theories of chemical bonding and there importance and applications.</li>
+  	<li>to understand unsuspected structural principles and growing need of molecular bond         theory to cope with unusaul stoichiometries of Boranes and its compounds.</li>
+  	<li>to let the students learn, working with anhydrous solvents.</li>
+</ol>
+<br>
+<h4>ORGANIC CHEMISTRY I & II</h4>
+    Students after studying these areas of knowledge are expected:
+  <ol>
+  	<li>to build a sound perception of a wide variety of chemical reactions of organic         compounds so as to build a natural relationship with instant and effective         connectivity.</li>
+  	<li>to contribute meaningfully towards research and development domain of various         organizations including pharmaceutical industries through carrying forward the          insight generated through academic practices prevalent in school of chemical         sciences.</li>
+  	<li>to envision teaching as an attractive profession so that students after completing their         education in this school , become active knowledge facilitators promoting teaching as         rhythmic and enjoyable activity thereby enhancing the interest of further generations.
+</li>
+</ol>
+<br>
+<h4>PHYSICAL CHEMISTRY I& II</h4>
+    Students after studying physical chemistry courses are expected:
+  <ol>
+  	<li>to recognize the interplay of various physical chemistry concepts so that problem         solving skills are promoted.</li>
+  	<li>to enrich various concepts such as those from quantum chemistry, electrochemistry,         thermodynamics, chemical kinetics etc.</li>
+  	</ol>
+  	<br>
+  	<h4>GROUP THEORY AND SPECTROSCOPY</h4>
+    This course aims at helping the students to become acquainted with the basic concepts of Group Theory and Spectroscopy.  After studying this course the student will be able:
+  <ol>
+  	<li>to learn a systematic treatment of symmetry in chemical systems within the         mathematical framework.</li>
+  	<li>to get considerable insight into many of chemical and physical applications of group         theory.</li>
+  	<li> to develop acquisition of a theoretical framework considering background knowledge          of spectroscopy.</li>
+  	<li> to  emphasise practical applications of point group theory in physics and chemistry by         considering the symmetry of isolated molecules along with the  involvement  of         selection         rules in Infrared and Raman spectroscopy as well as electronic         bonding, and         electronic transitions.</li>
+</ol>
+<br>
+  	<h4>CONCEPTS OF MATHEMATICS</h4>
+    After completion of this basic course the student will be able:
+  <ol>
+  	<li> to solve mathematical problems applying theory of determinants, vectors,         permutations         and combinations etc.  </li>
+  	<li>to apply and solve problems using matrices, differentiation and integration.</li>
+  	<li>  to understand and apply the knowledge of mathematics in solving the problems         encountered in the study of chemical sciences domain. </li>
+</ol>
+<br>
+  	<h4>BIOLOGY FOR CHEMISTS</h4>
+    After successfully finishing this basic course, the student will be able:
+  <ol>
+  	<li>  to have the knowledge of core concepts pertinent to all areas of biology.  </li>
+  	<li>to get deep insight about the features of biological evolution, ecology and         physiology. </li>
+</ol>
+<br>
+  	<h4>COMPUTER APPLICATIONS IN CHEMISTRY</h4>
+    After completion of this basic course the student would be able:
+  <ol>
+  	<li>   to develop an understanding of the         basics of computer science and to prepare them         for continued professional development.  </li>
+  	<li>to apply and solve problems using matrices, differentiation and integrationto illustrate the flowchart and design an algorithm for a given problem.</li>
+  	<li>   to develop proficiency in writing the programs in C languages/ FORTRAN. </li>
+  	<li>   to work on different softwares such as ACD lab for drawing the structures of         molecules, Origin to plot the graphs as well as programs related to create pi-charts         and bar diagram. </li>
+
+</ol>
+<br>
+  	<h4>MOLECULAR SPECTROSCOPY</h4>
+    Students after studying these areas of knowledge are expected:
+  <ol>
+  	<li>  to recognize enhanced utility of modern spectroscopic methods in structure         elucidation   as well as analytical applications vis-a-vis conventional knowledge of         chemical methods.  </li>
+  	<li>to promote active use of this knowledge in various domains such as Research and         Development sector, quality control and quality assurance departments of industries         as well as academic institutions. </li>
+</ol>
+<br>
+  	<h4>ORGANIC PHOTOCHEMISTRY</h4>
+    On completion of this course, the student should be able:
+  <ol>
+  	<li>   to investigate the molecular basis for the study of photo- induced phenomena as well         as a to carry very broad vision of the main techniques and applications in chemistry.  </li>
+  	<li>to build perception of photochemical and photo-physical processes along with         mechanisms through suitable theoretical models. </li>
+</ol>
+<br>
+  	<h4>BIO-INORGANIC CHEMISTRY</h4>
+    Students who complete the course are expected:
+  <ol>
+  	<li>   to understand the importance of the metal to change the entire properties of organic         compounds, heamoglobin and myoglobin when iron, chlorophyll when magnisium         and vitamin B12 when cobalt is there in porphyrin ring.  </li>
+  	<li>to understand biological nitrogen fixation, and its mechanism. </li>
+  	<li>to learn the biologically, Iron plays an important role in the transport and storage of         oxygen and also eletron transport and there would be no life without iron. </li>
+  	<li>role of small amounts of Metals in Biological Systems. </li>
+</ol>
+<br>
+  	<h4>MEDICINAL CHEMISTRY</h4>
+    Students after studying these areas of knowledge are expected:
+  <ol>
+  	<li>   to develop an overall understanding of functioning as well as mode of action of         various drugs in human life.  </li>
+  	<li>to consider drug design as a potential area so that appropriate contributions could be         made as and when required. </li>
+  	<li> to contribute value addition in quality control as well as quality assurance sections of         various pharmaceutical industries. </li>
+  	
+</ol>
+<br>
+  	<h4>CHEMISTRY OF POLYMERS</h4>
+    Students after studying these areas of knowledge are expected:
+  <ol>
+  	<li>   to recognize the importance of chemistry of polymers and to apply in professional         careers on need based approach.  </li>
+  	<li>to create wide –spread awareness about utility of polymers in human life. </li>
+</ol>
+<br>
+  	<h4>ADVANCES IN ANALYTICAL CHEMISTRY</h4>
+    Students after studying these areas of knowledge are expected:
+  <ol>
+  	<li>    to connect in an obvious mode with ongoing rapid transformation in hi-tech         instrumentation operational in industries.  </li>
+  	<li>to develop qualitative and quantitative skills needed in applications of analytical         chemistry. </li>
+  	<li> to display appropriate professional talent through meaningful utilization of         instruments based hands- on- training imparted in their student life. </li> 	
+</ol>
+<br>
+  	<h4>ENVIRONMENTAL CHEMISTRY</h4>
+    Students after studying these areas of knowledge are expected:
+  <ol>
+  	<li>to know about the Chemical composition of enviroment- atmosphere, hydosphere,         lethosphere and biosphere.  </li>
+  	<li>to understand water, air and noise polution and their sources, effects and remedies. </li>
+  	<li> to learn environmental toxicology and chemical speciation due to toxic heavy metals         and toxic chemicals. </li>
+  	<li> to know the history of environmental disasters throghout the world. </li> 	
+
+</ol>
+<br>
+  	<h4>CHEMISTRY OF NATURAL PRODUCTS</h4>
+    Students after studying these areas of knowledge are expected:
+  <ol>
+  	<li>to develop an overview of the field of natural product chemistry.  </li>
+  	<li>to identify different types of natural products, their occurrence, structure,         biosynthesis and properties.</li>
+  	<li>  to explore the use of natural products as starting materials for medicines. </li>
+  	<li> to carry out independent investigations of plant materials and natural products. </li> 	
+  </ol>
+<br>
+  	<h4>SOLID STATE CHEMISTRY AND NANOSCIENCE</h4>
+    After completion of the course the student should be able :
+  <ol>
+  	<li>to gain a deep insight about the solid state reactions, basics of crystal defects with         mathematical treatment, to know about the concentration of defects and their utility in         current scientific domain and to comprehend the relation between structure and         properties.  </li>
+  	<li>to understand the current trends and discoveries in the nanotechnology and its         perspectives for applications in different fields.</li>
+  	<li>   to gain knowledge of different synthetic  methods for fabrication of inorganic         nanoparticles, one-dimensional nanostructures (nanotubes, nanorods, nanowires), thin         films, nanoporous materials. </li>
+  	<li>  to develop fundamental knowledge of superconductivity and its use in modern day         science and technology. </li></ol>
+<br>
+  	<h4>BIO-ORGANIC CHEMISTRY</h4>
+    After successfully finishing the course, the student wil  be able:
+  <ol>
+  	<li>to correlate the chemical structure of biomolecules with reactivity and properties         such         as solubility, binding ability (hydrogen bond ability, lipophilicity,         hydrophilicity).   </li>
+  	<li> to discuss similarities and differences between transformations of biomolecules in         living systems and in vitro e.g., industrial synthesis.</li>	
+  </ol> 
+  <h3>(II)  For Ph.D. Course Work Program</h3>
+  <h4>RESEARCH METHODOLOGY</h4>
+    Doctoral students after successfully finishing the course, will be able:
+  <ol>
+  	<li>to become active promoter of GREEN CHEMISTRY concepts.   </li>
+  	<li> to develop hands-on / operational practices of different sophisticated instruments.</li>	
+  	<li>  to create a platform for pursuing research activities in respective domains</li>
+  </ol> 	
+  <br>
+<h4>REVIEW OF LITERATURE</h4>
+    After successfully finishing the course, the student will be able:
+  <ol>
+  	<li>to gain the  knowledge and develop  acquaintance with the  existing literature studies, threading the different lines of development in their respective research domains.   </li>
+  </ol>
+  <h4>COMPUTER APPLICATIONS</h4>
+    After successfully finishing the course, the student will be able:
+  <ol>
+  	<li>to develop specialized computational skills.   </li>
+  	<li>to gain proficiency in working with  different software,  beneficial for their         research studies.   </li>
+  </ol>
+  <br>
+  <h4>ADVANCE COURSE: INTERPRETATION OF SPECTRA</h4>
+    After successfully finishing the course, the student will be able:
+  <ol>
+  	<li> to develop theoretical and practical knowledge of different instrumental techniques.   </li>
+  	<li>to apply the knowledge of interpretation skills in their research problems.   </li>
+  </ol> 	
+
+</p>
+
+  </section>
+  <!-- <section id="section-5">
+    <h1>Section 5</h1>
+    <p>Officia ipsum fugit iure eaque quisquam error tempore earum enim illum, delectus officiis incidunt corrupti aliquid nam quas perspiciatis eveniet doloremque quod labore? Doloremque, ipsum?</p>
+  </section>
+  <section id="section-6">
+    <h1>Section 6</h1>
+    <p>Aperiam repellat dignissimos fugiat possimus esse, suscipit neque nisi libero alias obcaecati ipsam, porro illo corrupti nostrum reprehenderit unde, illum in laudantium impedit. Modi, veniam.</p>
+  </section>
+  <section id="section-7">
+    <h1>Section 7</h1>
+    <p>Cum asperiores temporibus itaque consequatur quod inventore, quia quis explicabo dicta esse minus voluptatem reiciendis eveniet animi, necessitatibus illum dolorem doloremque repellat placeat, dolores eaque.</p>
+  </section>
+  <section id="section-8">
+    <h1>Section 8</h1>
+    <p>Optio qui, omnis itaque rerum iusto molestiae necessitatibus deleniti quod tenetur id perspiciatis voluptatum dolorum quisquam eius ipsum non architecto labore! Distinctio, tenetur. Officiis, necessitatibus?</p>
+  </section>
+  <section id="section-9">
+    <h1>Section 9</h1>
+    <p>Rem iste iure blanditiis excepturi esse nisi corrupti sequi, illo, laborum quo quis quaerat assumenda perspiciatis quod fuga vel laudantium doloribus architecto tempora omnis earum!</p>
+  </section> -->
+</main>
+
+<!-- <footer>
+  &copy;2018 Footer
+</footer> -->
+</body>
+</html>
