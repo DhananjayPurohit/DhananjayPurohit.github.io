@@ -242,6 +242,7 @@ body,html{
 canvas {
   background-color: #0c2461;
 }
+
       
 /* from here       */
    @media only screen and (max-width: 1350px) {
@@ -254,23 +255,39 @@ canvas {
     width:350px;
   }
 }
-      @media only screen and (max-width: 1020px) {
+
+#f3{
+  display:none;
+}
+      @media only screen and (max-width: 1000px) {
   .motionpic, #can{
     display:none;
   }
-  #f1,#f2{
-    font-size:3vw !important;
+  #f3{
+    font-size:3.6vw !important;
     position: absolute !important;
     right:3% !important;
   }
 }
-@media only screen and (max-width: 710px) {
+@media only screen and (max-width: 640px) {
+  
+  #f3{
+    display:none !important;
+  }
+  
+}
+@media only screen and (max-width: 1180px) {
   
   #f1,#f2{
     display:none;
   }
+  #f3{
+    display:block;
+    align-content: center;
+  }
   
 }
+
     </style>
   </head>
   <body style="background-color: #E9E6DF;">
@@ -287,7 +304,7 @@ canvas {
       <a class="navbar-brand" style="font-family: serif; font-size : 20px; color:white; font-weight:normal; padding-top:8px; " href="index.html">SCHOOL OF CHEMICAL SCIENCES</a>
     </div>
     <ul class="nav navbar-nav navbar-left">
-      <li><a href="index.html"><span style="font-size: 1.2em; color: white; ">
+      <li><a href="index.html"><span style="font-size: 1.2em;  ">
             <i class="fas fa-home"></i>
             </span></a></li>
     </ul>
@@ -295,7 +312,7 @@ canvas {
       <li> <a href="aboutus.html">About Us</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-left">
-      <li><a href="facultyprofile.html">Staff</a></li>
+      <li><a href="facultyprofile.html" style="color: white;">Staff</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-left">
       <li><div class="idropdown" >
@@ -304,8 +321,8 @@ canvas {
     </button>
     <div class="idropdown-content">
       <a href="http://www.dauniv.ac.in/admissions.php" target="_blank">Admission Procedure</a>
-      <a href="courses.html" target="_blank">Courses</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vSKjaBBI0k7MZuS1gVZM29MHyJJpt9tl-c9nYgxmsQFNckQaPCyOyPiE2mAlVzeH1Hvk6dNv-0iF0my/pub" target="_blank">POs, PSOs, COs</a>
+      <a href="courses.html" >Courses</a>
+      <a href="POs.html">POs, PSOs, COs</a>
      </div>
   </div>
   </li>
@@ -317,9 +334,9 @@ canvas {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="idropdown-content" >
-      <a href="https://docs.google.com/document/d/e/2PACX-1vQDHqXxOu3i8mj7em4bgWM10ITficBbJ_akgxjCHo5zs0gwiY-dsbBv2MXX30Tt3olHeR5VpNUtrsmL/pub" target="_blank">Lab Profile 1</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vTJ5fPTzUDRBqTbITIuPxLNpKc3aAGGaLvW06hpjWRqSmwtVD1Vb4oaUmRJGax97530LCNhqLnyJb7c/pub" target="_blank">Lab Profile 2</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vQUHiSzZZjQHoHgXIWqkHAhOStA6vg_YXKHL4n5MTgv7XsQQ926K3lq1-bupkp6iF0S-m_rxPSWwAFW/pub" target="_blank">Lab Profile 3</a>
+      <a href="https://drive.google.com/open?id=1WYIIxCGyLvN1EAmxif02OaI1jSpxHx5C" target="_blank">Lab Profile 1</a>
+      <a href="https://drive.google.com/open?id=1ToNP922GnnRP4Ex9Q_8C2wLIB6OX0nxM" target="_blank">Lab Profile 2</a>
+      <a href="https://drive.google.com/open?id=1n9znm1frZsMoqX2-KOdaJyFK_QhcuK2F" target="_blank">Lab Profile 3</a>
     </div>
   </div></li>
     </ul>
@@ -354,6 +371,9 @@ canvas {
 </p>
 <p id="f2" style="font-size:2.7vw; color:white; position:absolute;  top:110px; right:28%; z-index:5; font-family: 'Rozha One', serif; font-weight:bold;">रसायन विज्ञान अध्ययनशाला  
 </p>
+<p id="f3" align="center" style="font-size:3vw; color:white; position:absolute;  top:50px; right:25%; z-index:5; font-family:serif; font-weight:bold; ">SCHOOL OF CHEMICAL<br> SCIENCES
+</p>
+
       
      
 
@@ -401,6 +421,9 @@ canvas {
       <script media="screen and (max-width:1020px)">
 
          // particules
+         var viewportWidth = $(window).width();
+         if (viewportWidth > 1000)
+         {
 class Point {
   constructor(x, y) {
     this.pos = {
@@ -640,24 +663,24 @@ function main_loop() {
 }
 main_loop();
          
-    
+         }
 </script>
 
 
   <div class="itopnav" id="myTopnav" style="margin-left: 2%;">
-  <a href="index.html" style="opacity:1;"><span style="font-size: 1.2em; color: white;  ">
+  <a href="index.html" ><span style="font-size: 1.2em; color: white;  ">
             <i class="fas fa-home" ></i>
             </span></a>
     <a href="aboutus.html">About Us</a>
-    <a href="facultyprofile.html">Staff</a>
+    <a href="facultyprofile.html" style="opacity:1;">Staff</a>
   <div class="idropdown">
     <button class="idropbtn" >Admission 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="idropdown-content">
       <a href="http://www.dauniv.ac.in/admissions.php" target="_blank">Admission Procedure</a>
-      <a href="courses.html" target="_blank">Programs</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vSKjaBBI0k7MZuS1gVZM29MHyJJpt9tl-c9nYgxmsQFNckQaPCyOyPiE2mAlVzeH1Hvk6dNv-0iF0my/pub" target="_blank">POs, PSOs, COs</a>
+      <a href="courses.html" >Programs</a>
+      <a href="POs.html" >POs, PSOs, COs</a>
      </div>
   </div>
   <div class="idropdown" style="">
@@ -665,9 +688,9 @@ main_loop();
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="idropdown-content" >
-      <a href="https://docs.google.com/document/d/e/2PACX-1vQDHqXxOu3i8mj7em4bgWM10ITficBbJ_akgxjCHo5zs0gwiY-dsbBv2MXX30Tt3olHeR5VpNUtrsmL/pub" target="_blank">Lab Profile 1</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vTJ5fPTzUDRBqTbITIuPxLNpKc3aAGGaLvW06hpjWRqSmwtVD1Vb4oaUmRJGax97530LCNhqLnyJb7c/pub" target="_blank">Lab Profile 2</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vQUHiSzZZjQHoHgXIWqkHAhOStA6vg_YXKHL4n5MTgv7XsQQ926K3lq1-bupkp6iF0S-m_rxPSWwAFW/pub" target="_blank">Lab Profile 3</a>
+      <a href="https://drive.google.com/open?id=1WYIIxCGyLvN1EAmxif02OaI1jSpxHx5C" target="_blank">Lab Profile 1</a>
+      <a href="https://drive.google.com/open?id=1ToNP922GnnRP4Ex9Q_8C2wLIB6OX0nxM" target="_blank">Lab Profile 2</a>
+      <a href="https://drive.google.com/open?id=1n9znm1frZsMoqX2-KOdaJyFK_QhcuK2F" target="_blank">Lab Profile 3</a>
     </div>
   </div> 
   <a href="student.html">Students</a>
@@ -737,7 +760,7 @@ function myFunction() {
             <br>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=drashoksharma2001@yahoo.com" target="_blank" style="color:white">drashoksharma2001@yahoo.com</a>
 		   <br>
-		 <a href="https://drive.google.com/open?id=1Tl_o_AcRSdaQi-pmvtFNNMWILc5HSX8n" style="color:white;"><strong>View Profile...</strong></a>  
+		 <a href="https://drive.google.com/open?id=1Tl_o_AcRSdaQi-pmvtFNNMWILc5HSX8n" target="_blank" style="color:white;"><strong>View Profile...</strong></a>  
           </div>
         </div>
       </div>
@@ -766,7 +789,7 @@ function myFunction() {
             <br>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dravbajaj@gmail.com" target="_blank" style="color:white">dravbajaj@gmail.com</a>
        <br>
-	    <a href="https://drive.google.com/open?id=0Bxij5YrhAMFeVzk0NTJTUUxxUHZTQXpISmZzTENiMG9oaGpR" style="color:white;"><strong>View Profile...</strong></a>   
+	    <a href="https://drive.google.com/open?id=0Bxij5YrhAMFeVzk0NTJTUUxxUHZTQXpISmZzTENiMG9oaGpR" target="_blank" style="color:white;"><strong>View Profile...</strong></a>   
 	 </div>
      </div>
    </div>
@@ -795,7 +818,7 @@ function myFunction() {
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hpsc@rediffmail.com" target="_blank" style="color:white">hpsc@rediffmail.com</a>
 
            <br>
-		<a href="https://drive.google.com/open?id=1KQCg87Jb39TXFX1sRLW5zDzWcIRcsj4j" style="color:white;"><strong>View Profile...</strong></a>   
+		<a href="https://drive.google.com/open?id=1KQCg87Jb39TXFX1sRLW5zDzWcIRcsj4j" target="_blank" style="color:white;"><strong>View Profile...</strong></a>   
          </div>
        </div>
      </div>
@@ -826,12 +849,12 @@ function myFunction() {
          
 
          <center>CONTACT</center>
-         <a href="tel:9425187226" style="color:white">9425187226</a>
+         <a href="tel:9826085169" style="color:white">9826085169</a>
             <br>
             <br>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=spjoshi11@rediffmail.com" target="_blank" style="color:white">spjoshi11@rediffmail.com</a>
             <br>
-	    <a href="https://drive.google.com/open?id=0Bxij5YrhAMFeV3d4aENBeFFIRWk0ZlZaa3Z3RmxCQXRUNTUw" style="color:white;"><strong>View Profile...</strong></a>   
+	    <a href="https://drive.google.com/open?id=0Bxij5YrhAMFeV3d4aENBeFFIRWk0ZlZaa3Z3RmxCQXRUNTUw" target="_blank" style="color:white;"><strong>View Profile...</strong></a>   
        </div>
      </div>
    </div>
@@ -859,7 +882,7 @@ function myFunction() {
             <br>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=drpratibhasharma@yahoo.com" target="_blank" style="color:white">drpratibhasharma@yahoo.com</a>
 		 <br>
-		 <a href="" style="color:white;"><strong >View Profile...</strong></a>
+		 <a href="" target="_blank" style="color:white;"><strong >View Profile...</strong></a>
          </div>
        </div>
      </div>
@@ -889,7 +912,7 @@ function myFunction() {
             <br>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kharesavita@rediffmail.com" target="_blank" style="color:white">kharesavita@rediffmail.com</a>
          <br>
-	   <a href="https://drive.google.com/file/d/0Bxij5YrhAMFeLXBHX3lFX29BZkEyZHh4SFkwSXNSamNXVV9r/view" style="color:white;"><strong>View Profile...</strong></a>    
+	   <a href="https://drive.google.com/file/d/0Bxij5YrhAMFeLXBHX3lFX29BZkEyZHh4SFkwSXNSamNXVV9r/view" target="_blank" style="color:white;"><strong>View Profile...</strong></a>    
        </div>
      </div>
    </div>
