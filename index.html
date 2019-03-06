@@ -234,35 +234,43 @@ canvas {
     width:350px;
   }
 }
-      @media only screen and (max-width: 1020px) {
+
+#f3{
+  display:none;
+}
+      @media only screen and (max-width: 1000px) {
   .motionpic, #can{
     display:none;
   }
-  #f1,#f2{
-    font-size:3vw !important;
+  #f3{
+    font-size:3.6vw !important;
     position: absolute !important;
     right:3% !important;
   }
 }
-@media only screen and (max-width: 710px) {
+@media only screen and (max-width: 640px) {
+  
+  #f3{
+    display:none !important;
+  }
+  
+}
+@media only screen and (max-width: 1180px) {
   
   #f1,#f2{
     display:none;
   }
-  
-#c1{
- display:none;
-}
+  #f3{
+    display:block;
+    align-content: center;
+  }
   
 }
 
-body {
-  background-color: #E9E6DF;
-}
     </style>
   </head>
-  <body >
-      <div id="load"></div>
+  <body style="background-color: #E9E6DF;">
+    	<div id="load"></div>
     <div id="contents">
         
     </div>
@@ -292,8 +300,8 @@ body {
     </button>
     <div class="idropdown-content">
       <a href="http://www.dauniv.ac.in/admissions.php" target="_blank">Admission Procedure</a>
-      <a href="courses.html" target="_blank">Courses</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vSKjaBBI0k7MZuS1gVZM29MHyJJpt9tl-c9nYgxmsQFNckQaPCyOyPiE2mAlVzeH1Hvk6dNv-0iF0my/pub" target="_blank">POs, PSOs, COs</a>
+      <a href="courses.html" >Courses</a>
+      <a href="POs.html">POs, PSOs, COs</a>
      </div>
   </div>
   </li>
@@ -305,9 +313,9 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="idropdown-content" >
-      <a href="https://docs.google.com/document/d/e/2PACX-1vQDHqXxOu3i8mj7em4bgWM10ITficBbJ_akgxjCHo5zs0gwiY-dsbBv2MXX30Tt3olHeR5VpNUtrsmL/pub" target="_blank">Lab Profile 1</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vTJ5fPTzUDRBqTbITIuPxLNpKc3aAGGaLvW06hpjWRqSmwtVD1Vb4oaUmRJGax97530LCNhqLnyJb7c/pub" target="_blank">Lab Profile 2</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vQUHiSzZZjQHoHgXIWqkHAhOStA6vg_YXKHL4n5MTgv7XsQQ926K3lq1-bupkp6iF0S-m_rxPSWwAFW/pub" target="_blank">Lab Profile 3</a>
+      <a href="https://drive.google.com/open?id=1WYIIxCGyLvN1EAmxif02OaI1jSpxHx5C" target="_blank">Lab Profile 1</a>
+      <a href="https://drive.google.com/open?id=1ToNP922GnnRP4Ex9Q_8C2wLIB6OX0nxM" target="_blank">Lab Profile 2</a>
+      <a href="https://drive.google.com/open?id=1n9znm1frZsMoqX2-KOdaJyFK_QhcuK2F" target="_blank">Lab Profile 3</a>
     </div>
   </div></li>
     </ul>
@@ -342,6 +350,9 @@ body {
 </p>
 <p id="f2" style="font-size:2.7vw; color:white; position:absolute;  top:110px; right:28%; z-index:5; font-family: 'Rozha One', serif; font-weight:bold;">रसायन विज्ञान अध्ययनशाला  
 </p>
+<p id="f3" align="center" style="font-size:3vw; color:white; position:absolute;  top:50px; right:25%; z-index:5; font-family:serif; font-weight:bold; ">SCHOOL OF CHEMICAL<br> SCIENCES
+</p>
+
       
      
 
@@ -389,6 +400,9 @@ body {
       <script media="screen and (max-width:1020px)">
 
          // particules
+         var viewportWidth = $(window).width();
+         if (viewportWidth > 1000)
+         {
 class Point {
   constructor(x, y) {
     this.pos = {
@@ -628,7 +642,7 @@ function main_loop() {
 }
 main_loop();
          
-    
+         }
 </script>
 
 
@@ -644,8 +658,8 @@ main_loop();
     </button>
     <div class="idropdown-content">
       <a href="http://www.dauniv.ac.in/admissions.php" target="_blank">Admission Procedure</a>
-      <a href="courses.html" target="_blank">Programs</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vSKjaBBI0k7MZuS1gVZM29MHyJJpt9tl-c9nYgxmsQFNckQaPCyOyPiE2mAlVzeH1Hvk6dNv-0iF0my/pub" target="_blank">POs, PSOs, COs</a>
+      <a href="courses.html" >Programs</a>
+      <a href="POs.html" >POs, PSOs, COs</a>
      </div>
   </div>
   <div class="idropdown" style="">
@@ -653,9 +667,9 @@ main_loop();
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="idropdown-content" >
-      <a href="https://docs.google.com/document/d/e/2PACX-1vQDHqXxOu3i8mj7em4bgWM10ITficBbJ_akgxjCHo5zs0gwiY-dsbBv2MXX30Tt3olHeR5VpNUtrsmL/pub" target="_blank">Lab Profile 1</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vTJ5fPTzUDRBqTbITIuPxLNpKc3aAGGaLvW06hpjWRqSmwtVD1Vb4oaUmRJGax97530LCNhqLnyJb7c/pub" target="_blank">Lab Profile 2</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vQUHiSzZZjQHoHgXIWqkHAhOStA6vg_YXKHL4n5MTgv7XsQQ926K3lq1-bupkp6iF0S-m_rxPSWwAFW/pub" target="_blank">Lab Profile 3</a>
+      <a href="https://drive.google.com/open?id=1WYIIxCGyLvN1EAmxif02OaI1jSpxHx5C" target="_blank">Lab Profile 1</a>
+      <a href="https://drive.google.com/open?id=1ToNP922GnnRP4Ex9Q_8C2wLIB6OX0nxM" target="_blank">Lab Profile 2</a>
+      <a href="https://drive.google.com/open?id=1n9znm1frZsMoqX2-KOdaJyFK_QhcuK2F" target="_blank">Lab Profile 3</a>
     </div>
   </div> 
   <a href="student.html">Students</a>
@@ -1153,7 +1167,7 @@ console.log(random);
      
     </div> -->
 
-<div class="smallfooter" style="background-color:#0c2461 !important; display:block; font-family: 'Source Sans Pro', sans-serif; margin-top:30px; ">
+<div class="smallfooter" style="background-color:#0c2461 !important; display:block; font-family: 'Source Sans Pro', sans-serif; margin-top: 30px; ">
 
   
 
