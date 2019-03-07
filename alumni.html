@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <link rel = "icon" type = "image/png" href = "img/SCHEMLOGO.png">
+    <link rel = "icon" type = "image/webp" href = "img/SCHEMLOGO.webp">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -219,23 +219,39 @@ canvas {
     width:350px;
   }
 }
-      @media only screen and (max-width: 1020px) {
+ 
+#f3{
+  display:none;
+}
+      @media only screen and (max-width: 1000px) {
   .motionpic, #can{
     display:none;
   }
-  #f1,#f2{
-    font-size:3vw !important;
+  #f3{
+    font-size:3.6vw !important;
     position: absolute !important;
     right:3% !important;
   }
 }
-@media only screen and (max-width: 710px) {
+@media only screen and (max-width: 640px) {
+  
+  #f3{
+    display:none !important;
+  }
+  
+}
+@media only screen and (max-width: 1180px) {
   
   #f1,#f2{
     display:none;
   }
+  #f3{
+    display:block;
+    align-content: center;
+  }
   
 }
+
     </style>
   </head>
   <body style="background-color: #E9E6DF;">
@@ -252,12 +268,15 @@ canvas {
       <a class="navbar-brand" style="font-family: serif; font-size : 20px; color:white; font-weight:normal; padding-top:8px; " href="index.html">SCHOOL OF CHEMICAL SCIENCES</a>
     </div>
     <ul class="nav navbar-nav navbar-left">
-      <li><a href="index.html"><span style="font-size: 1.2em; color: #9d9d9d; ">
+      <li><a href="index.html"><span style="font-size: 1.2em;  ">
             <i class="fas fa-home"></i>
             </span></a></li>
     </ul>
     <ul class="nav navbar-nav navbar-left">
-	    <li> <a href="aboutus.html">About</a></li>
+      <li> <a href="aboutus.html">About Us</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="facultyprofile.html" >Staff</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-left">
       <li><div class="idropdown" >
@@ -266,8 +285,8 @@ canvas {
     </button>
     <div class="idropdown-content">
       <a href="http://www.dauniv.ac.in/admissions.php" target="_blank">Admission Procedure</a>
-      <a href="courses.html" target="_blank">Courses</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vSKjaBBI0k7MZuS1gVZM29MHyJJpt9tl-c9nYgxmsQFNckQaPCyOyPiE2mAlVzeH1Hvk6dNv-0iF0my/pub" target="_blank">POs, PSOs, COs</a>
+      <a href="courses.html" >Programmes</a>
+      <a href="POs.html">POs, PSOs, COs</a>
      </div>
   </div>
   </li>
@@ -279,14 +298,14 @@ canvas {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="idropdown-content" >
-      <a href="https://docs.google.com/document/d/e/2PACX-1vQDHqXxOu3i8mj7em4bgWM10ITficBbJ_akgxjCHo5zs0gwiY-dsbBv2MXX30Tt3olHeR5VpNUtrsmL/pub" target="_blank">Lab Profile 1</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vTJ5fPTzUDRBqTbITIuPxLNpKc3aAGGaLvW06hpjWRqSmwtVD1Vb4oaUmRJGax97530LCNhqLnyJb7c/pub" target="_blank">Lab Profile 2</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vQUHiSzZZjQHoHgXIWqkHAhOStA6vg_YXKHL4n5MTgv7XsQQ926K3lq1-bupkp6iF0S-m_rxPSWwAFW/pub" target="_blank">Lab Profile 3</a>
+      <a href="https://drive.google.com/open?id=1WYIIxCGyLvN1EAmxif02OaI1jSpxHx5C" target="_blank">Lab Profile 1</a>
+      <a href="https://drive.google.com/open?id=1ToNP922GnnRP4Ex9Q_8C2wLIB6OX0nxM" target="_blank">Lab Profile 2</a>
+      <a href="https://drive.google.com/open?id=1n9znm1frZsMoqX2-KOdaJyFK_QhcuK2F" target="_blank">Lab Profile 3</a>
     </div>
   </div></li>
     </ul>
     <ul class="nav navbar-nav navbar-left">
-      <li><a href="student.html">Students</a></li>
+      <li><a href="student.html" style="color: white;">Students</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-left">
       <li> <div class="idropdown">
@@ -294,38 +313,36 @@ canvas {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="idropdown-content">
-      <a href="activities.html">Invited Speakers</a>
-	    <a href="https://docs.google.com/document/d/e/2PACX-1vSKjaBBI0k7MZuS1gVZM29MHyJJpt9tl-c9nYgxmsQFNckQaPCyOyPiE2mAlVzeH1Hvk6dNv-0iF0my/pub" target="_blank"></a>
+      <a href="activities.html">Guest Of Honour</a>
+      <a href="photogallery.html" >Gallery</a>
       
       
      </div>
   </div></li>
     </ul>
     <ul class="nav navbar-nav navbar-left">
-      <li><a href="facultyprofile.html">Staff</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-left">
       <li><a href="http://www.iqac.dauniv.ac.in/" target="_blank">IQAC</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-left">
-      <li><a href="alumni.html" style="color:white;">Alumni</a></li>
+      <li><a href="alumni.html">Alumni</a></li>
     </ul>
-    <ul class="nav navbar-nav navbar-left">
-      <li><a href="photogallery.html" >Gallery</a></li>
-    </ul>
+    
 
   </div>
 </nav>
 </div>
-<font id="f1" style="font-size:2.7vw; color:white; position:absolute;  top:30px; right:20%; z-index:5; font-family:serif; font-weight:bold; ">SCHOOL OF CHEMICAL SCIENCES
-</font>
-<font id="f2" style="font-size:2.7vw; color:white; position:absolute;  top:110px; right:28%; z-index:5; font-family: 'Rozha One', serif; font-weight:bold;">रसायन विज्ञान अध्ययनशाला  
-</font>
-	    
-	   
+<p id="f1" style="font-size:2.7vw; color:white; position:absolute;  top:30px; right:20%; z-index:5; font-family:serif; font-weight:bold; ">SCHOOL OF CHEMICAL SCIENCES
+</p>
+<p id="f2" style="font-size:2.7vw; color:white; position:absolute;  top:110px; right:28%; z-index:5; font-family: 'Rozha One', serif; font-weight:bold;">रसायन विज्ञान अध्ययनशाला  
+</p>
+<p id="f3" align="center" style="font-size:3vw; color:white; position:absolute;  top:50px; right:25%; z-index:5; font-family:serif; font-weight:bold; ">SCHOOL OF CHEMICAL<br> SCIENCES
+</p>
+
+      
+     
 
 
-    <nav class="" style="background-color: #0c2461; position:relative; z-index:4 !important; width:100%; padding-top:10px;
+    <nav class="" style="background-color: #0c2461; position:relative; z-index:4 !important; width:100%; padding-top:10px;margin-bottom:-23px;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);">
     <a href="http://www.dauniv.ac.in/">
     <div class = "schoolName" style="  border-style:solid;
@@ -338,7 +355,7 @@ canvas {
       margin-top:20px;
       margin-bottom:10px;
       ">
-	    <img src= "img/davvlogo.png" width="100%" height="100%" >
+      <img src= "img/davvlogo.webp" width="100%" height="100%" >
       
      
     </div>
@@ -355,7 +372,7 @@ canvas {
      margin-top:20px;
      margin-bottom:10px;
      ">
-	     <img src="img/SCHEMLOGO.png" height="100%" width="100%">
+       <img src="img/SCHEMLOGO.webp" height="100%" width="100%">
       
       </div></a>
       
@@ -364,9 +381,13 @@ canvas {
         </canvas>
        
       </div>
-	    
-	    <script>
-  // particules
+      
+      <script media="screen and (max-width:1020px)">
+
+         // particules
+         var viewportWidth = $(window).width();
+         if (viewportWidth > 1000)
+         {
 class Point {
   constructor(x, y) {
     this.pos = {
@@ -605,22 +626,25 @@ function main_loop() {
   requestAnimationFrame(main_loop);
 }
 main_loop();
-      </script>
+         
+         }
+</script>
 
 
   <div class="itopnav" id="myTopnav" style="margin-left: 2%;">
-  <a href="index.html" style="opacity:0.6;"><span style="font-size: 1.2em; color: white;  ">
+  <a href="index.html" ><span style="font-size: 1.2em; color: white;  ">
             <i class="fas fa-home" ></i>
             </span></a>
-	  <a href="aboutus.html">About</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="facultyprofile.html" >Staff</a>
   <div class="idropdown">
     <button class="idropbtn" >Admission 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="idropdown-content">
       <a href="http://www.dauniv.ac.in/admissions.php" target="_blank">Admission Procedure</a>
-      <a href="courses.html" target="_blank">Courses</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vSKjaBBI0k7MZuS1gVZM29MHyJJpt9tl-c9nYgxmsQFNckQaPCyOyPiE2mAlVzeH1Hvk6dNv-0iF0my/pub" target="_blank">POs, PSOs, COs</a>
+      <a href="courses.html" >Programmes</a>
+      <a href="POs.html" >POs, PSOs, COs</a>
      </div>
   </div>
   <div class="idropdown" style="">
@@ -628,27 +652,26 @@ main_loop();
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="idropdown-content" >
-      <a href="https://docs.google.com/document/d/e/2PACX-1vQDHqXxOu3i8mj7em4bgWM10ITficBbJ_akgxjCHo5zs0gwiY-dsbBv2MXX30Tt3olHeR5VpNUtrsmL/pub" target="_blank">Lab Profile 1</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vTJ5fPTzUDRBqTbITIuPxLNpKc3aAGGaLvW06hpjWRqSmwtVD1Vb4oaUmRJGax97530LCNhqLnyJb7c/pub" target="_blank">Lab Profile 2</a>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vQUHiSzZZjQHoHgXIWqkHAhOStA6vg_YXKHL4n5MTgv7XsQQ926K3lq1-bupkp6iF0S-m_rxPSWwAFW/pub" target="_blank">Lab Profile 3</a>
+      <a href="https://drive.google.com/open?id=1WYIIxCGyLvN1EAmxif02OaI1jSpxHx5C" target="_blank">Lab Profile 1</a>
+      <a href="https://drive.google.com/open?id=1ToNP922GnnRP4Ex9Q_8C2wLIB6OX0nxM" target="_blank">Lab Profile 2</a>
+      <a href="https://drive.google.com/open?id=1n9znm1frZsMoqX2-KOdaJyFK_QhcuK2F" target="_blank">Lab Profile 3</a>
     </div>
   </div> 
-  <a href="student.html">Students</a>
+  <a href="student.html" style="opacity:1;">Students</a>
   <div class="idropdown">
     <button class="idropbtn" >Activities 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="idropdown-content">
-      <a href="activities.html">Invited Speakers</a>
-	    <a href="https://docs.google.com/document/d/e/2PACX-1vSKjaBBI0k7MZuS1gVZM29MHyJJpt9tl-c9nYgxmsQFNckQaPCyOyPiE2mAlVzeH1Hvk6dNv-0iF0my/pub" target="_blank">Outcomes</a>
+      <a href="activities.html">Guest Of Honour</a>
+      <a href="photogallery.html" >Gallery</a>
       
       
      </div>
   </div>
-  <a href="facultyprofile.html">Staff</a>
   <a href="http://www.iqac.dauniv.ac.in/" target="_blank">IQAC</a>
-  <a href="alumni.html" style="opacity:1;">Alumni</a>
-  <a href="photogallery.html" >Gallery</a>
+  <a href="alumni.html">Alumni</a>
+  
   <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 </nav>
@@ -661,9 +684,9 @@ function myFunction() {
     x.className = "itopnav";
   }
 }
-	
-	
-	
+  
+  
+  
 </script>
 <div class  = "parallax" style="padding-bottom: 100px;margin-bottom: 50px;">
 
@@ -688,7 +711,7 @@ function myFunction() {
 
   <h2 align="center" style="font-size : 45px; font-family: 'Source Sans Pro', sans-serif; font-weight:bold;">About Our Alumni </h2>
   <br>
-<center style="font-family : 'Cookie', cursive; font-size: 22px;margin-left: 50px;margin-right: 50px; ">A large number of alumni of School of Chemical Sciences have risen to prominent positions in academic institutions as well as industries along with research establishments, thereby making presence noticeable even at the global level. The key element in their functioning has been the punch line : <strong>Life is a beautiful struggle which is fully endorsed by their elaborate efforts at diverse platforms.</strong> Consequently, giving the right priority to the concept of empowerment through knowledge, the alumni have served to propagate the spirit of quality enhancement in every walk of life so that, it is made a part of the day to day work culture. 
+<center align='justify' style="font-family : 'Cookie', cursive; font-size: 22px;margin-left: 50px;margin-right: 50px; ">A large number of alumni of School of Chemical Sciences have risen to prominent positions in academic institutions as well as industries along with research establishments, thereby making presence noticeable even at the global level. The key element in their functioning has been the punch line : <strong>Life is a beautiful struggle which is fully endorsed by their elaborate efforts at diverse platforms.</strong> Consequently, giving the right priority to the concept of empowerment through knowledge, the alumni have served to propagate the spirit of quality enhancement in every walk of life so that, it is made a part of the day to day work culture. 
 </center>
 
   </div>
@@ -703,8 +726,8 @@ function myFunction() {
                 <div class="alcard">
                  <center><img src = "img/Premlata_Gupta.jpeg" class = "img_size" style = "margin-top:10px;display : preserve-3d;outline : solid 3px #fff;
                   margin : 0;padding : 0;outline : solid 2px white;margin-top : 10px; "class = "img_size"></center> 
-                  <p style = "text-align : center;margin-top : 10px;color : white;"><b>Dr. Premlata Gupta</b></p>
-                  <p style = "text-align : center;margin-top : 10px;color : white"><b>Principal , IPS Academy<br>Indore</b></p>
+                  <p style = "text-align : center;margin-top : 10px;color : white;"><b>Dr. PREMLATA GUPTA</b></p>
+                  <p style = "text-align : center;margin-top : 10px;color : white"><b>PRINCIPAL , IPS ACADEMY<br>INDORE</b></p>
               </div>
           </div>
 
@@ -729,7 +752,8 @@ function myFunction() {
     <div class="alcard">
         <center><img src = "img/Kapil_Bilthare.jpeg" style = "display : preserve-3d;outline : solid 3px #fff;margin : 0;padding : 0;outline : solid 2px white;margin-top : 10px; "class = "img_size"></center>
   <p style = "text-align : center;margin-top : 10px;color : white;"><b>Mr. KAPIL BIRTHARE</b></p>
-  <p style = "text-align : center;margin-top : 10px;color : white"><b>ENTREPRENEUR - DIRECTOR RANKERS INSTITUTE</b></p>
+  <p style = "text-align : center;margin-top : 10px;color : white"><b>ENTREPRENEUR - DIRECTOR RANKERS GROUP OF INSTITUTIONS INDORE</b></p>
+  
 </div>
 </div>
 
@@ -760,8 +784,9 @@ function myFunction() {
 <div class = "col" >
     <div class="alcard">
         <center><img src = "img/Pushpendra_kumar_kushwaha.jpeg" style = "margin-top : 10px;outline : solid 2px white;" class = "img_size"></center>
-    <p style = "text-align : center;margin-top : 10px;color : white;"><b>Dr. PUSHPENDRA KUSHWAHA</b></p>
-  <p style = "text-align : center;margin-top : 10px;color : white;"><b>ASSISTANT COMMISSIONER COOPEERATIVE DISTRICT SHEOPUR(MP)</b></p>
+    <p style = "text-align : center;margin-top : 10px;color : white;"><b>Mr. PUSHPENDRA KUSHWAHA</b></p>
+  <p style = "text-align : center;margin-top : 10px;color : white;"><b>ASSISTANT COMMISSIONER COOP. SOCIETIES GOVT. OF M.P.</b></p>
+  <p style = "text-align : center;margin-top : 10px;color : white;"><b>M.Sc-2005</b></p>
 </div>
 </div>
 
@@ -780,7 +805,7 @@ function myFunction() {
         <center><img src = "img/nishitaL.png" style = "margin-top : 10px;outline : solid 2px white;" class = "img_size"></center>
     <p style = "text-align : center;margin-top : 10px;color : white;"><b>Dr. NISHITHA LUCAS</b></p>
     <p style = "text-align : center;margin-top : 10px;color : white"><b>Dr. D.S. KOTHARI FELLOW</b></p>
-    <p style = "text-align : center;margin-top : 10px; color : white"><b>Ph.D.- 2015</b></p>
+    <p style = "text-align : center;margin-top : 10px; color : white"><b>M.Sc. - 2004</b></p>
 </div>
 </div>
 
@@ -802,7 +827,17 @@ function myFunction() {
 
 <div class="row">
 
-     <div class = "col" >
+   <div class = "col" >
+        <div class="alcard">
+          <center><img src = "img/dr.Dheeraj_Mandloi.jpeg" class = "img_size"  style = "margin-top : 10px;display : preserve-3d;outline : solid 2px white;" class = "img_size"></center>
+          <p style = "text-align : center;margin-top : 10px;color:white;"><b>Dr. DHEERAJ MANDLOI</b></p>
+          <p style = "text-align : center;margin-top : 10px;color : white;"><b>ASSISTANT PROFFESOR - IET DAVV</b></p>
+      </div>
+  </div>
+
+
+
+   <div class = "col" >
     <div class="alcard">
         <center><img src = "img/DVinitaSahu.jpeg" style = "margin-top : 10px;outline : solid 2px white;" class = "img_size"></center>
     <p style = "text-align : center;margin-top : 10px;color : white;"><b>Dr. VINITA SAHU</b></p>
@@ -811,15 +846,8 @@ function myFunction() {
 </div>
 </div>
 
-     <div class = "col" >
-        <div class="alcard">
-          <center><img src = "img/dr.Dheeraj_Mandloi.jpeg" class = "img_size"  style = "margin-top : 10px;display : preserve-3d;outline : solid 2px white;" class = "img_size"></center>
-          <p style = "text-align : center;margin-top : 10px;color:white;"><b>Dr. DHEERAJ MANDLOI</b></p>
-          <p style = "text-align : center;margin-top : 10px;color : white;"><b>ASSISTANT PROFFESOR - IET DAVV</b></p>
-      </div>
-  </div>
 
-   <div class = "col" >
+      <div class = "col" >
     <div class="alcard">
         <center><img src = "img/PankajPatidar.jpeg" style = "margin-top : 10px;outline : solid 2px white;" class = "img_size"></center>
     <p style = "text-align : center;margin-top : 10px;color : white;"><b>Dr. PANKAJ PATIDAR</b></p>
@@ -827,6 +855,21 @@ function myFunction() {
     <p style = "text-align : center;margin-top : 10px; color : white"><b>Ph.D.-2014</b></p>
 </div>
 </div>
+
+
+  <div class = "col" >
+    <div class="alcard">
+        <center><img src = "img/Jitendra_Sir.jpeg" style = "margin-top : 10px;outline  : solid 2px white;" class = "img_size"></center>
+        <p style = "text-align : center;margin-top : 10px;color : white;"><b>Dr. JITENDRA SINGH</b></p>
+        <p style = "text-align : center;margin-top : 10px;color : white;"><b>ASSISTANT PROFESSOR - IET DAVV</b></p>
+        <p style = "text-align : center;margin-top : 10px;color : white;"><b>Ph.D. - 2014</b></p>
+    </div>
+</div>
+
+    
+
+
+ 
 
   <div class = "col" >
     <div class="alcard">
@@ -838,13 +881,7 @@ function myFunction() {
 </div>
 
 
- <div class = "col" >
-    <div class="alcard">
-        <center><img src = "img/Dr_Rajendra_Chaukhare.jpeg" style = "display : preserve-3d;outline : solid 3px #fff;margin : 0;padding : 0;outline : solid 2px white;margin-top : 10px; "class = "img_size"></center>
-  <p style = "text-align : center;margin-top : 10px;color : white;"><b>Dr. RAJENDRA CHOUKHAREY</b></p>
-  <p style = "text-align : center;margin-top : 10px;color : white"><b>SCIENTIFIC OFFICER, FSL, SAGAR</b></p>
-</div>
-</div>
+ 
 
 </div>
 
@@ -852,15 +889,14 @@ function myFunction() {
 
 <div class="row">
 
-
-<div class = "col" >
+  <div class = "col" >
     <div class="alcard">
-        <center><img src = "img/Jitendra_Sir.jpeg" style = "margin-top : 10px;outline  : solid 2px white;" class = "img_size"></center>
-        <p style = "text-align : center;margin-top : 10px;color : white;"><b>JITENDRA SINGH</b></p>
-        <p style = "text-align : center;margin-top : 10px;color : white;"><b>ASSISTANT PROFESSOR - IET DAVV</b></p>
-        <p style = "text-align : center;margin-top : 10px;color : white;"><b>Ph.D. 2014</b></p>
-    </div>
+        <center><img src = "img/Dr_Rajendra_Chaukhare.jpeg" style = "display : preserve-3d;outline : solid 3px #fff;margin : 0;padding : 0;outline : solid 2px white;margin-top : 10px; "class = "img_size"></center>
+  <p style = "text-align : center;margin-top : 10px;color : white;"><b>Dr. RAJENDRA CHOUKHAREY</b></p>
+  <p style = "text-align : center;margin-top : 10px;color : white"><b>SCIENTIFIC OFFICER, FSL, SAGAR</b></p>
 </div>
+</div>
+
 
 
     <div class = "col" >
@@ -873,14 +909,16 @@ function myFunction() {
 
 
 
-<div class = "col" >
-    <div class="alcard">
-        <center> <img src = "img/al3.jpeg" style = " margin-top : 10px;display : preserve-3d;outline  : solid 2px white;" class = "img_size"></center>
-    <p style = "text-align : center;margin-top : 10px;color : white;"><b>Mrs. ANKITA SHARMA</b></p>
-  <p style = "text-align : center;margin-top : 10px;color : white;"><b>CIPLA PHARMACEUTICALS</b></p>
-   <p style = "text-align : center;margin-top : 10px;color : white;"><b></b></p>
-</div>
-</div>
+
+  <div class = "col"  >
+            <div class="alcard">
+              <center><img class = "img_size" src = "img/alumni1.jpeg" style = " margin-top : 10px;display : preserve-3d;outline : solid 2px white; " class= "img_size"></center>
+              <p style = "text-align : center;margin-top : 10px;color : white;"><b>Mr. ANURAG TIWARI</b></p>
+              <p style = "text-align : center;margin-top : 10px;color : white;"><b>NATIONAL ACADEMIC DIRECTOR</b></p>
+              <p style = "text-align : center;margin-top : 10px;color : white;"><b>AAKASH EDUCATIONAL Ltd.</b></p>
+          </div>
+      </div>
+
 
 <div class = "col" >
     <div class="alcard">
@@ -891,14 +929,16 @@ function myFunction() {
 </div>
 </div>
 
-   <div class = "col"  >
-            <div class="alcard">
-              <center><img class = "img_size" src = "img/alumni1.jpeg" style = " margin-top : 10px;display : preserve-3d;outline : solid 2px white; " class= "img_size"></center>
-              <p style = "text-align : center;margin-top : 10px;color : white;"><b>ANURAG TIWARI</b></p>
-              <p style = "text-align : center;margin-top : 10px;color : white;"><b>NATIONAL ACADEMIC DIRECTOR</b></p>
-              <p style = "text-align : center;margin-top : 10px;color : white;"><b>AAKASH EDUCATIONAL Ltd.</b></p>
-          </div>
-      </div>
+<div class = "col" >
+    <div class="alcard">
+        <center> <img src = "img/al3.jpeg" style = " margin-top : 10px;display : preserve-3d;outline  : solid 2px white;" class = "img_size"></center>
+    <p style = "text-align : center;margin-top : 10px;color : white;"><b>Mrs. ANKITA SHARMA</b></p>
+  <p style = "text-align : center;margin-top : 10px;color : white;"><b>CIPLA PHARMACEUTICALS</b></p>
+   <p style = "text-align : center;margin-top : 10px;color : white;"><b></b></p>
+</div>
+</div>
+
+ 
 
 
 </div>
@@ -912,23 +952,23 @@ function myFunction() {
     <div class="alcard">
         <center><img src = "img/VinayNimbola.jpeg" style = "margin-top : 10px;outline : solid 2px white;" class = "img_size"></center>
     <p style = "text-align : center;margin-top : 10px;color : white;"><b>Mr. VINAY NIMBOLA</b></p>
-    <p style = "text-align : center;margin-top : 10px;color : white"><b>ASSISTANT MANAGER, QC, ALEMBIC PHARMA</b></p>
-    <p style = "text-align : center;margin-top : 10px; color : white"><b>M.Sc</b></p>
+    <p style = "text-align : center;margin-top : 10px;color : white"><b>ASSISTANT MANAGER, QA, ALEMBIC PHARMA</b></p>
+    <!-- <p style = "text-align : center;margin-top : 10px; color : white"><b>M.Sc</b></p> -->
     </div>
 </div>
     
     <div class = "col" >
-    <div class="alcard" style = "margin-left : 15px;">
+    <div class="alcard">
         <center><img src = "img/Vijaylakshmi.jpeg" style = "margin-top : 10px;outline : solid 2px white;" class = "img_size"></center>
     <p style = "text-align : center;margin-top : 10px;color : white;"><b>Ms. VIJAYLAKSHMI PANDEY</b></p>
   
-    <p style = "text-align : center;margin-top : 10px;color : white"><b>M.Sc 2012</b></p>
+    <p style = "text-align : center;margin-top : 10px;color : white"><b>M.Sc - 2012</b></p>
 </div>
 </div>
 
     
     <div class = "col" >
-    <div class="alcard" style = "margin-left: 7px;">
+    <div class="alcard">
         <center><img src = "img/RaviV.jpeg" style = "margin-top : 10px;outline : solid 2px white;" class = "img_size"></center>
     <p style = "text-align : center;margin-top : 10px;color : white;"><b>Dr. RAVI VISHWAKARMA</b></p>
     <p style = "text-align : center;margin-top : 10px;color : white"><b>ASSISTANT PROFESSOR</b></p>
@@ -949,7 +989,8 @@ function myFunction() {
     <div class="alcard">
         <center><img src = "img/Jitendra_Daryani.jpeg" style = " margin-top : 10px;display : preserve-3d;margin-right :10px;outline  : solid 2px white; " class = "img_size"></center>
   <p style = "text-align : center;color : white;margin-top : 10px;"><b>Mr. JITENDRA DARYANI</b></p>
-  <p style = "text-align : center;margin-top : 10px;color : white;"><b>SENIOR EXECUTIVE QUALITY AND COMPLIANCE</b></p>
+  <p style = "text-align : center;margin-top : 10px;color : white;"><b>SR. EXECUTIVE QUALITY & COMPLIANCE , SUN PHARMA</b></p>
+  <p style = "text-align : center;margin-top : 10px;color : white;"><b>M.Sc. - 2005</b></p>
 </div>
 </div>
 
@@ -973,7 +1014,8 @@ function myFunction() {
     <div class="alcard">
         <center><img src = "img/Yogendra.jpeg" style = "margin-top : 10px;outline : solid 2px white;" class = "img_size"></center>
     <p style = "text-align : center;margin-top : 10px;color : white;"><b>Dr. YOGENDRA SINGH CHAUHAN</b></p>
-    <p style = "text-align : center;margin-top : 10px;color : white"><b>SCIENTIST-B,SPICES BOARD OF INDIA<BR>MUMBAI</b></p>
+    <p style = "text-align : center;margin-top : 10px;color : white"><b>SCIENTIST-B</b></p>
+    <p style = "text-align : center;margin-top : 10px;color : white"><b>SPICES BOARD OF INDIA, MUMBAI</b></p>
    
 </div>
 </div>
@@ -982,7 +1024,7 @@ function myFunction() {
   <div class = "col" >
     <div class="alcard">
         <center><img src = "img/spm.jpeg" style = "margin-top : 10px;outline : solid 2px white;" class = "img_size"></center>
-    <p style = "text-align : center;margin-top : 10px;color : white;"><b>SARABJOT KAUR MAKKAD</b></p>
+    <p style = "text-align : center;margin-top : 10px;color : white;"><b>Ms. SARABJOT KAUR MAKKAD</b></p>
     <p style = "text-align : center;margin-top : 10px;color : white"><b>SPM FELLOW</b></p>
 
     <p style = "text-align : center;margin-top : 10px;color : white"><b>M.Sc - 2012</b></p>
@@ -994,7 +1036,7 @@ function myFunction() {
     <div class="alcard">
         <center><img src = "img/Govind_Sethia.jpg" style = "margin-top : 10px;outline : solid 2px white;" class = "img_size"></center>
     <p style = "text-align : center;margin-top : 10px;color : white;"><b>Dr. GOVIND SETHIA</b></p>
-    <p style = "text-align : center;margin-top : 10px;color : white"><b>SCIENTIST-B</b></p>
+    <p style = "text-align : center;margin-top : 10px;color : white"><b>SENIOR SCIENTIST</b></p>
 
     <p style = "text-align : center;margin-top : 10px;color : white"><b>CSMCRI - BHAVNAGAR</b></p>
    
@@ -1024,55 +1066,72 @@ function myFunction() {
 
 </div>
 </div>
-<div class="smallfooter" style="background-color:#0c2461; display:block; font-family: 'Source Sans Pro', sans-serif; padding-bottom:450px;">
-   <div class="col-sm-6 col-md-6" style="float:left; background-color:#0c2461;" >
-        <a href="index.html">
-        <div class = "schoolName" style="  border-style:solid;
-          border-width: thin;
-          border-color: white;
-          height:140px;
-          width:140px;
-          margin-left:5%;
-          margin-top:10px;">
-         <img src="img/SCHEMLOGO.png" height="138px" width="138px">
-        </div>
-      </a>
-      <div class="sfqlinks" style="color:white !important;"  >
-      <ul style=" list-style-type: none; color:white !important; text-decoration:none; font-size:18px;">
-        <li style="margin-top:30px;" >
-        <a style="color:white !important; font-weight:bold; opacity:0.6;" href="http://www.dauniv.ac.in/">DAVV</a>
-        </li>
-        <li style="margin-top:15px;" >
-        <a style="color:white !important; font-weight:bold; opacity:0.6;"href="aboutus.html">About Us</a>
-        </li>
-        <li style="margin-top:15px;" >
-        <a style="color:white !important; font-weight:bold; opacity:0.6;" href="https://maps.google.com/?cid=6646430206762351224">Campus Map</a>
-        </li>
-        <li style="margin-top:15px;" >
-        <a style="color:white !important; font-weight:bold; opacity:0.6;" href="aboutdev.html">About Developers</a>
-        </li>
+</div>
+<div class="smallfooter" style="background-color:#0c2461 !important; display:block; font-family: 'Source Sans Pro', sans-serif; margin-top: 30px; ">
 
-      </ul>
-    </div>
-      <hr style="width:70%; margin-left:20%; margin-top:20px; color:white;">
-      <center>
-      <font style="font-size:12px; color:white ; ">
-        <span style="font-size: 1.2em; color: white;">
-      <i class="far fa-copyright"></i>
-      </span> 2018 School of Chemical Sciences </font>
-      </center>
+  
+
+    <div class="col-md-3" style="float:left; background-color:inherit; min-height: 500px; " >
+         <a href="index.html">
+         <div class = "schoolName" style="  border-style:solid;
+           border-width: thin;
+           border-color: white;
+           height:140px;
+           width:140px;
+           margin-left:5%;
+           margin-top:10px;">
+          <img src="img/SCHEMLOGO.webp" height="138px" width="138px">
+         </div>
+       </a>
+       <div class="sfqlinks" style="color:white !important;"  >
+       <ul style=" list-style-type: none; color:white !important; text-decoration:none; font-size:18px;">
+         <li style="margin-top:30px;" >
+         <a style="color:white !important; font-weight:bold; opacity:0.6;" href="http://www.dauniv.ac.in/">DAVV</a>
+         </li>
+         <li style="margin-top:15px;" >
+         <a style="color:white !important; font-weight:bold; opacity:0.6;"href="aboutus.html">About Us</a>
+         </li>
+         <li style="margin-top:15px;" >
+         <a style="color:white !important; font-weight:bold; opacity:0.6;" href="https://maps.google.com/?cid=6646430206762351224">Campus Map</a>
+         </li>
+         <li style="margin-top:15px;" >
+         <a style="color:white !important; font-weight:bold; opacity:0.6;" href="aboutdev.html">About Developers</a>
+         </li>
+ 
+       </ul>
+     </div>
    </div>
-
-   <div class="col-sm-6 col-md-6" style="float:left; background-color:#0c2461;" >
-    <div class="mapouter" style="outline:solid 20px white; margin-top:30px; margin-bottom:10px;"><div class="gmap_canvas"><iframe style="width:100%;" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=School%20of%20chemical%20sciences%2CDAVV%2C%20KHANDWA%20ROAD&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de/webdesign-muenster/"></a></div>
-    <style>.mapouter{text-align:right;height:350px;width:90%;}.gmap_canvas {overflow:hidden;background:none!important;height:350px;width:100%;}
-    </style></div>
-
-</div>
-
-</div>
-
-</div>
+     <div class="col-md-4" style="float:left; background-color:inherit; min-height: 500px;  " >
+     <div class = "contact" >
+       <br>
+           <a style = " color : white; font-size : 22px; "><b>Contact Us</b></a>
+           
+           <p style = "color : white; font-size : 18px; font-weight:500; opacity:0.7;">
+             <span style="font-size: 1.2em; color: white; opacity:1;">
+           <i class="fas fa-map-marker-alt"></i>
+         </span>School of Chemical Sciences, <br>
+             Devi Ahilya Vishwavidyalaya,<br>Takshashila Campus,<br>Khandwa Road,<br>Indore (M.P.)-452001,India<br><br>
+             <span style="font-size: 1.2em; color: white; opacity:1;">
+             <i class="fas fa-phone"></i>
+             </span>Contact No. - 0731-2460208 <br><br>
+             <span style="font-size: 1.2em; color: white; opacity:1;">
+             <i class="fas fa-envelope"></i>
+             </span>Email ID: drashoksharma2001@yahoo.com<br><br>
+           &copy; 2019 School Of Chemical Sciences</p>
+        </div> 
+       
+     </div>
+       
+    
+ 
+    <div class="col-md-5" style="float:left;  padding:2%; background-color:inherit; min-height: 500px; " >
+     <div class="mapouter" style="outline:solid 20px white; margin-top:30px; margin-bottom:10px;"><div class="gmap_canvas"><iframe style="width:100%;" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=School%20of%20chemical%20sciences%2CDAVV%2C%20KHANDWA%20ROAD&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de/webdesign-muenster/"></a></div>
+     <style>.mapouter{text-align:right;height:350px;width:90%;}.gmap_canvas {overflow:hidden;background:none!important;height:350px;width:100%;}
+     </style></div>
+ 
+ </div>
+ 
+ </div>
 
 
 
