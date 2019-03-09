@@ -48,7 +48,7 @@
      /* Float four columns side by side */
 .column {
   float: left;
-  width: 33%;
+  width: 50%;
   padding: 0 10px;
 }
 /* Remove extra left and right margins, due to padding */
@@ -264,6 +264,39 @@ canvas {
     display:block;
     align-content: center;
   }
+  
+}
+
+#s{
+  position: absolute;
+  top:30%;
+  width : 18%;
+  left:8%;
+}
+
+#text{
+  font-size:2.4vw;
+  position: absolute;
+  top:42%;
+  left:30%;
+}
+
+@media only screen and (max-width: 1180px) {
+  #s{
+  width:24%;
+  position: absolute;
+  top:5%;
+  left:38%;
+  
+}
+
+#text{
+  font-size:3vw;
+  position: absolute;
+  left:15%;
+  top:65%;
+}
+  
   
 }
 
@@ -1014,41 +1047,27 @@ function myFunction() {
 
 
 
-  <div class="column">
-    <div class="card">
-      <center><span style="font-size: 1.5em;">
-        <i class="fas fa-newspaper"></i>
-        <font  style="font-size:24px; font-family: 'Source Sans Pro', sans-serif; font-weight:bold;">News</font>
-         <hr size="100">
-      </span>
-     </center>
-     <marquee  scrollamount="2" direction="up" loop="true">
-<center> <font style="font-family: 'Source Sans Pro', sans-serif; font-size:20px;"><br><br>
-                                        <br><br>
-                                       <br><br>
-
-                                       </font></center></marquee>
-    </div>
-  </div>
+  
 </div>
 
 
 
 <div class = "container-fluid margin" id="c1" style = "width : 100%;position: relative;">
 <img src = "newImg/bgimg.webp"  style = "height: auto; width : 100%;max-height : 700px;filter:blur(3px);">
-<div class = "container" style = "position: absolute;left : 10%;top : 26%;">
-  <img src = '' id = "s" style = "border-radius: 100%;height : auto; max-height : 310px;width : auto;box-shadow: 0 12px 15px 0 rgba(1, 1, 1, 1), 0 0 15px 10px rgba(1, 1, 1, 1);"> 
-  </div>
 
-<div class = "container" style="position: absolute;left : 32%;top :35%;">
-<!-- h4 id = "text"style = "margin-bottom : 17px;color :#fff;">"Nothing in life is to feared, it is only to be understood. Now is the time to understand </h4> -->
+  <img src = '' id = "s" style = "border-radius: 100%;height : auto; max-height : 310px;box-shadow: 0 12px 15px 0 rgba(1, 1, 1, 1), 0 0 15px 10px rgba(1, 1, 1, 1);"> 
+  <!-- h4 id = "text"style = "margin-bottom : 17px;color :#fff;">"Nothing in life is to feared, it is only to be understood. Now is the time to understand </h4> -->
 
 <h2 id = "text" style = "margin-bottom : 17px;color :#fff;width : 70%;"></h2>
 <!-- <h4 style = "color : #fff;">more, so that we may fear less" - Marie Curie</h4> -->
 
+  </div>
 
-</div>
-</div>
+
+
+
+
+
 </div>
  <script>
   
