@@ -300,6 +300,19 @@ canvas {
   
 }
 
+.explore{
+  height:8%;
+  width:100%;
+  position: sticky;
+  bottom:0px;
+  background-color:#0c2461;
+  color:white;
+  font-size:2vw;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  z-index: 0;
+
+}
     </style>
   </head>
   <body style="background-color: #E9E6DF;">
@@ -446,7 +459,7 @@ class Point {
       x: x,
       y: y
     };
-    this.radius = Utl.random(5,10);
+    this.radius = Utl.random(10,15);
     let color_id = Math.floor(Utl.random(0,colorTheme.length));
     this.color = colorTheme[color_id];
     this.target = {
@@ -524,7 +537,7 @@ class Stick{
     this.min_distance = min_distance;
     this.length = Math.max(min_distance,distance) + Utl.random(10,80);
     this.maxLength = this.length + 100;
-    this.max_link_width = Math.min(1,4);
+    this.max_link_width = Math.min(2,6);
   }
   update(){
         let dx = this.p1.pos.x - this.p0.pos.x,
@@ -572,7 +585,7 @@ class Synapse{
   constructor(){
     this.points = [];
     this.sticks = [];
-    this.number_point = 20;
+    this.number_point = 15;
     for (var i = 0; i < this.number_point; i++) {
       this.points.push(new Point(Utl.random(0,W),Utl.random(0,H)));
     }
@@ -737,7 +750,7 @@ function myFunction() {
   
 </script>
       
-      
+ 
 <!--    to here    -->
 <!-- <marquee style="margin-top:20px;"><i class="fas fa-vial" style = "color :#800000;font-size : 20px;margin-right : 5px;"></i> <font id = "marquee" style = "font-size : 25px;font-family: serif; color :#800000;"><b>SCHOOL OF CHEMICAL SCIENCES WELCOMES YOU!!!</b></font><i class="fas fa-vial" style = "color :#800000;font-size : 20px;margin-left : 5px;"></i></marquee> -->
 <br>
@@ -958,6 +971,8 @@ function myFunction() {
     </div>
     <script type="text/javascript">jssor_1_slider_init();</script>
     <!-- #endregion Jssor Slider End -->
+      
+
 <div class = "message" style = "margin-top : 0px; background-color: white; margin:5%; padding:2%; padding-bottom:20px;">
 
   <h2 style="font-family: 'Source Sans Pro', sans-serif; text-align : center; color:#1e3799"><b> Message From Head </b></h2>
@@ -1185,7 +1200,8 @@ console.log(random);
 
      
     </div> -->
-
+ <div class="explore"><center>Explore More</center>
+ </div>  
 <div class="smallfooter" style="background-color:#0c2461 !important; display:block; font-family: 'Source Sans Pro', sans-serif; margin-top: 30px; ">
 
   
