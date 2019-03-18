@@ -311,6 +311,33 @@ canvas {
     display:none;
   }
 }
+
+a { color: white; text-decoration: none; }
+
+.arrow {
+  text-align: center;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+#ex{
+   height:8%;
+  width:100%;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-6px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
     </style>
   </head>
   <body style="background-color: #E9E6DF;">
@@ -1104,7 +1131,9 @@ if(random === 5){
 console.log(random);
 </script>
 
- <div class="explore"><center>Explore More</center>
+ <div class="explore arrow bounce" id="ex"><center>Explore More
+  <a class="fa fa-arrow-down fa-1x" href="#"></a>
+</center>
  </div>  
 <div class="smallfooter" style="background-color:#0c2461 !important; display:block; font-family: 'Source Sans Pro', sans-serif; margin-top: 0px; ">
 
