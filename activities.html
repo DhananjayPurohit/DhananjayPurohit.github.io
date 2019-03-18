@@ -188,10 +188,11 @@
 
  .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  width: 300px;
   margin: auto;
   text-align: center;
   font-family: arial;
+  margin-top:20px;
 }
 
 .title {
@@ -274,6 +275,15 @@ canvas {
   
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+.flex-container > div {
+  margin:auto;
+}
     </style>
   </head>
   <body style="background-color: #E9E6DF;">
@@ -712,17 +722,16 @@ function myFunction() {
 </script>
       
       <div class="container-fluid" style="padding-bottom:30px;">
-<p style="font-size : 45px; font-family: 'sans-serif', sans-serif; font-weight:bold;text-align : center;margin-top: 50px;"> Guest Of Honour
+<p style="font-size : 45px; font-family: 'sans-serif', sans-serif; font-weight:bold;text-align : center;margin-top: 50px;"> Guest of Honour
     </p>
       
-<div class="row">
-  
+  <div class="flex-container">
   <div class="col">
 <div class="card">
   <img src="img/sp2.JPG" alt="" style="width:100%;height : 250px;">
-  <h3>Dr. J.S. Yadav</h3>
+  <h4>Dr. J.S. Yadav</h4>
 <!--   <p class="title">Forward Director</p> -->
-  <p>IICT Hyderabad</p>
+  <h6>IICT Hyderabad</h6>
 <!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
 </div>
 </div>
@@ -730,52 +739,9 @@ function myFunction() {
 <div class="col">
 <div class="card">
   <img src="img/sp12.jpg" alt="" style="width:100%;height : 250px;">
-  <h3>Prof. R.S. Mali</h3>
+  <h4>Prof. R.S. Mali</h4>
   <!-- <p class="title"></p> -->
-  <p>North Maharashtra University, Jalgaon</p>
-<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
-</div>
-</div>
-
-<div class="col">
-<div class="card">
-  <img src="img/sp9.jpg" alt="" style="width:100%;height : 250px;">
-  <h3>Dr. C. Venkatesh</h3>
-  <!-- <p class="title">Forward Director</p> -->
-  <p>IIT Indore</p>
-<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
-</div>
-</div>
-
-<div class="col">
-<div class="card">
-  <img src="img/sp8.jpg" alt="" style="width:100%;height : 250px;">
-  <h3>Dr. Sampak Samanta</h3>
-  <!-- <p class="title">Forward Director</p> -->
-  <p>IIT Indore</p>
-<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
-</div>
-</div>
-
-</div>
-
-<div class="row">
-  <div class="col">
-  <div class="card">
-  <img src="img/sp.JPG" alt="" style="width:100%;height : 250px;">
-  <h3>Dr. S.K. Singh</h3>
-  <!-- <p class="title">Forward Director</p> -->
-  <p>IIT Indore</p>
-<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
-</div>
-</div>
-
-<div class="col">
-<div class="card">
-  <img src="img/sp5.jpg" alt="" style="width:100%;height : 250px;">
-  <h3>Dr. Satya S. Bulusu</h3>
-  <!-- <p class="title">Forward Director</p> -->
-  <p>IIT Indore</p>
+  <h6>North Maharashtra University, Jalgaon</h6>
 <!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
 </div>
 </div>
@@ -783,31 +749,9 @@ function myFunction() {
 <div class="col">
 <div class="card">
   <img src="img/sp4.JPG" alt="" style="width:100%;height : 250px;">
-  <h3>Dr. P.S. Kulsi</h3>
+  <h4>Dr. P.S. Kulsi</h4>
   <!-- <p class="title">Forward Director</p> -->
-  <p>Punjab Technical University, Ludhiana</p>
-<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
-</div>
-</div>
-
-<div class="col">
-<div class="card">
-  <img src="img/sp3.JPG" alt="" style="width:100%;height : 250px;">
-  <h3>Dr. Rajneesh Misra</h3>
-  <!-- <p class="title">Forward Director</p> -->
-  <p>IIT Indore</p>
-<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
-</div>
-</div>
-</div>
-
-<div class="row">
-  <div class="col">
-  <div class="card">
-  <img src="img/sp1.JPG" alt="" style="width:100%;height : 250px;">
-  <h3>Dr. Akhilesh Verma</h3>
-  <!-- <p class="title">Forward Director</p> -->
-  <p>University Of Delhi</p>
+  <h6>Punjab Technical University, Ludhiana</h6>
 <!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
 </div>
 </div>
@@ -815,63 +759,156 @@ function myFunction() {
 <div class="col">
 <div class="card">
   <img src="img/sp16.jpg" alt="" style="width:100%;height : 250px;">
-  <h3>Dr. D.S. Rawat</h3>
+  <h4>Dr. D.S. Rawat</h4>
   
 <!--   <p class="title">Forward Director</p> -->
-  <p>IIT Indore</p>
+  <h6>University Of Delhi</h6>
 <!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
 </div>
 </div>
+
+<div class="col">
+  <div class="card">
+  <img src="img/sp1.JPG" alt="" style="width:100%;height : 250px;">
+  <h4>Dr. Akhilesh Verma</h4>
+  <!-- <p class="title">Forward Director</p> -->
+  <h6>University Of Delhi</h6>
+<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
+</div>
+</div>
+
+ <div class="col" >
+<div class="card">
+  <img src="img/sp19.jpeg" alt="" style="width:100%;height : 250px;">
+  <h4>Dr. B. Vishwanathan</h4>
   
-  <div class="col">
+<!--   <p class="title">Forward Director</p> -->
+  <h6>IIT Madras</h6>
+<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
+</div>
+</div>
+
+<div class="col">
 <div class="card">
   <img src="img/sp17.jpeg" alt="" style="width:100%;height : 250px;">
-  <h3>Dr. Deepak Gupta</h3>
+  <h4>Dr. Deepak Gupta</h4>
   
 <!--   <p class="title">Forward Director</p> -->
-  <p>IIT Kanpur</p>
+  <h6>IIT Kanpur</h6>
 <!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
 </div>
 </div>
+
+<div class="col">
+<div class="card">
+  <img src="img/sp9.jpg" alt="" style="width:100%;height : 250px;">
+  <h4>Dr. C. Venkatesh</h4>
+  <!-- <p class="title">Forward Director</p> -->
+  <h6>IIT Indore</h6>
+<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
+</div>
+</div>
+
+<div class="col">
+<div class="card">
+  <img src="img/sp8.jpg" alt="" style="width:100%;height : 250px;">
+  <h4>Dr. Sampak Samanta</h4>
+  <!-- <p class="title">Forward Director</p> -->
+  <h6>IIT Indore</h6>
+<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
+</div>
+</div>
+
+
+  <div class="col">
+  <div class="card">
+  <img src="img/sp.JPG" alt="" style="width:100%;height : 250px;">
+  <h4>Dr. S.K. Singh</h4>
+  <!-- <p class="title">Forward Director</p> -->
+  <h6>IIT Indore</h6>
+<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
+</div>
+</div>
+
+<div class="col">
+<div class="card">
+  <img src="img/sp5.jpg" alt="" style="width:100%;height : 250px;">
+  <h4>Dr. Satya S. Bulusu</h4>
+  <!-- <p class="title">Forward Director</p> -->
+  <h6>IIT Indore</h6>
+<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
+</div>
+</div>
+
+
+<div class="col">
+<div class="card">
+  <img src="img/sp3.JPG" alt="" style="width:100%;height : 250px;">
+  <h4>Dr. Rajneesh Misra</h4>
+  <!-- <p class="title">Forward Director</p> -->
+  <h6>IIT Indore</h6>
+<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
+</div>
+</div>
+
 
 <div class="col">
 <div class="card">
   <img src="img/sp18.jpeg" alt="" style="width:100%;height : 250px;">
-  <h3>Dr. P. Yogeeshwari</h3>
+  <h4>Dr. P. Yogeeshwari</h4>
   
 <!--   <p class="title">Forward Director</p> -->
-  <p>BITS Pilani, Hyderabad</p>
+  <h6>BITS Pilani, Hyderabad</h6>
 <!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
 </div>
 </div>
-</div>
 
-<div class="row">
-  <div class="col" >
+
+<div class="col" >
 <div class="card">
   <img src="img/sp19.jpeg" alt="" style="width:100%;height : 250px;">
-  <h3>Dr. B. Vishwanathan</h3>
+  <h4>Dr. Vinod Kumar Tiwari</h4>
   
 <!--   <p class="title">Forward Director</p> -->
-  <p>IIT Madras</p>
+  <h6>IIT BHU</h6>
 <!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
 </div>
 </div>
 
-<div class="col">
-</div> 
+<div class="col" >
+<div class="card">
+  <img src="img/sp19.jpeg" alt="" style="width:100%;height : 250px;">
+  <h4>Dr. Sandeep Atre</h4>
+  
+<!--   <p class="title">Forward Director</p> -->
+  <h6>Founder- CH Edge Makers</h6>
+<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
+</div>
+</div>
 
-<div class="col">
-</div> 
+<div class="col" >
+<div class="card">
+  <img src="img/sp19.jpeg" alt="" style="width:100%;height : 250px;">
+  <h4>Dr. Ravi P. Singh</h4>
+  
+<!--   <p class="title">Forward Director</p> -->
+  <h6>IIT DELHI</h6>
+<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
+</div>
+</div>
 
-<div class="col">
-</div> 
+<div class="col" >
+<div class="card">
+  <img src="img/sp19.jpeg" alt="" style="width:100%;height : 250px;">
+  <h4>Dr. Biswarup Pathak</h4>
+  
+<!--   <p class="title">Forward Director</p> -->
+  <h6>IIT INDORE</h6>
+<!--   <p><button style="background-color:#0c2461;">Contact</button></p> -->
+</div>
+</div>
+  
   </div>
-
-
-  
-  
-  
       </div>
     </div>
 
