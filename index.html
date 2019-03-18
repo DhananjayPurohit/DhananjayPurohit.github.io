@@ -71,7 +71,7 @@
     margin-bottom: 20px;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .column {
     width: 100%;
     display: block;
@@ -234,7 +234,6 @@ canvas {
     width:350px;
   }
 }
-
 #f3{
   display:none;
 }
@@ -266,21 +265,18 @@ canvas {
   }
   
 }
-
 #s{
   position: absolute;
   top:30%;
   width : 18%;
   left:8%;
 }
-
 #text{
   font-size:2.4vw;
   position: absolute;
   top:42%;
   left:30%;
 }
-
 @media only screen and (max-width: 1180px) {
   #s{
   width:24%;
@@ -289,7 +285,6 @@ canvas {
   left:38%;
   
 }
-
 #text{
   font-size:3vw;
   position: absolute;
@@ -299,7 +294,6 @@ canvas {
   
   
 }
-
 .explore{
   height:8%;
   width:100%;
@@ -310,8 +304,12 @@ canvas {
   font-size:2vw;
   font-weight: bold;
   font-family: 'Source Sans Pro', sans-serif;
-  z-index: 0;
+}
 
+@media only screen and (max-width: 800px) {
+  .explore{
+    display:none;
+  }
 }
     </style>
   </head>
@@ -444,7 +442,6 @@ canvas {
       </div>
       
       <script media="screen and (max-width:1020px)">
-
          // particules
          var viewportWidth = $(window).width();
          if (viewportWidth > 1000)
@@ -1025,7 +1022,7 @@ function myFunction() {
 </div>
 
 
-
+<div class="container">
 <div class="row" style="padding-bottom:30px;">
   <div class="column">
     <div class="card" >
@@ -1058,11 +1055,8 @@ function myFunction() {
 
                                        </font></center></marquee>
     </div>
-  </div>
-
-
-
-  
+  </div>  
+</div>
 </div>
 
 
@@ -1077,11 +1071,6 @@ function myFunction() {
 <!-- <h4 style = "color : #fff;">more, so that we may fear less" - Marie Curie</h4> -->
 
   </div>
-
-
-
-
-
 
 </div>
  <script>
@@ -1115,94 +1104,9 @@ if(random === 5){
 console.log(random);
 </script>
 
-
-
-
-
-<!-- <div class="row" style="background-color:white; font-weight: bold; font-family: 'Source Sans Pro', sans-serif; float:top; margin-top:50px; font-size:16px;">
-    <div class="col-md-4" style="float:left;" >
-      <font style=" font-size:22px;  color:#0c2461; margin-left:2%;">Quick Links</font>
-       <hr style = "width : 100%;  ">
-       <font  style="font-size: 18px; font-weight: bold; margin-left:2%;color : black;">Schools</font>
-       <div class = "qlinks" style="color:black; background-color:white;"  >
-       <ul style="list-style-type: none; font-size:15px;">
-         <li>
-         <a href="http://www.biochem.dauniv.ac.in/">School Of Biochemistry</a>
-         </li>
-         <li>
-         <a href="http://www.biotech.dauniv.ac.in/">School Of Biotechnology</a>
-         </li>
-         <li>
-         <a href="http://www.chemical.dauniv.ac.in/">School Of Chemical Sciences</a>
-         </li>
-         <li>
-         <a href="http://www.commerce.dauniv.ac.in/">School Of Commerce</a>
-         </li>
-         <li>
-         <a href="http://www.scs.dauniv.ac.in/index.php">School Of Computer Science & Information Technology</a>
-         </li>
-         <li>
-         <a href="http://www.dsf.dauniv.ac.in/">School Of Data Science & Forecasting</a>
-         </li>
-         <li>
-         <a href="http://www.soedavv.ac.in/">School Of Economics</a>
-         </li>
-         <li>
-         <a href="http://www.edu.dauniv.ac.in/">School Of Education</a>
-         </li>
-         <li>
-         <a href="http://www.elex.dauniv.ac.in/">School Of Electronics</a>
-         </li>
-         <li>
-         <a href="http://www.sees.dauniv.ac.in/">School Of Energy & Environmental Studies</a>
-         </li>
-         <li>
-         <a href="http://www.inst.dauniv.ac.in/">School Of Instrumentation</a>
-         </li>
-         </div>
-       </div>
-      <div class="col-sm-6 col-md-4" style="float:left;" >
-       <div class = "qlinks" style="color:black;"  >
-       <ul style="margin-top:100px; list-style-type: none; font-size:15px;">
-         <li>
-         <a href="http://www.sjmc.dauniv.ac.in/">School Of Journalism & Mass Communication</a>
-         </li>
-         <li>
-         <a href="http://www.slaw.dauniv.ac.in/">School Of Law</a>
-         </li>
-         <li>
-         <a href="http://www.sls.dauniv.ac.in/">School Of Life Sciences</a>
-         </li>
-         <li>
-         <a href="http://www.sclc.dauniv.ac.in/">School Of Languages</a>
-         </li>
-         <li>
-         <a href="http://www.math.dauniv.ac.in/">School Of Mathematics</a>
-         </li>
-         <li>
-         <a href="http://www.pharmacy.dauniv.ac.in/">School Of Pharmacy</a>
-         </li>
-         <li>
-         <a href="http://www.sope.davv.ac.in/">School Of Physical Education</a>
-         </li>
-         <li>
-         <a href="http://www.physics.dauniv.ac.in/">School Of Physics</a>
-         </li>
-         <li>
-         <a href="http://www.stat.dauniv.ac.in/">School Of Statistics</a>
-         </li>
-         <li>
-         <a href="http://www.soss.dauniv.ac.in/">School Of Social Science</a>
-         </li>
-       </ul>
-     </div>
-   </div>
-
-     
-    </div> -->
  <div class="explore"><center>Explore More</center>
  </div>  
-<div class="smallfooter" style="background-color:#0c2461 !important; display:block; font-family: 'Source Sans Pro', sans-serif; margin-top: 30px; ">
+<div class="smallfooter" style="background-color:#0c2461 !important; display:block; font-family: 'Source Sans Pro', sans-serif; margin-top: 0px; ">
 
   
 
