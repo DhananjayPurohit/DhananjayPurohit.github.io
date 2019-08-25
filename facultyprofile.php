@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel = "icon" type = "image/webp" href = "img/SCHEMLOGO.webp">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="external/css/bootstrap.css">
+    <script src="external/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="external/css/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Rozha+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+    <script src="external/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="external/js/popper.js" ></script>
+
+  <title>School of Chemical Science</title>
+  <style type="text/css">
+	  
+
+
+
+
+
+  /* Style the counter cards */
+body,html{
+  margin : 0;
+  padding : 0x;
+  overflow-x : hidden;
+}
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+    height:0px;
+  }
+
+  .flipcard{
+    width : 350px;
+    height : 380px;
+    perspective: 1000px;
+    
+  }
+
+  .flipcard-inner{
+    position : relative;
+    width : 100%;
+    height : 100%;
+    text-align : center;
+    transition :0.6s;
+    transform-style : preserve-3d;
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.5), 0 15px 20px 5px rgba(0, 0, 0, 0.4);
+    background-color: white;
+  }
+
+  .flipcard:hover .flipcard-inner{
+    transform : rotateY(180deg);
+  }
+
+  .flipcard-front, .flipcard-back{
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    backface-visibility: hidden;
+  }
+
+  .flipcard-front{
+    background-color : #03A9F4;
+    color : black;
+    z-index : 2;
+
+  }
+
+  .drp_button:hover{
+    color : white;
+  }
+
+
+  .flipcard-back {
+   background-color: #03A9F4;
+   padding:40px;
+   transform: rotateY(180deg);
+   z-index: 1;
+
+ }
+
+ .flipcard-front p{
+   font-weight : 700;
+ }
+
+ .flipcard-back p{
+   font-weight : 700;
+ }
+
+ .ntcard{
+  background-color: #03A9F4;
+  height : 310px;
+  margin: 2%;
+  max-width:320px;
+  min-width:300px;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.5), 15px 12px 20px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+}
+
+	  
+.sfqlinks a:hover {
+  opacity: 1 !important;
+  text-decoration: none;
+}
+      
+/* from here       */
+  
+
+.itopnav {
+  overflow: hidden;
+  background-color: #0c2461;
+  
+}
+.itopnav a {
+  float: left;
+  display: block;
+  color:#f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight:bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:20px;
+  opacity: 0.7;
+}
+.iactive {
+  
+  color: white;
+}
+.itopnav .icon {
+  display: none;
+}
+.idropdown {
+  float: left;
+  overflow: hidden;
+}
+.idropdown .idropbtn {
+  font-weight:bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:20px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+.idropbtn {
+  opacity:0.6;
+}
+.idropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index:5;
+}
+.idropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block ;
+  text-align: left;
+}
+.itopnav a:hover, .idropdown:hover .idropbtn {
+  /*background-color: #555;*/
+  color: white;
+  opacity: 1;
+}
+.idropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.idropdown:hover .idropdown-content {
+  display: block;
+}
+@media screen and (max-width: 600px) {
+  .itopnav a:not(:first-child), .idropdown .idropbtn {
+    display: none;
+  }
+  .itopnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .itopnav.responsive {position: relative;}
+  .itopnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .itopnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .itopnav.responsive .idropdown {float: none;}
+  .itopnav.responsive .idropdown-content {position: relative;}
+  .itopnav.responsive .idropdown .idropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+} 
+#colch:hover {
+    color:white !important;
+  
+}  
+	
+ 
+    .motionpic {
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background-color: #111;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+canvas {
+  background-color: #0c2461;
+}
+
+      
+/* from here       */
+   @media only screen and (max-width: 1350px) {
+  .pseudocont{
+    display:none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .mapouter,.gmap_canvas,#gmap_canvas{
+    width:350px;
+  }
+}
+
+#f3{
+  display:none;
+}
+      @media only screen and (max-width: 1000px) {
+  .motionpic, #can{
+    display:none;
+  }
+  #f3{
+    font-size:3.6vw !important;
+    position: absolute !important;
+    right:3% !important;
+  }
+}
+@media only screen and (max-width: 640px) {
+  
+  #f3{
+    display:none !important;
+  }
+  
+}
+@media only screen and (max-width: 1180px) {
+  
+  #f1,#f2{
+    display:none;
+  }
+  #f3{
+    display:block;
+    align-content: center;
+  }
+  
+}
+nav ul li a{
+    color:#9d9d9d;
+    text-decoration:none !important;
+}
+
+nav ul li a:hover{
+    color:white;
+}
+    </style>
+  </head>
+  <body style="">
+    	<div id="load"></div>
+    <div id="contents">
+        
+    </div>
+    <div class="container-fluid" style="width:100% !important; padding:0% !important; margin:0% !important; " >
+      <div class="pseudocont" style=" box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 1); position:fixed;
+      z-index:3 !important;"  >
+      <nav class="navbar navbar-inverse" id="pseudoheader" style="background-color: #0c2461; position:fixed; z-index:0 !important;width:100%; border:0px;">
+  <div class="container-fluid" id="pseudocontent" style="font-family: 'Source Sans Pro', sans-serif; font-weight:bold;font-size:18px;" >
+    <div class="navbar-header" >
+      <a class="navbar-brand" style="font-family: serif; font-size : 20px; color:white; font-weight:normal; padding-top:8px; " href="index.php">SCHOOL OF CHEMICAL SCIENCES</a>
+    </div>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="index.php"><span style="font-size: 1.2em;  ">
+            <i class="fas fa-home"></i>
+            </span></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li> <a href="aboutus.php" >About Us</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><div class="idropdown" >
+        <button class="idropbtn" id="colch" style="font-size:18px; color: white; opacity:1;">Staff 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="idropdown-content">
+          <a href="facultyprofile.php" target="_blank">Staff Profile</a>
+          <a onclick="document.getElementById('id01').style.display='block'">Update</a>
+         </div>
+      </div></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><div class="idropdown" >
+    <button class="idropbtn" id="colch" style="font-size:18px; color: #9d9d9d; opacity:1;">Admission 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="idropdown-content">
+      <a href="http://www.dauniv.ac.in/admissions.php" target="_blank">Admission Procedure</a>
+      <a href="courses.php" >Programmes</a>
+      <a href="POs.php">POs, PSOs, COs</a>
+     </div>
+  </div>
+  </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><div class="idropdown" >
+    <button class="idropbtn" id="colch"   style="font-size:18px; color: #9d9d9d; opacity:1;">
+      Research 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="idropdown-content" >
+      <a href="https://drive.google.com/open?id=1WYIIxCGyLvN1EAmxif02OaI1jSpxHx5C" target="_blank">Lab Profile 1</a>
+      <a href="https://drive.google.com/open?id=1ToNP922GnnRP4Ex9Q_8C2wLIB6OX0nxM" target="_blank">Lab Profile 2</a>
+      <a href="https://drive.google.com/open?id=1n9znm1frZsMoqX2-KOdaJyFK_QhcuK2F" target="_blank">Lab Profile 3</a>
+    </div>
+  </div></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="student.php">Students</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li> <div class="idropdown">
+    <button class="idropbtn" id="colch" style="font-size:18px; color: #9d9d9d; opacity:1;" >Activities 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="idropdown-content">
+      <a href="activities.php">Guest Of Honour</a>
+      <a href="photogallery.php" >Gallery</a>
+      
+      
+     </div>
+  </div></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="http://www.iqac.dauniv.ac.in/" target="_blank">IQAC</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="alumni.php">Alumni</a></li>
+    </ul>
+    
+
+  </div>
+</nav>
+</div>
+<p id="f1" style="font-size:2.7vw; color:white; position:absolute;  top:30px; right:20%; z-index:5; font-family:serif; font-weight:bold; ">SCHOOL OF CHEMICAL SCIENCES
+</p>
+<p id="f2" style="font-size:2.7vw; color:white; position:absolute;  top:110px; right:28%; z-index:5; font-family: 'Rozha One', serif; font-weight:bold;">रसायन विज्ञान अध्ययनशाला  
+</p>
+<p id="f3" align="center" style="font-size:3vw; color:white; position:absolute;  top:50px; right:25%; z-index:5; font-family:serif; font-weight:bold; ">SCHOOL OF CHEMICAL<br> SCIENCES
+</p>
+
+      
+     
+
+
+    <nav class="" style="background-color: #0c2461; position:relative; z-index:4 !important; width:100%; padding-top:10px;margin-bottom:-23px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);">
+    <a href="http://www.dauniv.ac.in/">
+    <div class = "schoolName" style="  border-style:solid;
+      border-width: thin;
+      border-color: white;
+      height:160px;
+      width: 150px;
+      display:inline-block;
+      margin-left:3%;
+      margin-top:20px;
+      margin-bottom:10px;
+      ">
+      <img src= "img/davvlogo.webp" width="100%" height="100%" >
+      
+     
+    </div>
+    </a>
+    <a href="index.php">
+     <div class="logopane" style="
+     margin-left: 2%;
+     width:150px;
+     height:160px;
+     border-style:solid;
+     border-width: thin;
+     border-color: white;
+     display:inline-block;
+     margin-top:20px;
+     margin-bottom:10px;
+     ">
+       <img src="img/SCHEMLOGO.webp" height="100%" width="100%">
+      
+      </div></a>
+      
+<div class="motionpic" style = "height :220px;width : 220px;position: absolute;right:2%; top:10px; ">
+        <canvas id="can" style="background-color: #0c2461;">
+        </canvas>
+       
+      </div>
+      
+      <script media="screen and (max-width:1020px)">
+         // particules
+         var viewportWidth = $(window).width();
+         if (viewportWidth > 1000)
+         {
+class Point {
+  constructor(x, y) {
+    this.pos = {
+      x: x,
+      y: y
+    };
+    this.old_pos = {
+      x: x,
+      y: y
+    };
+    this.radius = Utl.random(10,15);
+    let color_id = Math.floor(Utl.random(0,colorTheme.length));
+    this.color = colorTheme[color_id];
+    this.target = {
+      x:W/2,
+      y:H/2
+    };
+    this.linked = false;
+    this.connected_to = [];
+    this.is_dragged = false;
+  }
+  draw() {
+    ctx.fillStyle=this.color; 
+    ctx.beginPath();
+    ctx.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI, false);
+    ctx.fill();
+    ctx.closePath();
+    if(Utl.distance(pointer.pos,this.pos)<this.radius){
+    ctx.fillStyle=selection_color;
+    ctx.beginPath();
+    ctx.arc(this.pos.x, this.pos.y, this.radius-10, 0, 2 * Math.PI, false);
+    ctx.fill();
+    ctx.closePath();
+  }
+    
+  }
+  update() {
+    let vx = (this.pos.x - this.old_pos.x) * 0.96,
+    vy = (this.pos.y - this.old_pos.y) * 0.96;
+    this.old_pos.x = this.pos.x;
+    this.old_pos.y = this.pos.y;
+    this.pos.x += vx;
+    this.pos.y += vy;
+    if(!this.linked){
+    let angle = Utl.angleFrom(this.pos,this.target)
+    this.pos.x += Math.cos(angle) * 0.2;
+    this.pos.y += Math.sin(angle) * 0.2;
+    }
+    if(pointer.active && pointer.target === false){
+      if(Utl.distance(pointer.pos,this.pos)<this.radius){
+      pointer.offset.x = pointer.pos.x - this.pos.x;
+      pointer.offset.y = pointer.pos.y - this.pos.y;
+      this.being_dragged = true;
+      pointer.target = this;
+      }
+    }
+    if(this.being_dragged && pointer.drag){
+      this.pos.x = pointer.pos.x - pointer.offset.x;
+      this.pos.y = pointer.pos.y - pointer.offset.y;
+    }
+        if(this.pos.x + this.radius > W) {
+          this.pos.x = W - this.radius;
+          this.old_pos.x = this.pos.x + vx * 0.2;
+        }
+        else if(this.pos.x < this.radius) {
+          this.pos.x = this.radius;
+          this.old_pos.x = this.pos.x + vx * 0.2;
+        }
+        if(this.pos.y + this.radius > H) {
+          this.pos.y = H - this.radius;
+          this.old_pos.y = this.pos.y + vy * 0.2;
+        }
+        else if(this.pos.y < this.radius) {
+          this.pos.y = this.radius;
+          this.old_pos.y = this.pos.y + vy * 0.2;
+        }
+  }
+}
+class Stick{
+  constructor(point_array,stick_array,p0,p1,min_distance){
+    this.point_array = point_array;
+    this.stick_array = stick_array;
+    this.p0 = this.point_array[p0];
+    this.p1 = this.point_array[p1];
+    let distance = Utl.distance(this.p0.pos,this.p1.pos);
+    this.min_distance = min_distance;
+    this.length = Math.max(min_distance,distance) + Utl.random(10,80);
+    this.maxLength = this.length + 100;
+    this.max_link_width = Math.min(3,8);
+  }
+  update(){
+        let dx = this.p1.pos.x - this.p0.pos.x,
+        dy = this.p1.pos.y - this.p0.pos.y,
+        distance = Math.sqrt(dx * dx + dy * dy);
+        if(distance  > this.maxLength){
+          this.p0.connected_to[this.point_array.indexOf(this.p1)] = false;
+          this.p1.connected_to[this.point_array.indexOf(this.p0)] = false;
+          this.stick_array.splice(this.stick_array.indexOf(this), 1);
+        }
+        let difference = this.length - distance,
+        percent = difference / distance /60,
+        offsetX = dx * percent,
+        offsetY = dy * percent;
+        this.p0.pos.x -= offsetX;
+        this.p0.pos.y -= offsetY;
+        this.p1.pos.x += offsetX;
+        this.p1.pos.y += offsetY;
+  }
+  draw(){
+    let distance = Utl.distance(this.p1.pos,this.p0.pos);
+    ctx.lineWidth = Utl.map(distance,this.min_distance,this.maxLength,this.max_link_width,0);
+    ctx.strokeStyle=link_color;
+    ctx.beginPath();
+    ctx.moveTo(this.p0.pos.x,this.p0.pos.y);
+    ctx.lineTo(this.p1.pos.x,this.p1.pos.y);
+    ctx.stroke();
+  }
+}
+// synapse.js
+Utl = {};
+Utl.distance = function(p1, p2) {
+  return Math.hypot(p1.x - p2.x, p1.y - p2.y);
+};
+Utl.random = function(min, max) {
+  return min + Math.random() * (max - min);
+};
+Utl.angleFrom = function(p1,p2){
+  return Math.atan2(p2.y - p1.y, p2.x - p1.x)
+};
+Utl.map = function(a,b,c,d,e){
+  return(a-b)/(c-b)*(e-d)+d;
+};
+class Synapse{
+  constructor(){
+    this.points = [];
+    this.sticks = [];
+    this.number_point = 15;
+    for (var i = 0; i < this.number_point; i++) {
+      this.points.push(new Point(Utl.random(0,W),Utl.random(0,H)));
+    }
+  }
+  updatePoints(){
+    for (let p = this.points.length - 1; p >= 0; p--) {
+      this.points[p].update();
+        for (let others = this.points.length - 1; others >= 0; others--) {
+          if(this.points[p] === this.points[others]) continue;
+          let min_distance = this.points[p].radius + this.points[others].radius;
+          if(Utl.distance(this.points[p].pos,this.points[others].pos) < min_distance){
+            if(this.points[p].connected_to[others] === true) continue;
+            this.sticks.push(new Stick(this.points,this.sticks,p,others,min_distance));
+            this.points[p].linked = true;
+            this.points[p].connected_to[others] = true;
+          }
+        }
+    }
+  }
+  renderPoints() {
+    for (var i = this.points.length - 1; i >= 0; i--) {
+      this.points[i].draw();
+    }
+  }
+  renderSticks(){
+    for (var i = this.sticks.length - 1; i >= 0; i--) {
+      this.sticks[i].draw();
+    }
+  }
+  updateSticks(){
+    for (var i = this.sticks.length - 1; i >= 0; i--) {
+      this.sticks[i].update();
+    }
+  }
+  update(){
+     this.updatePoints();
+     this.updateSticks();
+    
+  }
+  draw(){
+    this.renderSticks();
+    this.renderPoints();
+  }
+}
+let canvas = document.getElementById("can"),
+  ctx = canvas.getContext("2d");
+let W = canvas.width = 220;
+    H = canvas.height = 220;
+document.addEventListener("mousedown", event => pointerDown(event), false);
+document.addEventListener("mouseup", event => pointerUp(event), false);
+document.addEventListener("mousemove", event => pointerMove(event), false);
+colorTheme = ["#3fc778","#00a383","#007dc7","#bcb7c5","#ea71bd","#e1534a","#ad3e50","#f29546","#e33247"];
+selection_color = "#ffce00";
+link_color = "#ffffff";
+// colorTheme = ["#007dc7","#ea71bd","#64468d"];
+// link_color = "#332041";
+let pointer = {
+  pos:{
+    x:0,
+    y:0
+  },
+  offset:{
+    x:0,
+    y:0
+  },
+  active:false,
+  drag:false,
+  target:false,
+}
+function pointerDown(event){
+  pointer.active = true;
+}
+function pointerUp(event){
+  if(!pointer.drag){
+    console.log("simple clique");
+  }
+  if(pointer.target.being_dragged){
+    pointer.target.being_dragged = false;
+    pointer.target = false;
+  }
+  pointer.active = false;
+  pointer.drag = false;
+}
+function pointerMove(event){
+  if(pointer.active){
+    pointer.drag = true;
+  }
+  updatePointerPosition(event);
+}
+function updatePointerPosition(event){
+    pointer.pos.x = event.pageX - canvas.offsetLeft;
+    pointer.pos.y = event.pageY - canvas.offsetTop;
+}
+let memory_cloud = new Synapse();
+function main_loop() {
+  ctx.clearRect(0,0,W,H);
+  memory_cloud.update();
+  memory_cloud.draw();
+  requestAnimationFrame(main_loop);
+}
+main_loop();
+         
+         }
+</script>
+
+
+  <div class="itopnav" id="myTopnav" style="margin-left: 2%;">
+  <a href="index.php" ><span style="font-size: 1.2em; color: white;  ">
+            <i class="fas fa-home" ></i>
+            </span></a>
+    <a href="aboutus.php" >About Us</a>
+    <div class="idropdown">
+    <button class="idropbtn" style="opacity:1;" >Staff 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="idropdown-content">
+      <a href="facultyprofile.php">Staff</a>
+      <a onclick="document.getElementById('id01').style.display='block'" >Update</a>
+     </div>
+  </div>
+    
+  <div class="idropdown">
+    <button class="idropbtn" >Admission 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="idropdown-content">
+      <a href="http://www.dauniv.ac.in/admissions.php" target="_blank">Admission Procedure</a>
+      <a href="courses.php" >Programmes</a>
+      <a href="POs.php" >POs, PSOs, COs</a>
+     </div>
+  </div>
+  <div class="idropdown" style="">
+    <button class="idropbtn" >Research 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="idropdown-content" >
+      <a href="https://drive.google.com/open?id=1WYIIxCGyLvN1EAmxif02OaI1jSpxHx5C" target="_blank">Lab Profile 1</a>
+      <a href="https://drive.google.com/open?id=1ToNP922GnnRP4Ex9Q_8C2wLIB6OX0nxM" target="_blank">Lab Profile 2</a>
+      <a href="https://drive.google.com/open?id=1n9znm1frZsMoqX2-KOdaJyFK_QhcuK2F" target="_blank">Lab Profile 3</a>
+    </div>
+  </div> 
+  <a href="student.php">Students</a>
+  <div class="idropdown">
+    <button class="idropbtn" >Activities 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="idropdown-content">
+      <a href="activities.php">Guest Of Honour</a>
+      <a href="photogallery.php" >Gallery</a>
+      
+      
+     </div>
+  </div>
+  <a href="http://www.iqac.dauniv.ac.in/" target="_blank">IQAC</a>
+  <a href="alumni.php">Alumni</a>
+  
+  <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</nav>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "itopnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "itopnav";
+  }
+}
+  
+  
+  
+</script>
+</script>
+  <!-- ************************************************************* -->
+
+
+
+
+  <div class = "container-fluid" >
+
+
+
+    <h1 style = "text-align : center;font-family: 'Source Sans Pro', sans-serif;color : black; font-weight:bold;margin-top : 5%;text-shadow: 5px 5px #D3D3D3;">OUR TEACHING FACULTY</h1>
+
+    <h4 style = "text-align : center;font-family: 'Grand Hotel', cursive;margin-top : 2%;font-size: 23px;text-shadow: 6px 4px #D3D3D3;font-weight : 700;">A Teacher takes a Hand , opens a Mind and touches the Heart</h4>
+    <div class = "row">
+
+
+     <div class = "col-md">
+      <center>
+       <div class = "flipcard" style = "display : inline-block ;  margin-top : 80px" >
+         <div class = "flipcard-inner" >
+           <div class = "flipcard-front" style = "background-color : #03A9F4; ">
+             <img src  = "img/Dr. Ashok Kumar.webp"  style="width:60%; height:240px;  margin-top : 5px;margin-bottom: 10px;">
+             <p style='font-size: 20px;'><strong>Dr. ASHOK KUMAR</strong></p>
+             <p >PROFESSOR AND HEAD</p>
+		   <p > SPECIALIZATION : PHYSICAL AND ANALYTICAL CHEMISTRY</p>
+             
+           </div>
+           <div class = "flipcard-back">
+            <p>QUALIFICATION : M.Sc , Ph.D.(IITD), D.Sc</p>
+            
+
+            <center style="font-weight:700">CONTACT</center>
+            <a href="tel:9425962688" style="color:black; font-weight:500;">9425962688</a>
+            <br>
+            <br>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=drashoksharma2001@yahoo.com" target="_blank" style="color:black; font-weight:500;">drashoksharma2001@yahoo.com</a>
+		   <br>
+		 <a href="https://drive.google.com/open?id=1Tl_o_AcRSdaQi-pmvtFNNMWILc5HSX8n" target="_blank" style="color:black;"><strong>View Profile...</strong></a>  
+          </div>
+        </div>
+      </div>
+    </center>
+
+  </div>
+	   
+  <div class = "col-md ">
+  <center>
+   <div class = "flipcard" style = "display : inline-block ; margin-top : 80px;">
+     <div class = "flipcard-inner" >
+       <div class = "flipcard-front" style = "background-color : #03A9F4; ">
+         <img src  = "img/Dr.A.V.Bajaj.webp" style="width:60%; height:240px;  margin-top : 5px;margin-bottom: 10px;">
+         <p style='font-size: 20px;'><strong>Dr. A.V. BAJAJ</strong></p>
+         <p>PROFESSOR</p>
+	       <p> SPECIALIZATION : ORGANIC CHEMISTRY</p>
+	 
+       </div>
+       <div class = "flipcard-back">
+         <p>QUALIFICATION : M.Sc , Ph.D.</p>
+        
+
+         <center style="font-weight:700">CONTACT</center>
+         <a href="tel:9425363818" style="color:black; font-weight:500;">9425363818</a>
+            <br>
+            <br>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dravbajaj@gmail.com" target="_blank" style="color:black; font-weight:500;">dravbajaj@gmail.com</a>
+       <br>
+	    <a href="https://drive.google.com/open?id=0Bxij5YrhAMFeVzk0NTJTUUxxUHZTQXpISmZzTENiMG9oaGpR" target="_blank" style="color:black"><strong>View Profile...</strong></a>   
+	 </div>
+     </div>
+   </div>
+ </center>
+</div>
+
+  <div class = "col-md">
+    <center>
+     <div class = "flipcard" style = "display : inline-block ; margin-top : 80px;" >
+       <div class = "flipcard-inner" >
+         <div class = "flipcard-front" style = "background-color : #03A9F4; ">
+           <img src  = "img/HPS-CHAUHAN.webp" style="width:60%; height:240px;  margin-top : 5px;margin-bottom: 10px;">
+           <p style='font-size: 20px;'><strong>Dr. H.P.S CHAUHAN</strong></p>
+           <p>PROFESSOR</p>
+		<p>SPECIALIZATION : SYNTHETIC ORGANIC AND ORGANOMETTALIC CHEMISTRY</p> 
+           
+         </div>
+         <div class = "flipcard-back">
+           <p>QUALIFICATION : M.Sc ,Ph.D.</p>
+		 
+
+           <center style="font-weight:700">CONTACT</center>
+           <a href="tel:9826219748" style="color:black; font-weight:500;">9826219748</a>
+            <br>
+            <br>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hpsc@rediffmail.com" target="_blank" style="color:black; font-weight:500;">hpsc@rediffmail.com</a>
+
+           <br>
+		<a href="https://drive.google.com/open?id=1KQCg87Jb39TXFX1sRLW5zDzWcIRcsj4j" target="_blank" style="color:black"><strong>View Profile...</strong></a>   
+         </div>
+       </div>
+     </div>
+   </center>
+ </div>
+
+ 
+</div>
+
+
+
+<div class = "row">
+	
+	
+	<div class = "col-md ">
+  <center>
+   <div class = "flipcard" style = "display : inline-block ; margin-top : 80px;" >
+     <div class = "flipcard-inner" >
+       <div class = "flipcard-front" style = "background-color : #03A9F4; ">
+         <img src  = "img/Dr.SheelaJoshi.webp" style = "width:60%; height:240px;  margin-top : 5px;margin-bottom: 10px;">
+         <p style='font-size: 20px;'><strong>Dr. SHEELA JOSHI</strong></p>
+         <p>PROFESSOR</p>
+	       <p> SPECIALIZATION : ORGANIC CHEMISTRY</p>
+	 
+       </div>
+       <div class = "flipcard-back">
+         <p>QUALIFICATION : M.Sc , Ph.D.</p>
+         
+
+         <center style="font-weight:700">CONTACT</center>
+         <a href="tel:9826085169" style="color:black; font-weight:500;">9826085169</a>
+            <br>
+            <br>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=spjoshi11@rediffmail.com" target="_blank" style="color:black; font-weight:500;">spjoshi11@rediffmail.com</a>
+            <br>
+	    <a href="https://drive.google.com/open?id=0Bxij5YrhAMFeV3d4aENBeFFIRWk0ZlZaa3Z3RmxCQXRUNTUw" target="_blank" style="color:black"><strong>View Profile...</strong></a>   
+       </div>
+     </div>
+   </div>
+ </center>
+</div>
+	
+	
+	<div class = "col-md ">
+    <center>
+     <div class = "flipcard" style = "display : inline-block ;  margin-top : 80px" >
+       <div class = "flipcard-inner" >
+         <div class = "flipcard-front" style = "background-color : #03A9F4; ">
+           <img src  = "img/Dr.PratibhaSharma.webp" style="width:60%; height:240px;  margin-top : 5px;margin-bottom:10px;">
+           <p style='font-size: 20px;'><strong>Dr. PRATIBHA SHARMA </strong></p>
+           <p>PROFESSOR</p>
+           <p>SPECIALIZATION : ORGANIC CHEMISTRY</p>
+         </div>
+         <div class = "flipcard-back">
+           <p>QUALIFICATION : M.Sc , Ph.D.</p>
+		 
+
+           <center style="font-weight:700">CONTACT</center>
+           <a href="tel:9425187226" style="color:black; font-weight:500;">9425187226</a>
+            <br>
+            <br>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=drpratibhasharma@yahoo.com" target="_blank" style="color:black; font-weight:500;">drpratibhasharma@yahoo.com</a>
+		 <br>
+		 <a href="https://drive.google.com/file/d/0B5tQoosyw1RcM2JQcG8zV1BSOWZVU2FRUVVfRHhXNU4wNVZz/view" target="_blank" style="color:black"><strong >View Profile...</strong></a>
+         </div>
+       </div>
+     </div>
+   </center>
+ </div>
+
+ 
+
+<div class = "col-md ">
+  <center>
+   <div class = "flipcard" style = "display : inline-block ; margin-top : 80px;">
+     <div class = "flipcard-inner" >
+       <div class = "flipcard-front" style = "background-color : #03A9F4; ">
+         <img src  = "img/Dr.SavitaKhare.webp" style = "width:60%; height:240px;  margin-top : 5px;margin-bottom:10px;">
+         <p style='font-size: 20px;'><strong>Dr. SAVITA KHARE</strong></p>
+         <p>PROFESSOR</p>
+	       <p> SPECIALIZATION : ORGANIC CHEMISTRY</p>
+       </div>
+       <div class = "flipcard-back">
+
+         <p>QUALIFICATION : M.SC , Ph.D.</p>
+         
+
+         <center style="font-weight:700">CONTACT</center>
+         <a href="tel:9407164882" style="color:black; font-weight:500;">9407164882</a>
+            <br>
+            <br>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kharesavita@rediffmail.com" target="_blank" style="color:black; font-weight:500;">kharesavita@rediffmail.com</a>
+         <br>
+	   <a href="https://drive.google.com/file/d/0Bxij5YrhAMFeLXBHX3lFX29BZkEyZHh4SFkwSXNSamNXVV9r/view" target="_blank" style="color:black"><strong>View Profile...</strong></a>    
+       </div>
+     </div>
+   </div>
+ </center>
+</div>
+</div>
+
+
+
+
+
+<h1 style = "text-align : center;padding-top : 60px;margin-top: 80px;font-family: 'Source Sans Pro', sans-serif; font-weight:bold; color : black;border-top: solid 1px #000;text-shadow: 5px 5px #D3D3D3;">OUR NON-TEACHING STAFF MEMBERS</h1>
+
+<div class = "container" style = "margin-top : 100px;">
+
+  <div class = "row">
+
+    <div class = "col-md" >
+    <center>
+      <div class="ntcard">
+      <img src = "img/Sudarshan_Azad.webp" style = "height : 180px; width : 180px;margin-top: 10px;outline : solid 5px #fff;margin-bottom:10px;">
+    
+     <h5 style = "margin-top: 30px; font-weight:700;">Mr. SUDARSHAN AZAD</h5>
+     <h6 style = "margin-top: 20px; font-weight:700;">Senior Technician</h6>
+   </div>
+   </center>
+ </div>
+
+ <div class = "col-md" >
+  <center>
+    <div class="ntcard">
+    <img src = "img/Awadesh_Sharma.webp" style = "height : 180px; width : 180px;margin-top: 10px;outline : solid 5px #fff;">
+   <h5 style = "margin-top: 30px; font-weight:700;">Mr. AWADESH SHARMA</h5>
+   <h6 style = "margin-top: 20px; font-weight:700;">Senior Technician</h6>
+ </div>
+ </center>
+</div>
+
+    <div class = "col-md" >
+  <center>
+    <div class="ntcard">
+    <img src = "img/Atul_Bharadwaj.webp" style = "height : 180px; width : 180px;margin-top: 10px;outline : solid 5px #fff;">
+  
+   <h5 style = "margin-top: 30px; font-weight:700;">Mr. ATUL BHARADWAJ </h5>
+   <h6 style = "margin-top: 20px; font-weight:700;">Senior Technician</h6>
+ </div>
+ </center>
+</div>
+
+   
+   </div>
+
+
+<div class = "row" style = "margin-top : 50px;">
+
+  <div class = "col-md" >
+  <center>
+    <div class="ntcard">
+    <img src = "img/KiranKulkarni.webp" style = "height : 180px; width : 180px;margin-top: 10px;outline : solid 5px #fff;">
+  
+   <h5 style = "margin-top: 30px; font-weight:700;">Mrs. KIRAN KULKARNI </h5>
+   <h6 style = "margin-top: 20px; font-weight:700;">Lab Technician</h6>
+ </div>
+ </center>
+</div>
+
+<div class = "col-md" >
+   <center>
+    <div class="ntcard">
+    <img src = "img/K,B_Yadav.webp" style = "height : 180px; width : 180px;margin-top: 10px;outline : solid 5px #fff;">
+   
+     <h5 style = "margin-top: 30px; font-weight:700;">Mr. K.B YADAV</h5>
+     <h6 style = "margin-top: 20px; font-weight:700;">Office Assistant</h6>
+     </div>
+   </center>
+ </div>
+
+
+<div class = "col-md" >
+     <center>
+      <div class="ntcard">
+     <img src = "img/Amarjeet_Yadav.webp" style = "height : 180px; width : 180px;margin-top: 10px;outline : solid 5px #fff;">
+
+    
+       <h5 style = "margin-top: 30px; font-weight:700;">Mr. AMARJEET YADAV</h5>
+       <h6 style = "margin-top: 20px; font-weight:700;">Lab Attendent</h6>
+     </div>
+     </center>
+   </div>
+
+</div>
+
+ <div class = "row" style = "margin-top : 50px; margin-bottom:  180px;">
+
+  <div class = "col-md" >
+     <center>
+      <div class="ntcard">
+     <img src = "img/Ramesh_Sulya.webp" style = "height : 180px; width : 180px;margin-top: 10px;outline : solid 5px #fff;">
+
+    
+       <h5 style = "margin-top: 30px; font-weight:700;">Mr. RAMESH SULYA</h5>
+       <h6 style = "margin-top: 20px; font-weight:700;">Lab Attendent</h6>
+     </div>
+     </center>
+   </div>
+
+ 
+
+  <div class = "col-md" >
+  <center>
+    <div class="ntcard">
+    <img src = "img/S.B_Yadav.webp" style = "height : 180px; width : 180px;margin-top: 10px;outline : solid 5px #fff;">
+  
+   <h5 style = "margin-top: 30px; font-weight:700;">Mr. S.B. YADAV</h5>
+   <h6 style = "margin-top: 20px; font-weight:700;">Gardener</h6>
+
+ </div>
+ </center>
+</div>
+
+
+
+    
+
+
+</div>
+</div>
+</div>
+
+
+
+<!-- ************************************************************* -->
+
+<div class="smallfooter" style="background-color:#0c2461 !important; display:block; font-family: 'Source Sans Pro', sans-serif; margin-top:30px; ">
+
+  
+
+  <div class="col-md-3" style="float:left; background-color:inherit; min-height: 500px; " >
+       <a href="index.php">
+       <div class = "schoolName" style="  border-style:solid;
+         border-width: thin;
+         border-color: white;
+         height:140px;
+         width:140px;
+         margin-left:5%;
+         margin-top:10px;">
+        <img src="img/SCHEMLOGO.webp" height="138px" width="138px">
+       </div>
+     </a>
+     <div class="sfqlinks" style="color:white !important;"  >
+     <ul style=" list-style-type: none; color:white !important; text-decoration:none; font-size:18px;">
+       <li style="margin-top:30px;" >
+       <a style="color:white !important; font-weight:bold; opacity:0.6;" href="http://www.dauniv.ac.in/">DAVV</a>
+       </li>
+       <li style="margin-top:15px;" >
+       <a style="color:white !important; font-weight:bold; opacity:0.6;"href="aboutus.php">About Us</a>
+       </li>
+       <li style="margin-top:15px;" >
+       <a style="color:white !important; font-weight:bold; opacity:0.6;" href="https://maps.google.com/?cid=6646430206762351224">Campus Map</a>
+       </li>
+       <li style="margin-top:15px;" >
+       <a style="color:white !important; font-weight:bold; opacity:0.6;" href="aboutdev.php">About Developers</a>
+       </li>
+
+     </ul>
+   </div>
+ </div>
+   <div class="col-md-4" style="float:left; background-color:inherit; min-height: 500px;  " >
+   <div class = "contact" >
+     <br>
+         <a style = " color : white; font-size : 22px; "><b>Contact Us</b></a>
+         
+         <p style = "color : white; font-size : 18px; font-weight:500; opacity:0.7;">
+           <span style="font-size: 1.2em; color: white; opacity:1;">
+         <i class="fas fa-map-marker-alt"></i>
+       </span>School of Chemical Sciences, <br>
+           Devi Ahilya Vishwavidyalaya,<br>Takshashila Campus,<br>Khandwa Road,<br>Indore (M.P.)-452001,India<br><br>
+           <span style="font-size: 1.2em; color: white; opacity:1;">
+           <i class="fas fa-phone"></i>
+           </span>Contact No. - 0731-2460208 <br><br>
+           <span style="font-size: 1.2em; color: white; opacity:1;">
+           <i class="fas fa-envelope"></i>
+           </span>Email ID: drashoksharma2001@yahoo.com<br><br>
+         &copy; 2019 School Of Chemical Sciences</p>
+      </div> 
+     
+   </div>
+     
+  
+
+  <div class="col-md-5" style="float:left;  padding:2%; background-color:inherit; min-height: 500px; " >
+   <div class="mapouter" style="outline:solid 20px white; margin-top:30px; margin-bottom:10px;"><div class="gmap_canvas"><iframe style="width:100%;" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=School%20of%20chemical%20sciences%2CDAVV%2C%20KHANDWA%20ROAD&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de/webdesign-muenster/"></a></div>
+   <style>.mapouter{text-align:right;height:350px;width:90%;}.gmap_canvas {overflow:hidden;background:none!important;height:350px;width:100%;}
+   </style></div>
+
+</div>
+
+</div>
+
+
+</body>
+</html>
