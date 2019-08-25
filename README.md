@@ -14,3 +14,10 @@ Providing the features of
 to the concerned faculties.
 
 PHP is used for Server-Side Scripting
+
+
+![Screenshot (13)](https://user-images.githubusercontent.com/44242169/63645853-722fdc00-c724-11e9-8c62-73d7f3973c1c.png)
+
+![Screenshot (14)](https://user-images.githubusercontent.com/44242169/63645865-9a1f3f80-c724-11e9-94ae-1d57a0bbaa1b.png)
+
+![Screenshot (15)](https://user-images.githubusercontent.com/44242169/63645875-cc30a180-c724-11e9-926d-7a5459003bc6.png)
